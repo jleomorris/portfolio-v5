@@ -10,6 +10,7 @@ import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Loader from '../components/Loader';
+import Header from '../components/Header';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(true);
@@ -34,15 +35,14 @@ function MyApp({ Component, pageProps }: AppProps) {
             </motion.div>
           ) : (
             <>
-              {/* <Header /> */}
+              <Header />
               {/* <Banner /> */}
               {/* <Nav /> */}
               <Component {...pageProps} />
-              <Footer />
               {!loading && (
                 <div className='transition-image final'>
                   <motion.img
-                    src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
+                    src={`../../images/image-2.jpg`}
                     layoutId='main-image-1'
                     transition={{
                       ease: [0.6, 0.01, -0.05, 0.95],
@@ -51,6 +51,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                   />
                 </div>
               )}
+              <Footer />
             </>
           )}
         </AnimatePresence>

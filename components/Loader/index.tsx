@@ -62,7 +62,7 @@ const Loader = ({ setLoading }) => {
         initial='hidden'
         animate='show'
         exit='exit'
-        // onAnimationComplete={() => setLoading(false)}
+        onAnimationComplete={() => setLoading(false)}
       >
         <ImageBlock variants={item} id='image-1' />
         <motion.div className={styles.transitionImage} variants={itemMain}>
