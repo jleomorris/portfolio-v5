@@ -3,7 +3,8 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 // Components
 import Image from './components/Image';
-import image1 from '../../images/image-1.jpg';
+// Styles
+import styles from '../../styles/Loader.module.scss';
 
 // Variants
 const container = {
@@ -54,9 +55,9 @@ const itemMain = {
 
 const Loader = ({ setLoading }) => {
   return (
-    <div className='loader'>
+    <div className={styles.loader}>
       <motion.div
-        className='loader-inner'
+        className={styles.loaderInner}
         variants={container}
         initial='hidden'
         animate='show'
@@ -64,7 +65,7 @@ const Loader = ({ setLoading }) => {
         // onAnimationComplete={() => setLoading(false)}
       >
         <ImageBlock variants={item} id='image-1' />
-        <motion.div className='transition-image' variants={itemMain}>
+        <motion.div className={styles.transitionImage} variants={itemMain}>
           <motion.img
             src={`../../images/image-2.jpg`}
             alt='random alt'
@@ -81,7 +82,10 @@ const Loader = ({ setLoading }) => {
 
 export const ImageBlock = ({ id, variants }) => {
   return (
-    <motion.div className={`image-block ${id}`} variants={variants}>
+    <motion.div
+      className={`${styles.imageBlock} ${styles[id]}`}
+      variants={variants}
+    >
       <Image
         src={`../../images/${id}.webp`}
         fallback={`../../images/${id}.jpg`}

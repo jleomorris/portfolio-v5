@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 import { store } from '../app/store';
-import '../styles/globals.css';
+// Styling
+import '../styles/globals.scss';
 // Animation
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 // Components
