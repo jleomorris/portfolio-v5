@@ -87,8 +87,8 @@ const Banner = () => {
       variants={banner}
       animate='animate'
     >
-      <BannerRowTop title={'brand'} />
-      <BannerRowCenter title={'experience'} playMarquee={playMarquee} />
+      <BannerRowTop title={'J.Morris'} />
+      <BannerRowCenter title={'Front End Dev'} playMarquee={playMarquee} />
       <BannerRowBottom title={'studio'} />
     </motion.div>
   );
@@ -103,7 +103,7 @@ const AnimatedLetters = ({ title, disabled }) => (
   >
     {[...title].map((letter) => (
       <motion.span
-        className={`${bannerStyles.rowLetter}`}
+        className={`${bannerStyles.rowLetter} text-sm`}
         variants={letterAnimation}
       >
         {letter}
@@ -125,8 +125,7 @@ const BannerRowTop = ({ title }) => {
         animate='animate'
       >
         <span className={bannerStyles['row-message']}>
-          We are specialised in setting up the foundation of your brand and
-          setting you up for success.
+          Senior React Developer at IronmongeryDirect - Basildon, Essex
         </span>
       </motion.div>
     </div>
