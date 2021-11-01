@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { store } from '../app/store';
 // Styling
 import '../styles/globals.scss';
+import bannerStyles from '../styles/Banner.module.scss';
 // Animation
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 // Components
@@ -11,6 +12,7 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Loader from '../components/Loader';
 import Header from '../components/Header';
+import Banner from '../components/Banner';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(true);
@@ -36,11 +38,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           ) : (
             <>
               <Header />
-              {/* <Banner /> */}
+              <Banner />
               {/* <Nav /> */}
-              <Component {...pageProps} />
               {!loading && (
-                <div className='transition-image final'>
+                <div className={`${bannerStyles['transitionImage--final']}`}>
                   <motion.img
                     src={`../../images/image-2.jpg`}
                     layoutId='main-image-1'
@@ -51,6 +52,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                   />
                 </div>
               )}
+              <Component {...pageProps} />
               <Footer />
             </>
           )}
