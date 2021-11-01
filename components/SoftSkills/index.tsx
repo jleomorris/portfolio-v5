@@ -13,42 +13,42 @@ const softSkillData = [
   {
     name: 'Ability To Learn',
     description:
-      "From legacy architecture to modern JS frameworks. Over my time in the industry I've had to learn many different skills to maintain legacy systems and redevelop into modern solutions. I'm driven to constantly improve myself and I always like to be learning something new",
+      "From legacy architecture to modern JS frameworks, I'm always willing to learn and adopt new technologies. I have no issues upskilling on the job and strive for continual development in my personal time as well.",
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1635801313/Portfolio-v5/Home/Soft-skills/Learning.png',
   },
   {
     name: 'Single Page Apps',
     description:
-      "From legacy architecture to modern JS frameworks. Over my time in the industry I've had to learn many different skills to maintain legacy systems and redevelop into modern solutions. I'm driven to constantly improve myself and I always like to be learning something new",
+      "Creating single page apps from designs is a large part of my day to day and is something I'm particulary skilled in.",
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1635801475/Portfolio-v5/Home/Soft-skills/Single-page-apps.png',
   },
   {
     name: 'Collaboration',
     description:
-      "From legacy architecture to modern JS frameworks. Over my time in the industry I've had to learn many different skills to maintain legacy systems and redevelop into modern solutions. I'm driven to constantly improve myself and I always like to be learning something new",
+      "Doesn't matter if it's marketing or design, I can work with multiple teams and have well developed verbal and written communication skills.",
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1635800171/Portfolio-v5/Home/Soft-skills/Collaboration.png',
   },
   {
     name: 'UI and UX design',
     description:
-      "From legacy architecture to modern JS frameworks. Over my time in the industry I've had to learn many different skills to maintain legacy systems and redevelop into modern solutions. I'm driven to constantly improve myself and I always like to be learning something new",
+      "I enjoy learning about the ins and outs of UI and UX design and it's always in the forefront of my mind when analysing designs and creating web applications.",
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1635801116/Portfolio-v5/Home/Soft-skills/UI_UX.png',
   },
   {
     name: 'Accessibility',
     description:
-      "From legacy architecture to modern JS frameworks. Over my time in the industry I've had to learn many different skills to maintain legacy systems and redevelop into modern solutions. I'm driven to constantly improve myself and I always like to be learning something new",
+      "It's important that all users have the same great experience on your web application, as such I'm well versed in current accessibility standards.",
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1635801660/Portfolio-v5/Home/Soft-skills/Accessibility.png',
   },
   {
     name: 'Responsive Design',
     description:
-      "From legacy architecture to modern JS frameworks. Over my time in the industry I've had to learn many different skills to maintain legacy systems and redevelop into modern solutions. I'm driven to constantly improve myself and I always like to be learning something new",
+      "You want your users to have the same positive experience - no matter what device they are using. As such I'm well versed in the best responsive design methods.",
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1635801818/Portfolio-v5/Home/Soft-skills/Responsive-design.png',
   },
@@ -61,13 +61,13 @@ const SoftSkills = () => {
       <div className='flex border border-black overflow-x-scroll'>
         {softSkillData.map((softSkill) => (
           <div
-            className='soft-skill w-96 mr-20 border border-red-800'
-            style={{ border: '2px solid red' }}
+            className='soft-skill w-112 mr-20'
+            // style={{ border: '2px solid red' }}
             key={softSkill.name}
           >
             <div
-              className='h-96 w-96 mb-10 border-8 relative border-red-900'
-              style={{ border: '2px solid green' }}
+              className='h-112 w-112 mb-10 relative border border-black'
+              style={{ border: '2px solid black' }}
             >
               <Image layout='fill' alt='skill' src={softSkill.imgURL} />
             </div>
