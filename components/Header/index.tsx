@@ -3,6 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 // Styles
 import styles from '../../styles/Header.module.scss';
+// Next
+import Link from 'next/link';
 
 // Variants
 const header = {
@@ -30,32 +32,33 @@ const Header = () => {
       animate='animate'
     >
       <div className={styles.headerInner}>
-        <div className={styles.logo}>Ollie</div>
+        <div className={styles.logo}>Jleo</div>
         <nav className={styles.nav}>
           <li className={styles.navLi}>
-            <a className={styles.navLinks} href='/design'>
-              Design
-            </a>
+            <Link href='/about'>
+              <a className={`${styles.navLinks} hover:underline pb-1`}>About</a>
+            </Link>
           </li>
           <li className={styles.navLi}>
-            <a className={styles.navLinks} href='/strategy'>
-              Strategy
-            </a>
+            <Link href='/projects'>
+              <a className={`${styles.navLinks} hover:underline pb-1`}>
+                Projects
+              </a>
+            </Link>
           </li>
           <li className={styles.navLi}>
-            <a className={styles.navLinks} href='/cases'>
-              Cases
-            </a>
+            <Link href='/desktops'>
+              <a className={`${styles.navLinks} hover:underline pb-1`}>
+                Desktops
+              </a>
+            </Link>
           </li>
           <li className={styles.navLi}>
-            <a className={styles.navLinks} href='/about'>
-              About
-            </a>
-          </li>
-          <li className={styles.navLi}>
-            <a className={styles.navLinks} href='/why'>
-              Why work with us?
-            </a>
+            <Link href='/contact'>
+              <a className={`${styles.navLinks} hover:underline pb-1`}>
+                Contact
+              </a>
+            </Link>
           </li>
         </nav>
         <div className={styles.contact}>
