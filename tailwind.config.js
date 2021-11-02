@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      spacing: {
+        112: '28rem',
+      },
       width: {
         '30%': '30%',
       },

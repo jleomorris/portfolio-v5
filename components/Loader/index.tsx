@@ -67,7 +67,7 @@ const Loader = ({ setLoading }) => {
         <ImageBlock variants={item} id='image-1' />
         <motion.div className={styles.transitionImage} variants={itemMain}>
           <motion.img
-            src={`../../images/image-2.jpg`}
+            src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1635814195/Portfolio-v5/Loader/main.jpg`}
             alt='random alt'
             layoutId='main-image-1'
           />
