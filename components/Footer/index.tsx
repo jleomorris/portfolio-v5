@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           rel='noreferrer'
           href='https://github.com/jleomorris'
         >
-          <div className='relative w-8 h-8 mr-3'>
+          <div className='relative w-12 h-12 mr-3'>
             <Image
               src={github}
               alt='github'
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
           rel='noreferrer'
           href='https://www.linkedin.com/in/james-morris-62a66b166/'
         >
-          <div className='relative w-8 h-8'>
+          <div className='relative w-12 h-12'>
             <Image
               src={linkedin}
               alt='github'
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
           </div>
         </a>
       </div>
-      <div className='copyright-contact space-y-3'>
+      <div className='copyright-contact space-y-6'>
         <p>© James Morris {new Date().getFullYear()}</p>
         <a href='mailTo:james-morris2010@hotmail.co.uk' className='block'>
           <div className='flex'>
@@ -50,11 +50,10 @@ const Footer: React.FC = () => {
             </p>
           </div>
         </a>
-        <p>
+        <p className='text-xl'>
           All product names, logos, and brands are property of their respective
-          owners. All company, product and service names used in this website
-          are for identification purposes only. Use of these names, logos, and
-          brands does not imply endorsement
+          owners. Use of these names, logos, and brands does not imply
+          endorsement
         </p>
       </div>
     </div>
