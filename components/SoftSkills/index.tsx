@@ -1,5 +1,8 @@
 // Next
 import SoftSkillCard from './components/SoftSkillCard';
+// Alice Carousel
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 // Image sources
 // <a href="https://storyset.com/people">People illustrations by Storyset</a>
@@ -54,14 +57,37 @@ const softSkillData = [
   },
 ];
 
+const responsive = {
+  0: { items: 1.5 },
+  568: { items: 3 },
+  1024: { items: 4.5 },
+};
+
 const SoftSkills = () => {
+  const items = softSkillData.map((softSkill) => (
+    <SoftSkillCard key={softSkill.name} softSkill={softSkill} />
+  ));
+
   return (
     <div className='soft-skills'>
       <h3 className='text-8xl mb-32 font-extrabold'>Soft Skills</h3>
-      <div className='flex border border-black overflow-x-scroll'>
-        {softSkillData.map((softSkill) => (
+      <div className='xl:ml-40'>
+        <AliceCarousel
+          // autoPlay
+          // autoPlayInterval={3000}
+          animationType='fadeout'
+          // infinite
+          mouseTracking
+          keyboardNavigation
+          items={items}
+          responsive={responsive}
+          disableButtonsControls
+          disableDotsControls
+          controlsStrategy='alternate'
+        ></AliceCarousel>
+        {/* {softSkillData.map((softSkill) => (
           <SoftSkillCard key={softSkill.name} softSkill={softSkill} />
-        ))}
+        ))} */}
       </div>
     </div>
   );
