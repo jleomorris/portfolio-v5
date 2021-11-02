@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               {!loading && (
                 <div className={`${bannerStyles['transitionImage--final']}`}>
                   <motion.img
-                    src={`../../images/image-2.jpg`}
+                    src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1635814195/Portfolio-v5/Loader/main.jpg`}
                     layoutId='main-image-1'
                     transition={{
                       ease: [0.6, 0.01, -0.05, 0.95],
