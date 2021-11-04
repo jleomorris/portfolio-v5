@@ -1,3 +1,5 @@
+// Components
+import SkillIcons from './components/skillIcons';
 // Images and Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -186,45 +188,7 @@ const TechnicalSkills = () => {
       <h3 className='text-8xl mb-32 font-extrabold text-center w-full xl:w-1/2 mx-auto'>
         Services and tools I have experience with.
       </h3>
-      <div className='w-full lg:w-2/3 mx-auto flex flex-wrap justify-center items-center'>
-        {skillsData.map((skill) => (
-          <div className='my-10 mx-16 relative' key={skill!.title}>
-            {skill.altIcon !== null ? (
-              <div className='h-36 w-60 flex justify-center items-center'>
-                {skill.altIcon}{' '}
-                {skill.showTitle && (
-                  <p
-                    style={{
-                      textShadow: '1px 1px 10px black',
-                      fontFamily: 'system-ui',
-                    }}
-                    className='text-center text-white mt-3 font-extrabold text-3xl absolute inset-0 flex items-center justify-center'
-                  >
-                    {skill.title}
-                  </p>
-                )}
-              </div>
-            ) : (
-              <FontAwesomeIcon
-                icon={skill.icon}
-                className='text-8xl md:text-10xl'
-              />
-            )}
-            {skill.showTitle && (
-              <p
-                style={{
-                  // color: '#F2C744',
-                  textShadow: '1px 1px 10px black',
-                  fontFamily: 'system-ui',
-                }}
-                className='text-center text-white mt-3 font-extrabold text-3xl absolute inset-0 flex items-center justify-center'
-              >
-                {skill.title}
-              </p>
-            )}
-          </div>
-        ))}
-      </div>
+      <SkillIcons skillsData={skillsData} />
     </div>
   );
 };
