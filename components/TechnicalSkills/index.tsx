@@ -9,6 +9,7 @@ import {
   faHandSparkles,
   faLanguage,
   faLowVision,
+  faUnlockAlt,
   faUserEdit,
   faUsers,
   faWind,
@@ -29,18 +30,132 @@ import {
   faSass,
   faWordpress,
 } from '@fortawesome/free-brands-svg-icons';
+// Components
+import Figma from '../Icons/Figma';
+import Next from '../Icons/NextJs';
+import GraphQL from '../Icons/GraphQL';
+import Tailwind from '../Icons/Tailwind';
+import Webpack from '../Icons/Webpack';
 
-const skillIcons = [
-  faAws,
-  faBootstrap,
-  faCss3Alt,
-  faGit,
-  faHtml5,
-  faJsSquare,
-  faNode,
-  faNpm,
-  faReact,
-  faSass,
+const skillsData = [
+  {
+    icon: faAws,
+    altIcon: null,
+    title: 'AWS',
+    showTitle: false,
+  },
+  {
+    icon: faBootstrap,
+    altIcon: null,
+    title: 'Bootstrap',
+    showTitle: false,
+  },
+  {
+    icon: faCss3Alt,
+    altIcon: null,
+    title: 'CSS',
+    showTitle: true,
+  },
+  {
+    icon: faCode,
+    altIcon: null,
+    title: 'CSHTML',
+    showTitle: true,
+  },
+  {
+    icon: null,
+    altIcon: <Figma />,
+    title: 'Figma',
+    showTitle: false,
+  },
+  {
+    icon: faGit,
+    altIcon: null,
+    title: 'Git',
+    showTitle: false,
+  },
+  {
+    icon: null,
+    altIcon: <GraphQL />,
+    title: 'GraphQL',
+    showTitle: true,
+  },
+  {
+    icon: faHtml5,
+    altIcon: null,
+    title: 'HTML',
+    showTitle: true,
+  },
+  {
+    icon: faJsSquare,
+    altIcon: null,
+    title: 'JS',
+    showTitle: false,
+  },
+  {
+    icon: faNode,
+    altIcon: null,
+    title: 'Node',
+    showTitle: false,
+  },
+  {
+    icon: null,
+    altIcon: <Next />,
+    title: 'Next',
+    showTitle: false,
+  },
+  {
+    icon: faNpm,
+    altIcon: null,
+    title: 'Npm',
+    showTitle: false,
+  },
+  {
+    icon: faReact,
+    altIcon: null,
+    title: 'React',
+    showTitle: true,
+  },
+  {
+    icon: null,
+    altIcon: (
+      <img
+        className='h-36 object-contain'
+        src='https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636030983/Portfolio-v5/Skills/rest-api.png'
+      />
+    ),
+    title: 'REST API',
+    showTitle: false,
+  },
+  {
+    icon: faSass,
+    altIcon: null,
+    title: 'Sass',
+    showTitle: false,
+  },
+  {
+    icon: null,
+    altIcon: <Tailwind />,
+    title: 'Tailwind',
+    showTitle: false,
+  },
+  {
+    icon: null,
+    altIcon: (
+      <img
+        className='h-36 object-contain'
+        src='https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636041408/Portfolio-v5/Skills/ts.png'
+      />
+    ),
+    title: 'Typescript',
+    showTitle: false,
+  },
+  {
+    icon: null,
+    altIcon: <Webpack />,
+    title: 'Webpack',
+    showTitle: true,
+  },
 ];
 
 const TechnicalSkills = () => {
@@ -49,17 +164,42 @@ const TechnicalSkills = () => {
       <h3 className='text-8xl mb-32 font-extrabold text-center w-full xl:w-1/2 mx-auto'>
         Services and tools I have experience with.
       </h3>
-      <div
-        className='border border-red-900 w-full lg:w-2/3 mx-auto flex flex-wrap justify-center items-center'
-        style={{ border: '1px solid red' }}
-      >
-        {skillIcons.map((skillIcon) => (
-          <div className='my-10 mx-16'>
-            <FontAwesomeIcon
-              key={skillIcon.toString()}
-              icon={skillIcon}
-              className='text-8xl md:text-10xl'
-            />
+      <div className='w-full lg:w-2/3 mx-auto flex flex-wrap justify-center items-center'>
+        {skillsData.map((skill) => (
+          <div className='my-10 mx-16 relative' key={skill!.title}>
+            {skill.altIcon !== null ? (
+              <div className='h-36 w-60'>
+                {skill.altIcon}{' '}
+                {skill.showTitle && (
+                  <p
+                    style={{
+                      textShadow: '1px 1px 10px black',
+                      fontFamily: 'system-ui',
+                    }}
+                    className='text-center text-white mt-3 font-extrabold text-3xl absolute inset-0 flex items-center justify-center'
+                  >
+                    {skill.title}
+                  </p>
+                )}
+              </div>
+            ) : (
+              <FontAwesomeIcon
+                icon={skill.icon}
+                className='text-8xl md:text-10xl'
+              />
+            )}
+            {skill.showTitle && (
+              <p
+                style={{
+                  // color: '#F2C744',
+                  textShadow: '1px 1px 10px black',
+                  fontFamily: 'system-ui',
+                }}
+                className='text-center text-white mt-3 font-extrabold text-3xl absolute inset-0 flex items-center justify-center'
+              >
+                {skill.title}
+              </p>
+            )}
           </div>
         ))}
       </div>
