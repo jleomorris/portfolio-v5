@@ -3,19 +3,29 @@ import Head from 'next/head';
 import Image from 'next/image';
 // Styling
 import homeStyles from '../styles/Home.module.css';
-// Components
-import PageContainer from '../components/PageContainer';
-import SoftSkills from '../components/SoftSkills';
 // Animation
 import AnimationParent, {
   Variant,
 } from '../components/FramerMotion/AnimationParent';
 import AnimationChild from '../components/FramerMotion/AnimationChild';
+// Components
+import PageContainer from '../components/PageContainer';
+import SoftSkills from '../components/SoftSkills';
+import TechnicalSkills from '../components/TechnicalSkills';
+import CurrentlyUsedSkills from '../components/CurrentlyUsedSkills';
 
 export default function Home() {
   return (
     <PageContainer>
-      <SoftSkills />
+      <div className='min-h-screen'>
+        <SoftSkills />
+      </div>
+      <div className='min-h-screen flex justify-center items-center'>
+        <TechnicalSkills />
+      </div>
+      <div className='min-h-screen flex justify-center items-center'>
+        <CurrentlyUsedSkills />
+      </div>
     </PageContainer>
   );
 }
