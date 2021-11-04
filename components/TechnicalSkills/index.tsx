@@ -87,6 +87,17 @@ const skillsData = [
     showTitle: true,
   },
   {
+    icon: null,
+    altIcon: (
+      <img
+        className='h-36 object-contain'
+        src='https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636043580/Portfolio-v5/Skills/jest.png'
+      />
+    ),
+    title: 'Jest',
+    showTitle: true,
+  },
+  {
     icon: faJsSquare,
     altIcon: null,
     title: 'JS',
@@ -114,6 +125,17 @@ const skillsData = [
     icon: faReact,
     altIcon: null,
     title: 'React',
+    showTitle: true,
+  },
+  {
+    icon: null,
+    altIcon: (
+      <img
+        className='h-36 object-contain'
+        src='https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636043837/Portfolio-v5/Skills/redux.png'
+      />
+    ),
+    title: 'Redux',
     showTitle: true,
   },
   {
@@ -168,7 +190,7 @@ const TechnicalSkills = () => {
         {skillsData.map((skill) => (
           <div className='my-10 mx-16 relative' key={skill!.title}>
             {skill.altIcon !== null ? (
-              <div className='h-36 w-60'>
+              <div className='h-36 w-60 flex justify-center items-center'>
                 {skill.altIcon}{' '}
                 {skill.showTitle && (
                   <p
