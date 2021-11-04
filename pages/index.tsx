@@ -20,10 +20,10 @@ export default function Home() {
       <div className='min-h-screen'>
         <SoftSkills />
       </div>
-      <div className='min-h-screen'>
+      <div className='min-h-screen flex justify-center items-center'>
         <TechnicalSkills />
       </div>
-      <div className='min-h-screen'>
+      <div className='min-h-screen flex justify-center items-center'>
         <CurrentlyUsedSkills />
       </div>
     </PageContainer>

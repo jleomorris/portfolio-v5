@@ -158,6 +158,12 @@ const skillsData = [
     showTitle: false,
   },
   {
+    icon: faHandSparkles,
+    altIcon: null,
+    title: 'Styled Components',
+    showTitle: true,
+  },
+  {
     icon: null,
     altIcon: <Tailwind />,
     title: 'Tailwind',
