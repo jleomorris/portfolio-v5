@@ -5,7 +5,6 @@ import Image from 'next/image';
 import homeStyles from '../styles/Home.module.css';
 import bannerStyles from '../styles/Banner.module.scss';
 // Animation
-import AnimationChild from '../components/FramerMotion/AnimationChild';
 import { motion } from 'framer-motion';
 // Components
 import PageContainer, { Variant } from '../components/PageContainer';
@@ -28,16 +27,14 @@ export default function Home() {
           }}
         />
       </div>
-      <PageContainer variant={Variant.NORMAL}>
-        <div className='min-h-screen'>
-          <SoftSkills />
-        </div>
-        <div className='min-h-screen flex justify-center items-center'>
-          <TechnicalSkills />
-        </div>
-        <div className='min-h-screen flex justify-center items-center'>
-          <CurrentlyUsedSkills />
-        </div>
+      <PageContainer variant={Variant.NORMAL} noFlex>
+        <SoftSkills />
+      </PageContainer>
+      <PageContainer variant={Variant.NORMAL} noFlex={false}>
+        <TechnicalSkills />
+      </PageContainer>
+      <PageContainer variant={Variant.NORMAL} noFlex={false}>
+        <CurrentlyUsedSkills />
       </PageContainer>
     </div>
   );

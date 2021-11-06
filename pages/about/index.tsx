@@ -43,7 +43,7 @@ const aboutData = [
 const About = () => {
   return (
     <div className='about'>
-      <PageContainer variant={Variant.TIGHT}>
+      <PageContainer variant={Variant.TIGHT} noFlex={false}>
         <div className='flex flex-col justify-center items-start h-full w-full'>
           <p className='font-sans uppercase mb-10 font-bold'>About</p>
           <h1 className='font-vesterbroPoster text-8xl lg:text-9xl font-extrabold 2xl:w-2/3'>
@@ -52,7 +52,7 @@ const About = () => {
         </div>
       </PageContainer>
       {aboutData.map((about, index) => (
-        <PageContainer key={about.title} variant={Variant.TIGHT}>
+        <PageContainer key={about.title} variant={Variant.TIGHT} noFlex={false}>
           <section
             className={` flex flex-col lg:flex-row items-center ${
               index % 2 === 0 ? '' : 'lg:flex-row-reverse'
