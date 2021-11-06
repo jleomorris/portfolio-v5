@@ -8,8 +8,26 @@ module.exports = {
       fontSize: {
         '10xl': '10rem',
       },
+      fontFamily: {
+        vesterbroPoster: [
+          'VesterbroPoster',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Oxygen',
+          'Ubuntu',
+          'Cantarell',
+          'Open Sans',
+          'Helvetica Neue',
+          'sans-serif',
+        ],
+      },
       spacing: {
         112: '28rem',
+        160: '40rem',
+        180: '45rem',
+        240: '60rem',
       },
       width: {
         '30%': '30%',
