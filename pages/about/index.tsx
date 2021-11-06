@@ -46,7 +46,7 @@ const About = () => {
       <PageContainer variant={Variant.TIGHT}>
         <div className='flex flex-col justify-center items-start h-full w-full'>
           <p className='font-sans uppercase mb-10 font-bold'>About</p>
-          <h1 className='font-vesterbroPoster text-9xl font-extrabold w-2/3  '>
+          <h1 className='font-vesterbroPoster text-8xl lg:text-9xl font-extrabold 2xl:w-2/3'>
             I'm a problem solver, designer and technology addict
           </h1>
         </div>
@@ -54,14 +54,16 @@ const About = () => {
       {aboutData.map((about, index) => (
         <PageContainer key={about.title} variant={Variant.TIGHT}>
           <section
-            className={` flex ${index % 2 === 0 ? '' : 'flex-row-reverse'}`}
+            className={` flex flex-col lg:flex-row items-center ${
+              index % 2 === 0 ? '' : 'lg:flex-row-reverse'
+            }`}
           >
             <div
-              className={`w-1/2 flex flex-col justify-center ${
-                index % 2 === 0 ? 'mr-20' : 'ml-20'
+              className={`mt-20 lg:mt-0 order-1 lg:order-none lg:w-1/2 flex flex-col justify-center ${
+                index % 2 === 0 ? 'lg:mr-20' : 'lg:ml-20'
               }`}
             >
-              <h2 className='font-vesterbroPoster font-extrabold text-8xl mb-10'>
+              <h2 className='font-vesterbroPoster font-extrabold text-6xl sm:text-8xl mb-10'>
                 {about.title}
               </h2>
               {about.content.map((content, index) => (
@@ -70,8 +72,8 @@ const About = () => {
                 </p>
               ))}
             </div>
-            <div className='w-1/2 flex justify-center items-center'>
-              <div className='relative w-240 h-240'>
+            <div className='lg:w-1/2 flex justify-center items-center'>
+              <div className='relative w-120 sm:w-220 lg:w-240 h-120 sm:h-220 lg:h-240'>
                 <Image
                   layout='fill'
                   objectFit='contain'
