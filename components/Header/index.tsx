@@ -32,7 +32,11 @@ const Header = () => {
       animate='animate'
     >
       <div className={styles.headerInner}>
-        <div className={styles.logo}>Jleo</div>
+        <div className={styles.logo}>
+          <Link href='/'>
+            <a>Jleo</a>
+          </Link>
+        </div>
         <nav className={styles.nav}>
           <li className={styles.navLi}>
             <Link href='/about'>
