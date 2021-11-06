@@ -10,7 +10,7 @@ import Link from 'next/link';
 const header = {
   initial: {
     opacity: 0,
-    y: -180,
+    y: 280,
   },
   animate: {
     opacity: 1,
@@ -18,7 +18,7 @@ const header = {
     transition: {
       ease: 'easeInOut',
       duration: 1,
-      delay: 0.6,
+      delay: 1.6,
     },
   },
 };
