@@ -27,8 +27,10 @@ export default function Home() {
           }}
         />
       </div>
-      <PageContainer variant={Variant.NORMAL} noFlex>
-        <SoftSkills />
+      <PageContainer variant={Variant.NORMAL} noFlex={false}>
+        <div className='w-full'>
+          <SoftSkills />
+        </div>
       </PageContainer>
       <PageContainer variant={Variant.NORMAL} noFlex={false}>
         <TechnicalSkills />
