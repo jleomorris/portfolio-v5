@@ -10,7 +10,7 @@ import Link from 'next/link';
 const header = {
   initial: {
     opacity: 0,
-    y: -180,
+    y: 280,
   },
   animate: {
     opacity: 1,
@@ -18,7 +18,7 @@ const header = {
     transition: {
       ease: 'easeInOut',
       duration: 1,
-      delay: 0.6,
+      delay: 1.6,
     },
   },
 };
@@ -32,7 +32,11 @@ const Header = () => {
       animate='animate'
     >
       <div className={styles.headerInner}>
-        <div className={styles.logo}>Jleo</div>
+        <div className={styles.logo}>
+          <Link href='/'>
+            <a>Jleo</a>
+          </Link>
+        </div>
         <nav className={styles.nav}>
           <li className={styles.navLi}>
             <Link href='/about'>

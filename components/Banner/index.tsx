@@ -114,7 +114,7 @@ const AnimatedLetters = ({ title, disabled }) => (
 
 const BannerRowTop = ({ title }) => {
   return (
-    <div className={bannerStyles.bannerRow}>
+    <div className={`${bannerStyles.bannerRow} pl-96`}>
       <div className={bannerStyles['row-col']}>
         <AnimatedLetters title={title} />
       </div>
