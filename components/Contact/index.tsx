@@ -8,7 +8,7 @@ const Contact = () => {
     <PageContainer variant={pageVariant.NORMAL} noFlex={false}>
       <div className='contact'>
         <h1 className='font-vesterbroPoster text-8xl'>Let's work together</h1>
-        <div className='w-80 h-20 mt-10 mx-auto'>
+        <div className='h-20 mx-auto mt-10 w-80'>
           <Button
             type='button'
             variant={buttonVariant.BLACK_OUTLINE}
@@ -16,7 +16,7 @@ const Contact = () => {
           >
             <Link href='/contact'>
               <a className='block mx-auto'>
-                <span className='uppercase font-sans tracking-wider'>
+                <span className='font-sans tracking-wider uppercase'>
                   Say hello
                 </span>
               </a>
