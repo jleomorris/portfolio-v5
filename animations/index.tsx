@@ -162,7 +162,6 @@ export const aboutRotation = {
     transition: {
       ease: [0.6, 0.01, -0.05, 0.95],
       duration: 1,
-      delay: 0.25,
     },
   },
   enter: {

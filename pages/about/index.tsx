@@ -1,6 +1,6 @@
 // Components
 import PageContainer, { Variant } from '../../components/PageContainer';
-import Image from 'next/image';
+import AboutSection from '../../components/AboutSection';
 
 const aboutData = [
   {
@@ -44,45 +44,16 @@ const About = () => {
   return (
     <div className='about'>
       <PageContainer variant={Variant.TIGHT} noFlex={false}>
-        <div className='flex flex-col justify-center items-start h-full w-full'>
-          <p className='font-sans uppercase mb-10 font-bold'>About</p>
-          <h1 className='font-vesterbroPoster text-8xl lg:text-9xl font-extrabold 2xl:w-2/3'>
+        <div className='flex flex-col items-start justify-center w-full h-full'>
+          <p className='mb-10 font-sans font-bold uppercase'>About</p>
+          <h1 className='font-extrabold font-vesterbroPoster text-8xl lg:text-9xl 2xl:w-2/3'>
             I'm a problem solver, designer and technology addict
           </h1>
         </div>
       </PageContainer>
       {aboutData.map((about, index) => (
         <PageContainer key={about.title} variant={Variant.TIGHT} noFlex={false}>
-          <section
-            className={` flex flex-col lg:flex-row items-center ${
-              index % 2 === 0 ? '' : 'lg:flex-row-reverse'
-            }`}
-          >
-            <div
-              className={`mt-20 lg:mt-0 order-1 lg:order-none lg:w-1/2 flex flex-col justify-center ${
-                index % 2 === 0 ? 'lg:mr-20' : 'lg:ml-20'
-              }`}
-            >
-              <h2 className='font-vesterbroPoster font-extrabold text-6xl sm:text-8xl mb-10'>
-                {about.title}
-              </h2>
-              {about.content.map((content, index) => (
-                <p key={index} className='mb-5 text-3xl font-sans'>
-                  {content}
-                </p>
-              ))}
-            </div>
-            <div className='lg:w-1/2 flex justify-center items-center'>
-              <div className='relative w-120 sm:w-220 lg:w-240 h-120 sm:h-220 lg:h-240'>
-                <Image
-                  layout='fill'
-                  objectFit='contain'
-                  src={about.imgURL}
-                  alt='skill'
-                />
-              </div>
-            </div>
-          </section>
+          <AboutSection about={about} index={index} />
         </PageContainer>
       ))}
     </div>
