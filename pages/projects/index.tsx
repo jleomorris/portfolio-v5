@@ -6,12 +6,43 @@ import { useEffect } from 'react';
 const projectData = [
   {
     subTitle: 'LDR Generator',
-    title: 'Some Love Death & Robot Randomness',
+    title: 'Some Love Death & Robots Randomness',
     backgroundColor: '#D62742',
     textColor: 'text-white',
     imgURL:
-      // 'https://res.cloudinary.com/jleomorris/image/upload/v1636303594/Portfolio-v5/Projects/LDR.png',
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636320699/Portfolio-v5/Projects/kharnivore.jpg',
+  },
+  {
+    subTitle: 'Poke Price',
+    title: 'Get the prices of your childhood favourites',
+    backgroundColor: '##ffc301',
+    textColor: 'text-black',
+    imgURL:
+      'https://res.cloudinary.com/jleomorris/image/upload/v1636328176/Portfolio-v5/Projects/Charizard.png',
+  },
+  {
+    subTitle: 'Modern Pokedex',
+    title: 'A Modern Twist On The First Gen Pokedex',
+    backgroundColor: '#27c2d6',
+    textColor: 'text-black',
+    imgURL:
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636324383/Portfolio-v5/Projects/gyarados.png',
+  },
+  {
+    subTitle: 'Last Life',
+    title: 'Get The Latest News On Your Favourite Games',
+    backgroundColor: '#0C0E14',
+    textColor: 'text-white',
+    imgURL:
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636325505/Portfolio-v5/Projects/jin_sakai.png',
+  },
+  {
+    subTitle: 'Bolt Music Player',
+    title: 'Code to some chill tracks',
+    backgroundColor: '#5C6285',
+    textColor: 'text-white',
+    imgURL:
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636326862/Portfolio-v5/Projects/bolt.png',
   },
 ];
 
@@ -44,7 +75,7 @@ const Projects = () => {
           // bgColor='bg-white'
         >
           <div
-            className={`${project.textColor} flex flex-col justify-center border`}
+            className={`${project.textColor} flex flex-col justify-start border`}
           >
             <p className='mb-20 font-sans font-bold uppercase'>
               {project.subTitle}
@@ -53,7 +84,7 @@ const Projects = () => {
               <h1 className='relative z-50 font-extrabold 2xl:2/3 font-vesterbroPoster text-7xl lg:text-8xl'>
                 {project.title}
               </h1>
-              <div className='absolute z-0 border border-black left-2/3 -inset-y-7 w-180'>
+              <div className='absolute z-0 border border-black left-9/10 -inset-y-64 w-180'>
                 <Image
                   src={project.imgURL}
                   layout='responsive'
@@ -61,6 +92,7 @@ const Projects = () => {
                   height='100%'
                   objectFit='contain'
                   alt='project'
+                  className='border border-blue-600'
                 />
               </div>
             </div>
