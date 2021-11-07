@@ -24,6 +24,14 @@ module.exports = {
         ],
       },
       spacing: {
+        1.5: '0.6rem',
+        2.5: '1rem',
+        3.5: '1.4rem',
+        4.5: '1.8rem',
+        7: '2.8rem',
+        9: '3.6rem',
+        14: '5.6rem',
+        15: '6rem',
         112: '28rem',
         120: '30rem',
         160: '40rem',
@@ -31,6 +39,10 @@ module.exports = {
         200: '50rem',
         220: '55rem',
         240: '60rem',
+        '6/25': '2.5rem',
+        '7/50': '3rem',
+        '8/50': '3.5rem',
+        '12/25': '5rem',
       },
       width: {
         '30%': '30%',
@@ -43,6 +55,7 @@ module.exports = {
     backgroundColor: (theme) => ({
       ...theme('colors'),
       blackLighter: '#1A1A1A',
+      hoverShadow: '#00000017',
     }),
     gradientColorStops: (theme) => ({
       ...theme('colors'),

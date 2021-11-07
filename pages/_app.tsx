@@ -12,7 +12,7 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Loader from '../components/Loader';
 import Header from '../components/Header';
-import Banner from '../components/Banner';
+import Contact from '../components/Contact';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(true);
@@ -39,6 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <>
               <Header />
               <Component {...pageProps} />
+              <Contact />
               <Footer />
             </>
           )}
