@@ -81,7 +81,7 @@ const Projects = () => {
               {project.subTitle}
             </p>
             <div className='relative w-1/2 border'>
-              <h1 className='relative z-50 font-extrabold 2xl:2/3 font-vesterbroPoster text-7xl lg:text-8xl'>
+              <h1 className='relative z-50 font-extrabold lg:leading-32 2xl:2/3 font-vesterbroPoster text-7xl lg:text-8xl'>
                 {project.title}
               </h1>
               <div className='absolute z-0 border border-black left-9/10 -inset-y-64 w-180'>

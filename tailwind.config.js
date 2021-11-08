@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  important: true,
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -22,6 +23,9 @@ module.exports = {
           'Helvetica Neue',
           'sans-serif',
         ],
+      },
+      lineHeight: {
+        32: '8rem',
       },
       spacing: {
         1.5: '0.6rem',
