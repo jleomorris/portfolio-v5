@@ -103,7 +103,7 @@ const AnimatedLetters = ({ title, disabled }) => (
   >
     {[...title].map((letter) => (
       <motion.span
-        className={`${bannerStyles.rowLetter} text-sm`}
+        className={`${bannerStyles.rowLetter}`}
         variants={letterAnimation}
       >
         {letter}
