@@ -47,26 +47,21 @@ const projectData = [
 ];
 
 const Projects = () => {
+  // Set bg color based on first project
   useEffect(() => {
-    setIntitialBackgroundColor();
+    const targetColor = projectData[0].backgroundColor;
+    setBackgroundColor(targetColor);
+    return () => {
+      setBackgroundColor('#f2c744');
+    };
   }, []);
 
-  const setIntitialBackgroundColor = () => {
-    const targetColor = projectData[0].backgroundColor;
-    document.body.style.backgroundColor = targetColor;
+  const setBackgroundColor = (color: string) => {
+    document.body.style.backgroundColor = color;
   };
 
   return (
     <div className='projects'>
-      {/* <PageContainer variant={Variant.TIGHT} noFlex={false}>
-        <div className='flex flex-col items-start justify-center w-full h-full'>
-          <p className='mb-20 font-sans font-bold uppercase'>About</p>
-          <h1 className='font-extrabold font-vesterbroPoster text-7xl lg:text-8xl 2xl:w-2/3'>
-            I'm a problem solver, designer and technology addict
-          </h1>
-          <p className='mt-10 font-sans font-bold uppercase'>View case study</p>
-        </div>
-      </PageContainer> */}
       {projectData.map((project, index) => (
         <PageContainer
           key={project.subTitle}
