@@ -1,7 +1,8 @@
-// Components
-import PageContainer, { Variant } from '../../components/PageContainer';
-import Image from 'next/image';
 import { useEffect } from 'react';
+// Components
+import ProjectSection from '../../components/ProjectSection';
+// Utils
+import { setBackgroundColor } from '../../utils';
 
 const projectData = [
   {
@@ -15,7 +16,7 @@ const projectData = [
   {
     subTitle: 'Poke Price',
     title: 'Get the prices of your childhood favourites',
-    backgroundColor: '##ffc301',
+    backgroundColor: '#ffc301',
     textColor: 'text-black',
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/v1636328176/Portfolio-v5/Projects/Charizard.png',
@@ -31,7 +32,7 @@ const projectData = [
   {
     subTitle: 'Last Life',
     title: 'Get The Latest News On Your Favourite Games',
-    backgroundColor: '#0C0E14',
+    backgroundColor: '#1e2438',
     textColor: 'text-white',
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636325505/Portfolio-v5/Projects/jin_sakai.png',
@@ -56,46 +57,10 @@ const Projects = () => {
     };
   }, []);
 
-  const setBackgroundColor = (color: string) => {
-    document.body.style.backgroundColor = color;
-  };
-
   return (
     <div className='projects'>
       {projectData.map((project, index) => (
-        <PageContainer
-          key={project.subTitle}
-          variant={Variant.TIGHT}
-          noFlex={false}
-          // bgColor='bg-white'
-        >
-          <div
-            className={`${project.textColor} flex flex-col justify-start border`}
-          >
-            <p className='mb-20 font-sans font-bold uppercase'>
-              {project.subTitle}
-            </p>
-            <div className='relative w-1/2 border'>
-              <h1 className='relative z-50 font-extrabold lg:leading-32 2xl:2/3 font-vesterbroPoster text-7xl lg:text-8xl'>
-                {project.title}
-              </h1>
-              <div className='absolute z-0 border border-black left-9/10 -inset-y-64 w-180'>
-                <Image
-                  src={project.imgURL}
-                  layout='responsive'
-                  width='100%'
-                  height='100%'
-                  objectFit='contain'
-                  alt='project'
-                  className='border border-blue-600'
-                />
-              </div>
-            </div>
-            <p className='mt-10 font-sans font-bold uppercase'>
-              View case study
-            </p>
-          </div>
-        </PageContainer>
+        <ProjectSection project={project} index={index} />
       ))}
     </div>
   );
