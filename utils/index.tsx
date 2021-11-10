@@ -13,3 +13,8 @@ export const joinClassNames = (
 ): string => {
   return classes.filter(Boolean).join(' ');
 };
+
+export const setBackgroundColor = (color: string) => {
+  document.body.style.backgroundColor = color;
+  console.log(`background color changed to ${color}`);
+};
