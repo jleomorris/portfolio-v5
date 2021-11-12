@@ -16,7 +16,7 @@ const projectData = [
   {
     subTitle: 'Poke Price',
     title: 'Get the prices of your childhood favourites',
-    backgroundColor: '#ffc301',
+    backgroundColor: '#dfc684',
     textColor: 'text-black',
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/v1636328176/Portfolio-v5/Projects/Charizard.png',
@@ -24,7 +24,7 @@ const projectData = [
   {
     subTitle: 'Modern Pokedex',
     title: 'A Modern Twist On The First Gen Pokedex',
-    backgroundColor: '#27c2d6',
+    backgroundColor: '#8ea4df',
     textColor: 'text-black',
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636324383/Portfolio-v5/Projects/gyarados.png',
