@@ -1,5 +1,7 @@
 // Hooks
 import { useInView } from 'react-intersection-observer';
+// Animation
+import { motion } from 'framer-motion';
 // Components
 import PageContainer, { Variant } from '../../components/PageContainer';
 import Image from 'next/image';
@@ -19,6 +21,21 @@ interface project {
   textColor: string;
   imgURL: string;
 }
+
+const imageVariants = {
+  initial: {
+    scale: 1,
+  },
+  whileHover: {
+    scale: 1.05,
+    transition: {
+      type: 'spring',
+      ease: 'easeInOut',
+      bounce: 0.7,
+      duration: 2,
+    },
+  },
+};
 
 const ProjectSection: React.FC<IProps> = ({ project, index }) => {
   const [ref, inView] = useInView({
@@ -56,7 +73,12 @@ const ProjectSection: React.FC<IProps> = ({ project, index }) => {
           <h1 className='relative z-50 font-extrabold lg:leading-32 2xl:2/3 font-vesterbroPoster text-7xl lg:text-8xl'>
             {project.title}
           </h1>
-          <div className='absolute z-0 border border-black left-9/10 -inset-y-64 w-180'>
+          <motion.div
+            className='absolute z-0 border border-black left-9/10 -inset-y-64 w-180'
+            variants={imageVariants}
+            initial='initial'
+            whileHover='whileHover'
+          >
             <Image
               src={project.imgURL}
               layout='responsive'
@@ -66,7 +88,7 @@ const ProjectSection: React.FC<IProps> = ({ project, index }) => {
               alt='project'
               className='border border-blue-600'
             />
-          </div>
+          </motion.div>
         </div>
         <p className='mt-10 font-sans font-bold uppercase'>View case study</p>
       </div>
