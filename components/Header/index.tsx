@@ -26,7 +26,7 @@ const header = {
 const Header = () => {
   return (
     <motion.div
-      className={styles.header}
+      className={`header absolute w-full z-50 ${styles.header}`}
       variants={header}
       initial='initial'
       animate='animate'

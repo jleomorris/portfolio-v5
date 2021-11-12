@@ -15,7 +15,7 @@ import Banner from '../components/Banner';
 
 export default function Home() {
   return (
-    <div className='home'>
+    <div className='home pt-nav'>
       <Banner />
       <div className={`${bannerStyles['transitionImage--final']}`}>
         <motion.img
