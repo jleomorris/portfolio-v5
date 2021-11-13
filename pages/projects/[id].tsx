@@ -1,16 +1,20 @@
-import Head from 'next/head';
-import Link from 'next/link';
-// import Layout from '../../components/layout';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { getProjectData, getAllProjectIds } from '../../lib/projects';
+// Components
+import ProjectHeader from '../../components/ProjectHeader';
+import Head from 'next/head';
+import Link from 'next/link';
 
 interface IProps {
   projectData: {
+    link: string;
     subTitle: string;
     title: string;
     backgroundColor: string;
     textColor: string;
-    imgUrl: string;
+    headerTextColor: string;
+    headerImgURL: string;
+    sectionImgURL: string;
   };
 }
 
@@ -22,7 +26,7 @@ const Project: React.FC<IProps> = ({ projectData }) => {
       <Head>
         <title>{`Portfolio | ${projectData.subTitle}`}</title>
       </Head>
-      <p>Project: {projectData.subTitle}</p>
+      <ProjectHeader project={projectData} />
     </>
   );
 };
