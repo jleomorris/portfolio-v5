@@ -154,14 +154,17 @@ export const fadeRight = {
 export const aboutRotation = {
   hidden: {
     rotate: 5,
-    y: 100,
+    y: 150,
   },
   show: {
     rotate: 0,
     y: 0,
     transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 1,
+      // ease: [0.6, 0.01, -0.05, 0.95],
+      type: 'spring',
+      bounce: 0.6,
+      ease: 'easeOut',
+      duration: 0.75,
     },
   },
   enter: {
