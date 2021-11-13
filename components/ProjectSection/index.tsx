@@ -2,12 +2,13 @@
 import { useInView } from 'react-intersection-observer';
 // Animation
 import { motion } from 'framer-motion';
+// Utils
+import { setBackgroundColor } from '../../utils';
 // Components
 import PageContainer, { Variant } from '../../components/PageContainer';
 import Image from 'next/image';
 import { useEffect } from 'react';
-// Utils
-import { setBackgroundColor } from '../../utils';
+import Link from 'next/link';
 
 interface IProps {
   project: project;
@@ -15,11 +16,14 @@ interface IProps {
 }
 
 interface project {
+  link: string;
   subTitle: string;
   title: string;
   backgroundColor: string;
   textColor: string;
-  imgURL: string;
+  headerTextColor: string;
+  headerImgURL: string;
+  sectionImgURL: string;
 }
 
 const imageVariants = {
@@ -66,7 +70,7 @@ const ProjectSection: React.FC<IProps> = ({ project, index }) => {
         ref={ref}
         className={`${project.textColor} flex flex-col justify-start border`}
       >
-        <p className='mb-20 font-sans font-bold uppercase'>
+        <p className='mb-20 font-sans font-bold tracking-widest uppercase'>
           {project.subTitle}
         </p>
         <div className='relative w-1/2 border'>
@@ -80,7 +84,7 @@ const ProjectSection: React.FC<IProps> = ({ project, index }) => {
             whileHover='whileHover'
           >
             <Image
-              src={project.imgURL}
+              src={project.sectionImgURL}
               layout='responsive'
               width='100%'
               height='100%'
@@ -90,7 +94,11 @@ const ProjectSection: React.FC<IProps> = ({ project, index }) => {
             />
           </motion.div>
         </div>
-        <p className='mt-10 font-sans font-bold uppercase'>View case study</p>
+        <Link href={`/projects/${project.link}`}>
+          <a className='mt-10 font-sans text-xl font-bold tracking-widest uppercase'>
+            View case study
+          </a>
+        </Link>
       </div>
     </PageContainer>
   );
