@@ -9,6 +9,7 @@ interface IProps {
   variant: Variant;
   noFlex: boolean;
   backgroundImgURL?: string;
+  noFullHeight?: boolean;
 }
 
 export enum Variant {
@@ -27,11 +28,14 @@ const PageContainer: React.FC<IProps> = ({
   variant,
   noFlex,
   backgroundImgURL,
+  noFullHeight,
 }) => {
   return (
     <div
       className={joinClassNames(
-        `page-container relative min-h-screen border border-purple-900 ${
+        `page-container relative ${
+          noFullHeight ? '' : 'min-h-screen'
+        } border border-purple-900 ${
           noFlex ? '' : 'flex flex-col justify-center items-center'
         }`,
         VARIANT_MAPS[variant],
