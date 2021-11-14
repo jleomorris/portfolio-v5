@@ -1,21 +1,15 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { getProjectData, getAllProjectIds } from '../../lib/projects';
+// Types
+import { project } from '../../types';
 // Components
 import ProjectHeader from '../../components/ProjectHeader';
 import Head from 'next/head';
 import Link from 'next/link';
+import ProjectDescription from '../../components/ProjectDescription';
 
 interface IProps {
-  projectData: {
-    link: string;
-    subTitle: string;
-    title: string;
-    backgroundColor: string;
-    textColor: string;
-    headerTextColor: string;
-    headerImgURL: string;
-    sectionImgURL: string;
-  };
+  projectData: project;
 }
 
 const Project: React.FC<IProps> = ({ projectData }) => {
@@ -27,6 +21,7 @@ const Project: React.FC<IProps> = ({ projectData }) => {
         <title>{`Portfolio | ${projectData.subTitle}`}</title>
       </Head>
       <ProjectHeader project={projectData} />
+      <ProjectDescription project={projectData} />
     </>
   );
 };
