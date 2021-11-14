@@ -4,6 +4,8 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 // Utils
 import { setBackgroundColor } from '../../utils';
+// Types
+import { project } from '../../types';
 // Components
 import PageContainer, { Variant } from '../../components/PageContainer';
 import Image from 'next/image';
@@ -13,17 +15,6 @@ import Link from 'next/link';
 interface IProps {
   project: project;
   index: number;
-}
-
-interface project {
-  link: string;
-  subTitle: string;
-  title: string;
-  backgroundColor: string;
-  textColor: string;
-  headerTextColor: string;
-  headerImgURL: string;
-  sectionImgURL: string;
 }
 
 const imageVariants = {

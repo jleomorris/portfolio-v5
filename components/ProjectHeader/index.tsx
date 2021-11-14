@@ -2,25 +2,17 @@
 import { useInView } from 'react-intersection-observer';
 // Animation
 import { motion } from 'framer-motion';
+// Utils
+import { setBackgroundColor } from '../../utils';
+// Types
+import { project } from '../../types';
 // Components
 import PageContainer, { Variant } from '../../components/PageContainer';
 import Image from 'next/image';
 import { useEffect } from 'react';
-// Utils
-import { setBackgroundColor } from '../../utils';
 
 interface IProps {
   project: project;
-}
-
-interface project {
-  subTitle: string;
-  title: string;
-  backgroundColor: string;
-  textColor: string;
-  headerTextColor: string;
-  headerImgURL: string;
-  sectionImgURL: string;
 }
 
 const imageVariants = {
@@ -72,24 +64,7 @@ const ProjectHeader: React.FC<IProps> = ({ project }) => {
           <h1 className='relative z-50 font-extrabold lg:leading-32 2xl:2/3 font-vesterbroPoster text-7xl lg:text-8xl'>
             {project.title}
           </h1>
-          {/* <motion.div
-            className='absolute z-0 border border-black left-9/10 -inset-y-64 w-180'
-            variants={imageVariants}
-            initial='initial'
-            whileHover='whileHover'
-          >
-            <Image
-              src={project.imgURL}
-              layout='responsive'
-              width='100%'
-              height='100%'
-              objectFit='contain'
-              alt='project'
-              className='border border-blue-600'
-            />
-          </motion.div> */}
         </div>
-        {/* <p className='mt-10 font-sans font-bold uppercase'>View case study</p> */}
       </div>
     </PageContainer>
   );
