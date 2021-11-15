@@ -7,6 +7,7 @@ import ProjectHeader from '../../components/ProjectHeader';
 import Head from 'next/head';
 import Link from 'next/link';
 import ProjectDescription from '../../components/ProjectDescription';
+import ProjectChallenge from '../../components/ProjectChallenge';
 
 interface IProps {
   projectData: project;
@@ -22,6 +23,7 @@ const Project: React.FC<IProps> = ({ projectData }) => {
       </Head>
       <ProjectHeader project={projectData} />
       <ProjectDescription project={projectData} />
+      <ProjectChallenge project={projectData} />
     </>
   );
 };

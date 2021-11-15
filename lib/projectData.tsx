@@ -4,6 +4,14 @@ export const projectData = [
     description:
       'Love Death and Robots is an American adult animated anthology series on Netflix. There are 18 episodes in the first season and this random episode generator app allows for random selection of one. You can roll for a random episode, or sort and select from all episodes.',
     subTitle: 'LDR Generator',
+    challenge: {
+      title: 'A clean simple tool',
+      description: [
+        'Ever since watching the series I wanted to created a little functional tool where the unique slot animations from the series could be expressed, as well as the typography and style.',
+        'I wanted those with little time to be able to filter by rating, name and duration to ensure they could identify episodes quickly',
+        ,
+      ],
+    },
     title: 'Some Love Death & Robots Randomness',
     backgroundColor: '#D62742',
     textColor: 'text-white',
@@ -28,6 +36,13 @@ export const projectData = [
     description:
       'Over the last two years the Pokemon card market has boomed and the worth of some cards has increased significantly. You can use this app to check the worth of your raw cards to see if you might have a surprise collection worth hundreds of dollars!',
     subTitle: 'Poke Price',
+    challenge: {
+      title: 'Easy to use with clean UI',
+      description: [
+        'For those who collect Pokemon cards I wanted to create a tool that they could use to price their raw cards. This tool had to have a clean user interface, useful features like search via name and set and had to display prices clearly.',
+        ,
+      ],
+    },
     title: 'Get the prices of your childhood favourites',
     backgroundColor: '#dfc684',
     textColor: 'text-black',
@@ -52,6 +67,13 @@ export const projectData = [
     description:
       'The original 151 Pokemon hold a special place in many peoples hearts, including my own. With this app you can view every related detail of each of them - users can view sprites & pokemon data, filter by type/max stat and search by name.',
     subTitle: 'Modern Pokedex',
+    challenge: {
+      title: 'Modern look, rich with details',
+      description: [
+        'After seeing examples of some simplistic pokedex apps I wanted to create my own that surpassed them. I wanted the tool to have a vast amount of data relating to the first 151 Pokemon of gen1, and a clean, modern look',
+        ,
+      ],
+    },
     title: 'A Modern Twist On The First Gen Pokedex',
     backgroundColor: '#8ea4df',
     textColor: 'text-black',
@@ -76,6 +98,13 @@ export const projectData = [
     description:
       "It's always nice to stay on top of the most popular games and with this app you can. Users can view popular/new/upcoming games and search for a game by name. Card size(S/M/L) and the amount of games viewable for each section can also be adjusted.",
     subTitle: 'Last Life',
+    challenge: {
+      title: 'Clean look, easy to use',
+      description: [
+        'I wanted to create a tool that would allow a user to customise what news they see for the games they like, whether that be popular, new or upcoming. I also wanted users to be able to search by name to locate results.',
+        ,
+      ],
+    },
     title: 'Get The Latest News On Your Favourite Games',
     backgroundColor: '#1e2438',
     textColor: 'text-white',
@@ -100,6 +129,13 @@ export const projectData = [
     description:
       'Nothing beats carrying out some development whilst listening to your favourite tracks. With this music player app you can - users can play a song from the library, sort via artist and title and enable dark mode.',
     subTitle: 'Bolt Music Player',
+    challenge: {
+      title: 'Easy access to modern tracks',
+      description: [
+        'The aim of this project was to create a free, easy to use tool that would allow users quick access to some modern tracks, to listen to while on the move.',
+        ,
+      ],
+    },
     title: 'Code to some chill tracks',
     backgroundColor: '#5C6285',
     textColor: 'text-white',
