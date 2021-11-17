@@ -47,6 +47,17 @@ const ProjectChallenge: React.FC<IProps> = ({ project }) => {
           </div>
         </div>
       </div>
+      <div className='relative w-screen h-screen mt-48 overflow-hidden border border-red-900'>
+        <Image
+          src={project.headerImgURL}
+          layout='responsive'
+          alt='main'
+          height='100%'
+          width='100%'
+          objectFit='contain'
+          objectPosition='top'
+        />
+      </div>
     </PageContainer>
   );
 };
