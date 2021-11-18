@@ -72,9 +72,9 @@ export const projectData = [
     textColor: 'text-black',
     headerTextColor: 'text-white',
     headerImgURL:
-      'https://res.cloudinary.com/jleomorris/image/upload/v1633172502/Pokemon-tcg-price-guide/home-background.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1633172502/Pokemon-tcg-price-guide/home-background.jpg',
     sectionImgURL:
-      'https://res.cloudinary.com/jleomorris/image/upload/v1636328176/Portfolio-v5/Projects/Charizard.png',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636328176/Portfolio-v5/Projects/Charizard.png',
     links: [
       {
         title: 'Github',
@@ -92,7 +92,7 @@ export const projectData = [
           "Search by card name or set to find the card you're looking for. Previous searches are also stored to make it easier to find a past result.",
         ],
         imgURL:
-          'https://res.cloudinary.com/jleomorris/image/upload/v1637277998/Portfolio-v5/Projects/poke-price/search-options-history.jpg',
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637277998/Portfolio-v5/Projects/poke-price/search-options-history.jpg',
       },
       {
         title: 'Varied price data',
@@ -194,7 +194,7 @@ export const projectData = [
     textColor: 'text-white',
     headerTextColor: 'text-white',
     headerImgURL:
-      'https://res.cloudinary.com/jleomorris/image/upload/v1636772097/Portfolio-v5/Projects/last-life/header-background.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636772097/Portfolio-v5/Projects/last-life/header-background.jpg',
     sectionImgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636325505/Portfolio-v5/Projects/jin_sakai.png',
     links: [
@@ -205,6 +205,30 @@ export const projectData = [
       {
         title: 'Demo',
         href: 'https://jleomorris.github.io/last-life',
+      },
+    ],
+    features: [
+      {
+        title: 'Variety of game types',
+        description: ['View popular, new, upcoming games, and search by name'],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637278930/Portfolio-v5/Projects/last-life/types.jpg',
+      },
+      {
+        title: 'Extensive details',
+        description: [
+          'View Metacritic rating, URLs, tags, description, platforms, screenshots, video for any game',
+        ],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637278931/Portfolio-v5/Projects/last-life/details.jpg',
+      },
+      {
+        title: 'RAWG API',
+        description: [
+          'Data pulled from the same comprehensive REST API used for Discord',
+        ],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637279183/Portfolio-v5/Projects/last-life/rawg.jpg',
       },
     ],
   },
