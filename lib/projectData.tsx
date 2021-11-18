@@ -68,7 +68,7 @@ export const projectData = [
       ],
     },
     title: 'Get the prices of your childhood favourites',
-    backgroundColor: '#dfc684',
+    backgroundColor: '#dfa63e',
     textColor: 'text-black',
     headerTextColor: 'text-white',
     headerImgURL:
@@ -83,6 +83,32 @@ export const projectData = [
       {
         title: 'Demo',
         href: 'https://poke-price.vercel.app/',
+      },
+    ],
+    features: [
+      {
+        title: 'Search options & history',
+        description: [
+          "Search by card name or set to find the card you're looking for. Previous searches are also stored to make it easier to find a past result.",
+        ],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/v1637277998/Portfolio-v5/Projects/poke-price/search-options-history.jpg',
+      },
+      {
+        title: 'Varied price data',
+        description: [
+          'View market, low, mid and high prices - all from TCGPlayer.',
+        ],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/v1637277803/Portfolio-v5/Projects/poke-price/price-data.jpg',
+      },
+      {
+        title: 'PokemonTCG API',
+        description: [
+          'Developed using one of the most comprehensive datasets for Pokemon cards - PokemonTCG API.',
+        ],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/v1637277673/Portfolio-v5/Projects/poke-price/pokemontcg.jpg',
       },
     ],
   },
