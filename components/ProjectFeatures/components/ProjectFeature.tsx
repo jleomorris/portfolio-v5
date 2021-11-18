@@ -40,13 +40,13 @@ const ProjectFeature: React.FC<IProps> = ({ feature }) => {
         <div
           className={`project-feature text-black flex flex-col justify-start w-full`}
         >
-          <p className='mb-20 font-sans text-2xl font-semibold tracking-widest uppercase'>
+          <p className='mb-20 font-sans text-xl text-2xl font-semibold tracking-widest uppercase'>
             {feature.title}
           </p>
           <div className='flex flex-wrap items-start justify-between'>
             <div className='w-full mb-10 md:mb-0 '>
               {feature.description.map((item) => (
-                <p className='font-bold text-7xl font-vesterbroPoster'>
+                <p className='text-5xl font-bold sm:text-7xl font-vesterbroPoster'>
                   {item}
                 </p>
               ))}
@@ -59,14 +59,14 @@ const ProjectFeature: React.FC<IProps> = ({ feature }) => {
         animate={controls2}
         elRef={element2}
       >
-        <div className='relative w-full mt-48 mb-20 overflow-hidden border border-red-900 rounded-3xl h-260'>
+        <div className='relative w-full mt-32 mb-20 overflow-hidden border border-red-900 sm:mt-48 h-52 rounded-3xl md:h-120 xl:h-160 2xl:h-220'>
           <Image
             src={feature.imgURL}
-            layout='responsive'
+            layout='fill'
             alt='main'
             height='100%'
             width='100%'
-            objectFit='contain'
+            objectFit='cover'
             objectPosition='top'
           />
         </div>

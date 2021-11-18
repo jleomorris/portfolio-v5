@@ -92,6 +92,40 @@ export const projectData = [
         href: 'https://jleomorris.github.io/modern-pokedex',
       },
     ],
+    features: [
+      {
+        title: 'Filters',
+        description: [
+          '3 different filters have been added to aid in quickly identifying specific Pokemon.',
+        ],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637201358/Portfolio-v5/Projects/modern-pokedex/filters.jpg',
+      },
+      {
+        title: 'Custom Sprite Options',
+        description: [
+          'Choose between 7 different sprite views - from official to 3D.',
+        ],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637272356/Portfolio-v5/Projects/modern-pokedex/sprites.jpg',
+      },
+      {
+        title: 'Extensive Details',
+        description: [
+          "View a Pokemon' stats, abilities, damage type, where to find, evolution chart and more.",
+        ],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637272956/Portfolio-v5/Projects/modern-pokedex/details.jpg',
+      },
+      {
+        title: 'PokeAPI',
+        description: [
+          'Data pulled from one of the largest and most reliable Pokemon REST API.',
+        ],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637273079/Portfolio-v5/Projects/modern-pokedex/poke-api.jpg',
+      },
+    ],
   },
   {
     link: 'Last_Life',

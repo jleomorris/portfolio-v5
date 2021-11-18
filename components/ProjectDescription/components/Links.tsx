@@ -36,7 +36,7 @@ const Links: React.FC<IProps> = ({ project }) => {
               variants={imageVariants}
               whileHover='whileHover'
               initial='initial'
-              className='font-sans text-2xl font-semibold tracking-widest uppercase cursor-pointer '
+              className='font-sans text-2xl font-semibold tracking-widest uppercase cursor-pointer'
             >
               <FontAwesomeIcon
                 icon={faExternalLinkAlt}

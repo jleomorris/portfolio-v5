@@ -164,7 +164,7 @@ export const aboutRotation = {
       type: 'spring',
       bounce: 0.6,
       ease: 'easeOut',
-      duration: 0.75,
+      duration: 1,
     },
   },
   enter: {
