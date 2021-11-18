@@ -8,7 +8,7 @@ export const projectData = [
       title: 'A clean simple tool',
       description: [
         'Ever since watching the series I wanted to created a little functional tool where the unique slot animations from the series could be expressed, as well as the typography and style.',
-        'I wanted those with little time to be able to filter by rating, name and duration to ensure they could identify episodes quickly',
+        'I wanted those with little time to be able to filter by rating, name and duration to ensure they could identify episodes quickly.',
         ,
       ],
     },
@@ -28,6 +28,30 @@ export const projectData = [
       {
         title: 'Demo',
         href: 'https://love-death-robots-slots.herokuapp.com/',
+      },
+    ],
+    features: [
+      {
+        title: 'Randomness',
+        description: ['Roll for a random episode from all 18 of season 1.'],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637275032/Portfolio-v5/Projects/LDR/random.jpg',
+      },
+      {
+        title: 'Slot animation',
+        description: [
+          'The classic slot animation from the series is used throughout the app to mimic a similar feel.',
+        ],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637274690/Portfolio-v5/Projects/LDR/slots.jpg',
+      },
+      {
+        title: 'Filters',
+        description: [
+          'Sort episodes by number, rating or duration to quickly identify an episode.',
+        ],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637274416/Portfolio-v5/Projects/LDR/filters.jpg',
       },
     ],
   },
@@ -94,20 +118,20 @@ export const projectData = [
     ],
     features: [
       {
-        title: 'Filters',
-        description: [
-          '3 different filters have been added to aid in quickly identifying specific Pokemon.',
-        ],
-        imgURL:
-          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637201358/Portfolio-v5/Projects/modern-pokedex/filters.jpg',
-      },
-      {
         title: 'Custom Sprite Options',
         description: [
           'Choose between 7 different sprite views - from official to 3D.',
         ],
         imgURL:
           'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637272356/Portfolio-v5/Projects/modern-pokedex/sprites.jpg',
+      },
+      {
+        title: 'Filters',
+        description: [
+          '3 different filters have been added to aid in quickly identifying specific Pokemon.',
+        ],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637201358/Portfolio-v5/Projects/modern-pokedex/filters.jpg',
       },
       {
         title: 'Extensive Details',
