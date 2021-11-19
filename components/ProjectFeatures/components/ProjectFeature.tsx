@@ -1,11 +1,11 @@
 // Hooks
-import { useInView } from 'react-intersection-observer';
+import InView, { useInView } from 'react-intersection-observer';
 // Animation
 import { motion } from 'framer-motion';
 // Utils
 import { setBackgroundColor } from '../../../utils';
 // Types
-import { Feature } from '../../../types';
+import { Feature, project } from '../../../types';
 // Components
 import PageContainer, { Variant } from '../../../components/PageContainer';
 import Image from 'next/image';
@@ -17,10 +17,12 @@ import ScrollAnimationChild, {
 import { useScroll } from '../../../hooks/useScroll';
 
 interface IProps {
+  project: project;
   feature: Feature;
+  inView: boolean;
 }
 
-const ProjectFeature: React.FC<IProps> = ({ feature }) => {
+const ProjectFeature: React.FC<IProps> = ({ project, feature, inView }) => {
   const [element, controls] = useScroll();
   const [element2, controls2] = useScroll();
 
@@ -38,9 +40,11 @@ const ProjectFeature: React.FC<IProps> = ({ feature }) => {
         elRef={element}
       >
         <div
-          className={`project-feature text-black flex flex-col justify-start w-full`}
+          className={`${
+            inView === true ? project.textColor : ''
+          } project-feature text-black flex flex-col justify-start w-full`}
         >
-          <p className='mb-20 font-sans text-xl text-2xl font-semibold tracking-widest uppercase'>
+          <p className='mb-20 font-sans text-2xl font-semibold tracking-widest uppercase'>
             {feature.title}
           </p>
           <div className='flex flex-wrap items-start justify-between'>

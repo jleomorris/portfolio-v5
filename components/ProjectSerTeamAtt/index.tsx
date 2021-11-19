@@ -5,9 +5,10 @@ import PageContainer, { Variant } from '../../components/PageContainer';
 
 interface IProps {
   project: project;
+  inView: boolean;
 }
 
-const ProjectSerTeamAtt: React.FC<IProps> = ({ project }) => {
+const ProjectSerTeamAtt: React.FC<IProps> = ({ project, inView }) => {
   return (
     <div className='project-services-team-attributions'>
       <PageContainer
@@ -16,7 +17,11 @@ const ProjectSerTeamAtt: React.FC<IProps> = ({ project }) => {
         // bgColor='bg-white'
         noFullHeight
       >
-        <div className='flex justify-between w-full font-sans font-bold tracking-widest uppercase border border-blue-900 h-180'>
+        <div
+          className={`${
+            inView === true ? project.textColor : ''
+          } flex justify-between w-full font-sans font-bold tracking-widest uppercase border border-blue-900 h-180`}
+        >
           <div className='w-1/4 border border-red-900'>
             <h2 className='mb-10 font-sans text-xl font-bold tracking-widest uppercase'>
               Services

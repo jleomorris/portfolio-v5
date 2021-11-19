@@ -5,13 +5,14 @@ import ProjectFeature from './components/ProjectFeature';
 
 interface IProps {
   project: project;
+  inView: boolean;
 }
 
-const ProjectFeatures: React.FC<IProps> = ({ project }) => {
+const ProjectFeatures: React.FC<IProps> = ({ project, inView }) => {
   return (
     <div className='project-features'>
       {project.features.map((feature) => (
-        <ProjectFeature feature={feature} />
+        <ProjectFeature project={project} feature={feature} inView={inView} />
       ))}
     </div>
   );

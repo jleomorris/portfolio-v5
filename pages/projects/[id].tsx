@@ -55,8 +55,8 @@ const Project: React.FC<IProps> = ({ projectData }) => {
       <ProjectDescription project={projectData} />
       <ProjectChallenge project={projectData} />
       <div className='features-serteamatt-container' ref={ref}>
-        <ProjectFeatures project={projectData} />
-        <ProjectSerTeamAtt project={projectData} />
+        <ProjectFeatures project={projectData} inView={inView} />
+        <ProjectSerTeamAtt project={projectData} inView={inView} />
       </div>
     </>
   );
