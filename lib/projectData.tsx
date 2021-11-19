@@ -262,5 +262,21 @@ export const projectData = [
         href: 'https://jleomorris.github.io/bolt-music-player/',
       },
     ],
+    features: [
+      {
+        title: 'Library',
+        description: [
+          'The latest chilled beats from chillhop.com, library view can be toggled on and off.',
+        ],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/v1637280131/Portfolio-v5/Projects/bolt-music-player/library.jpg',
+      },
+      {
+        title: 'Dark Mode',
+        description: ['Dark mode toggle available.'],
+        imgURL:
+          'https://res.cloudinary.com/jleomorris/image/upload/v1637280195/Portfolio-v5/Projects/bolt-music-player/dark-mode.jpg',
+      },
+    ],
   },
 ];
