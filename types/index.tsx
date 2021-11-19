@@ -13,6 +13,19 @@ export interface project {
   headerImgURL: string;
   sectionImgURL: string;
   features: Feature[];
+  services: string[];
+  team: Team[];
+  attributions: Attribution[];
+}
+
+export interface Team {
+  name: string;
+  role: string[];
+}
+
+export interface Attribution {
+  name: string;
+  role: string[];
 }
 
 export interface Feature {
