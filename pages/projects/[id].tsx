@@ -1,21 +1,50 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+// Hooks
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+// Lib
 import { getProjectData, getAllProjectIds } from '../../lib/projects';
 // Types
 import { project } from '../../types';
+// Utils
+import { setBackgroundColor } from '../../utils';
 // Components
+import { GetStaticPaths, GetStaticProps } from 'next';
 import ProjectHeader from '../../components/ProjectHeader';
 import Head from 'next/head';
 import Link from 'next/link';
 import ProjectDescription from '../../components/ProjectDescription';
 import ProjectChallenge from '../../components/ProjectChallenge';
 import ProjectFeatures from '../../components/ProjectFeatures';
+import ProjectSerTeamAtt from '../../components/ProjectSerTeamAtt';
 
 interface IProps {
   projectData: project;
 }
 
 const Project: React.FC<IProps> = ({ projectData }) => {
-  console.log('projectData.props', projectData);
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    console.log('ProjectFeaturesSerTeamAttContainer.inView', inView);
+
+    if (inView === true) {
+      console.log(
+        `Project features and serTeamAtt container (${projectData.backgroundColor}) component is visible`
+      );
+
+      const targetColor = projectData.backgroundColor;
+      setBackgroundColor(targetColor);
+    }
+
+    if (inView === false) {
+      console.log(
+        `Project features and serTeamAtt container (${projectData.backgroundColor}) component isn't visible`
+      );
+      setBackgroundColor('#FFFFFF');
+    }
+  }, [inView]);
 
   return (
     <>
@@ -25,7 +54,10 @@ const Project: React.FC<IProps> = ({ projectData }) => {
       <ProjectHeader project={projectData} />
       <ProjectDescription project={projectData} />
       <ProjectChallenge project={projectData} />
-      <ProjectFeatures project={projectData} />
+      <div className='features-serteamatt-container' ref={ref}>
+        <ProjectFeatures project={projectData} />
+        <ProjectSerTeamAtt project={projectData} />
+      </div>
     </>
   );
 };
