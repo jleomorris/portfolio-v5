@@ -97,7 +97,12 @@ const Header = () => {
           </ul>
         </nav>
         <div className={styles.contact}>
-          <a className={styles.contactLink} href='/contact'>
+          <a
+            className={`${styles.contactLink} ${
+              isCurrentPageProjects ? 'text-white border-white' : ''
+            }`}
+            href='/contact'
+          >
             Let's work together
           </a>
         </div>
