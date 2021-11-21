@@ -20,9 +20,9 @@ const ProjectSerTeamAtt: React.FC<IProps> = ({ project, inView }) => {
         <div
           className={`${
             inView === true ? project.textColor : ''
-          } flex justify-between w-full font-sans font-bold tracking-widest uppercase h-180`}
+          } flex flex-wrap justify-between w-full font-sans font-bold tracking-widest uppercase`}
         >
-          <div className='w-3/12 px-8'>
+          <div className='px-8 mb-20'>
             <h2 className='mb-10 font-sans text-xl font-bold tracking-widest uppercase'>
               Services
             </h2>
@@ -34,7 +34,7 @@ const ProjectSerTeamAtt: React.FC<IProps> = ({ project, inView }) => {
               ))}
             </div>
           </div>
-          <div className='w-4/12 px-8'>
+          <div className='px-8 mb-20'>
             <h2 className='mb-10 text-xl'>Team</h2>
             <div className='space-y-3 font-normal normal-case'>
               {project.team.map((teamMember) => (
@@ -45,7 +45,7 @@ const ProjectSerTeamAtt: React.FC<IProps> = ({ project, inView }) => {
               ))}
             </div>
           </div>
-          <div className='w-5/12 px-8'>
+          <div className='px-8 mb-20'>
             <h2 className='mb-10 font-sans text-xl font-bold tracking-widest uppercase'>
               Attributions
             </h2>

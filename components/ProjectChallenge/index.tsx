@@ -51,7 +51,7 @@ const ProjectChallenge: React.FC<IProps> = ({ project }) => {
           </div>
         </div>
       </ScrollAnimationChild>
-      <div className='relative w-screen mt-48 overflow-hidden border border-red-900 xl:h-screen'>
+      <div className='relative w-screen mt-48 overflow-hidden h-96 md:h-180 xl:h-screen'>
         <Image
           src={project.headerImgURL}
           layout='responsive'

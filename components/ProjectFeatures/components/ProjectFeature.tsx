@@ -63,7 +63,7 @@ const ProjectFeature: React.FC<IProps> = ({ project, feature, inView }) => {
         animate={controls2}
         elRef={element2}
       >
-        <div className='relative w-full mt-32 mb-20 overflow-hidden sm:mt-48 h-52 rounded-3xl md:h-120 xl:h-160 2xl:h-220'>
+        <div className='relative w-full mt-32 mb-20 overflow-hidden sm:mt-48 h-72 rounded-3xl md:h-120 xl:h-160 2xl:h-220'>
           <Image
             src={feature.imgURL}
             layout='fill'

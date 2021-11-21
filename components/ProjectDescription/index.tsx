@@ -24,7 +24,6 @@ const ProjectDescription: React.FC<IProps> = ({ project }) => {
       key={project.subTitle}
       variant={Variant.TIGHT}
       noFlex={false}
-      bgColor='bg-white'
       noFullHeight
     >
       <ScrollAnimationChild
@@ -33,13 +32,13 @@ const ProjectDescription: React.FC<IProps> = ({ project }) => {
         elRef={element}
       >
         <div className={`text-black flex flex-col justify-start`}>
-          <p className='text-6xl font-bold mt-28 font-vesterbroPoster xl:w-10/12'>
+          <p className='text-3xl font-bold md:text-6xl mt-28 font-vesterbroPoster xl:w-10/12'>
             {project.description}
           </p>
         </div>
         <Links project={project} />
       </ScrollAnimationChild>
-      <div className='relative w-full h-96 md:h-260 mt-96'>
+      <div className='relative w-full h-96 md:h-260 2xl:mt-96'>
         <Image
           src={project.headerImgURL}
           layout='fill'
