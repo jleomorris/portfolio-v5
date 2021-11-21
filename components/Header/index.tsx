@@ -50,13 +50,13 @@ const Header = () => {
               </a>
             </Link>
           </li>
-          <li className={styles.navLi}>
+          {/* <li className={styles.navLi}>
             <Link href='/desktops'>
               <a className={`${styles.navLinks} hover:underline pb-1`}>
                 Desktops
               </a>
             </Link>
-          </li>
+          </li> */}
           <li className={styles.navLi}>
             <Link href='/contact'>
               <a className={`${styles.navLinks} hover:underline pb-1`}>
