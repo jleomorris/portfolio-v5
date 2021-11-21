@@ -1,40 +1,23 @@
 // Hooks
-import { useInView } from 'react-intersection-observer';
+import { useScroll } from '../../hooks/useScroll';
 // Animation
 import { motion } from 'framer-motion';
-// Utils
-import { setBackgroundColor } from '../../utils';
 // Types
 import { project } from '../../types';
 // Components
 import PageContainer, { Variant } from '../../components/PageContainer';
 import Image from 'next/image';
-import { useEffect } from 'react';
 import Links from './components/Links';
+import ScrollAnimationChild, {
+  Variant as animationChildVariant,
+} from '../../components/FramerMotion/ScrollAnimationChild';
 
 interface IProps {
   project: project;
 }
 
-const imageVariants = {
-  initial: {
-    scale: 1,
-  },
-  whileHover: {
-    scale: 1.05,
-    transition: {
-      type: 'spring',
-      ease: 'easeInOut',
-      bounce: 0.7,
-      duration: 2,
-    },
-  },
-};
-
 const ProjectDescription: React.FC<IProps> = ({ project }) => {
-  const [ref, inView] = useInView({
-    threshold: 0.5,
-  });
+  const [element, controls] = useScroll();
 
   return (
     <PageContainer
@@ -44,31 +27,29 @@ const ProjectDescription: React.FC<IProps> = ({ project }) => {
       bgColor='bg-white'
       noFullHeight
     >
-      <div
-        ref={ref}
-        className={`text-black flex flex-col justify-start border`}
+      <ScrollAnimationChild
+        variant={animationChildVariant.ABOUTROTATION}
+        animate={controls}
+        elRef={element}
       >
-        <p className='text-6xl font-bold mt-28 font-vesterbroPoster xl:w-10/12'>
-          {project.description}
-        </p>
-      </div>
-      <Links project={project} />
-      <motion.div
-        className='relative w-full border-4 border-blue-900 h-96 md:h-240 mt-96'
-        // variants={imageVariants}
-        // initial='initial'
-        // whileHover='whileHover'
-      >
+        <div className={`text-black flex flex-col justify-start`}>
+          <p className='text-6xl font-bold mt-28 font-vesterbroPoster xl:w-10/12'>
+            {project.description}
+          </p>
+        </div>
+        <Links project={project} />
+      </ScrollAnimationChild>
+      <div className='relative w-full h-96 md:h-260 mt-96'>
         <Image
           src={project.headerImgURL}
           layout='fill'
-          // objectPosition='top'
-          // width='100%'
-          // height='100%'
-          objectFit='fill'
+          width='100%'
+          height='100%'
+          objectFit='contain'
+          objectPosition='center'
           alt='main'
         />
-      </motion.div>
+      </div>
     </PageContainer>
   );
 };
