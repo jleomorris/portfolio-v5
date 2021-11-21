@@ -26,6 +26,7 @@ const Project: React.FC<IProps> = ({ projectData }) => {
     threshold: 0.1,
   });
 
+  // Dynamic bg color logic
   useEffect(() => {
     console.log('ProjectFeaturesSerTeamAttContainer.inView', inView);
 
@@ -45,6 +46,13 @@ const Project: React.FC<IProps> = ({ projectData }) => {
       setBackgroundColor('#FFFFFF');
     }
   }, [inView]);
+
+  // Reset bg color to yellow on dismount
+  useEffect(() => {
+    return () => {
+      setBackgroundColor('#f2c744');
+    };
+  }, []);
 
   return (
     <>
