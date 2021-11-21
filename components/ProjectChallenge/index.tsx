@@ -25,8 +25,9 @@ const ProjectChallenge: React.FC<IProps> = ({ project }) => {
       key={project.subTitle}
       variant={Variant.TIGHT}
       noFlex={false}
-      bgColor='bg-white'
+      // bgColor='bg-white'
       noFullHeight
+      noPaddingBottom
     >
       <div
         ref={ref}

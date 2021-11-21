@@ -10,6 +10,7 @@ interface IProps {
   noFlex: boolean;
   backgroundImgURL?: string;
   noFullHeight?: boolean;
+  noPaddingBottom?: boolean;
 }
 
 export enum Variant {
@@ -29,6 +30,7 @@ const PageContainer: React.FC<IProps> = ({
   noFlex,
   backgroundImgURL,
   noFullHeight,
+  noPaddingBottom,
 }) => {
   return (
     <div
@@ -38,6 +40,7 @@ const PageContainer: React.FC<IProps> = ({
         } border border-purple-900 ${
           noFlex ? '' : 'flex flex-col justify-center items-center'
         }`,
+        `${noPaddingBottom ? 'pb-0 md:pb-0 xl:pb-0' : ''}`,
         VARIANT_MAPS[variant],
         bgColor
       )}
