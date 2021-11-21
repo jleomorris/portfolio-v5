@@ -54,6 +54,33 @@ export const projectData = [
           'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637274416/Portfolio-v5/Projects/LDR/filters.jpg',
       },
     ],
+    services: [
+      'ReactJS',
+      'Redux',
+      'Styled Components',
+      'SCSS',
+      'Framer Motion',
+    ],
+    team: [
+      {
+        name: 'James Morris',
+        role: ['Designer, Developer'],
+      },
+    ],
+    attributions: [
+      {
+        name: 'Michael Chernayk',
+        role: ['Custom Fonts'],
+      },
+      {
+        name: 'Ofer Ariel',
+        role: ['Custom Fonts'],
+      },
+      {
+        name: 'GeorgeArtman',
+        role: ['Card Illustrations'],
+      },
+    ],
   },
   {
     link: 'Poke_Price',
@@ -109,6 +136,30 @@ export const projectData = [
         ],
         imgURL:
           'https://res.cloudinary.com/jleomorris/image/upload/v1637277673/Portfolio-v5/Projects/poke-price/pokemontcg.jpg',
+      },
+    ],
+    services: [
+      'ReactJS',
+      'Redux',
+      'REST API',
+      'Styled Components',
+      'SCSS',
+      'Framer Motion',
+    ],
+    team: [
+      {
+        name: 'James Morris',
+        role: ['Designer, Developer'],
+      },
+    ],
+    attributions: [
+      {
+        name: 'Price Data',
+        role: ['PokemonTCG API'],
+      },
+      {
+        name: 'Pokemon Illustrations',
+        role: ['FanPop'],
       },
     ],
   },
@@ -176,6 +227,62 @@ export const projectData = [
           'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637273079/Portfolio-v5/Projects/modern-pokedex/poke-api.jpg',
       },
     ],
+    services: [
+      'ReactJS',
+      'Redux',
+      'REST API',
+      'Styled Components',
+      'SCSS',
+      'Framer Motion',
+    ],
+    team: [
+      {
+        name: 'James Morris',
+        role: ['Designer, Developer'],
+      },
+    ],
+    attributions: [
+      {
+        name: 'PokeAPI',
+        role: ['Pokemon data'],
+      },
+      {
+        name: 'Eocen - Fanpop',
+        role: ['Home Wallpaper'],
+      },
+      {
+        name: 'Icons8',
+        role: ['Type Icons'],
+      },
+      {
+        name: 'github.com/PokeAPI/sprites',
+        role: ['Black/White Shiny Animations'],
+      },
+      {
+        name: 'projectpokemon.org/',
+        role: ['3D Sprite Animations'],
+      },
+      {
+        name: 'github.com/athanstancss',
+        role: ['Pokeball CSS animation'],
+      },
+      {
+        name: 'brfa98 - instagram.com/bplayingcards/',
+        role: ['Pokemon Series Custom Logos'],
+      },
+      {
+        name: 'Pexels',
+        role: ['Tile backgrounds'],
+      },
+      {
+        name: 'Bulbapedia',
+        role: ['Move, Category & First Edition Icons'],
+      },
+      {
+        name: 'sweetyhigh, factcity, softschools, factinate, thefactsite',
+        role: ['Pokemon facts'],
+      },
+    ],
   },
   {
     link: 'Last_Life',
@@ -231,6 +338,29 @@ export const projectData = [
           'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637279183/Portfolio-v5/Projects/last-life/rawg.jpg',
       },
     ],
+    services: [
+      'ReactJS',
+      'Redux',
+      'Styled Components',
+      'SCSS',
+      'Framer Motion',
+    ],
+    team: [
+      {
+        name: 'James Morris',
+        role: ['Designer, Developer'],
+      },
+    ],
+    attributions: [
+      {
+        name: 'RAWG API',
+        role: ['Game data'],
+      },
+      {
+        name: 'Pexels',
+        role: ['Background Images'],
+      },
+    ],
   },
   {
     link: 'Bolt_Music_Player',
@@ -276,6 +406,29 @@ export const projectData = [
         description: ['Dark mode toggle available.'],
         imgURL:
           'https://res.cloudinary.com/jleomorris/image/upload/v1637280195/Portfolio-v5/Projects/bolt-music-player/dark-mode.jpg',
+      },
+    ],
+    services: [
+      'ReactJS',
+      'Redux',
+      'Styled Components',
+      'SCSS',
+      'Framer Motion',
+    ],
+    team: [
+      {
+        name: 'James Morris',
+        role: ['Designer, Developer'],
+      },
+    ],
+    attributions: [
+      {
+        name: 'Chillhop.com',
+        role: ['Music tracks'],
+      },
+      {
+        name: 'Pexels',
+        role: ['Background Images'],
       },
     ],
   },
