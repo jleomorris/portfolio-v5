@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // Animation
 import { motion } from 'framer-motion';
 // Styles
 import styles from '../../styles/Header.module.scss';
 // Next
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 // Variants
 const header = {
@@ -24,6 +25,18 @@ const header = {
 };
 
 const Header = () => {
+  const router = useRouter();
+  const [isCurrentPageProjects, setIsCurrentPageProjects] =
+    useState<boolean>(false);
+
+  useEffect(() => {
+    if (router.route === '/projects/[id]') {
+      setIsCurrentPageProjects(true);
+    } else {
+      setIsCurrentPageProjects(false);
+    }
+  }, [router]);
+
   return (
     <motion.div
       className={`header absolute w-full z-50 ${styles.header}`}
@@ -34,36 +47,54 @@ const Header = () => {
       <div className={styles.headerInner}>
         <div className={styles.logo}>
           <Link href='/'>
-            <a>Jleo</a>
+            <a className={`${isCurrentPageProjects ? 'text-white' : ''}`}>
+              Jleo
+            </a>
           </Link>
         </div>
         <nav className={styles.nav}>
-          <li className={styles.navLi}>
-            <Link href='/about'>
-              <a className={`${styles.navLinks} hover:underline pb-1`}>About</a>
-            </Link>
-          </li>
-          <li className={styles.navLi}>
-            <Link href='/projects'>
-              <a className={`${styles.navLinks} hover:underline pb-1`}>
-                Projects
-              </a>
-            </Link>
-          </li>
-          {/* <li className={styles.navLi}>
+          <ul className='flex'>
+            <li className={styles.navLi}>
+              <Link href='/about'>
+                <a
+                  className={`${styles.navLinks} ${
+                    isCurrentPageProjects ? 'text-white' : ''
+                  } hover:underline pb-1`}
+                >
+                  About
+                </a>
+              </Link>
+            </li>
+            <li className={styles.navLi}>
+              <Link href='/projects'>
+                <a
+                  className={`${styles.navLinks} ${
+                    isCurrentPageProjects ? 'text-white' : ''
+                  } hover:underline pb-1`}
+                >
+                  Projects
+                </a>
+              </Link>
+            </li>
+            {/* <li className={styles.navLi}>
             <Link href='/desktops'>
-              <a className={`${styles.navLinks} hover:underline pb-1`}>
+              <a className={`${styles.navLinks} ${isCurrentPageProjects ? "text-white" : ""} hover:underline pb-1`}>
                 Desktops
               </a>
             </Link>
           </li> */}
-          <li className={styles.navLi}>
-            <Link href='/contact'>
-              <a className={`${styles.navLinks} hover:underline pb-1`}>
-                Contact
-              </a>
-            </Link>
-          </li>
+            <li className={styles.navLi}>
+              <Link href='/contact'>
+                <a
+                  className={`${styles.navLinks} ${
+                    isCurrentPageProjects ? 'text-white' : ''
+                  } hover:underline pb-1`}
+                >
+                  Contact
+                </a>
+              </Link>
+            </li>
+          </ul>
         </nav>
         <div className={styles.contact}>
           <a className={styles.contactLink} href='/contact'>
