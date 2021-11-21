@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  important: true,
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -23,6 +24,9 @@ module.exports = {
           'sans-serif',
         ],
       },
+      lineHeight: {
+        32: '8rem',
+      },
       spacing: {
         1.5: '0.6rem',
         2.5: '1rem',
@@ -39,10 +43,13 @@ module.exports = {
         200: '50rem',
         220: '55rem',
         240: '60rem',
+        260: '65rem',
         '6/25': '2.5rem',
         '7/50': '3rem',
         '8/50': '3.5rem',
         '12/25': '5rem',
+        '9/10': '90%',
+        nav: '156px',
       },
       width: {
         '30%': '30%',

@@ -15,7 +15,7 @@ import Banner from '../components/Banner';
 
 export default function Home() {
   return (
-    <div className='home'>
+    <div className='home pt-nav'>
       <Banner />
       <div className={`${bannerStyles['transitionImage--final']}`}>
         <motion.img
@@ -27,8 +27,10 @@ export default function Home() {
           }}
         />
       </div>
-      <PageContainer variant={Variant.NORMAL} noFlex>
-        <SoftSkills />
+      <PageContainer variant={Variant.NORMAL} noFlex={false}>
+        <div className='w-full'>
+          <SoftSkills />
+        </div>
       </PageContainer>
       <PageContainer variant={Variant.NORMAL} noFlex={false}>
         <TechnicalSkills />

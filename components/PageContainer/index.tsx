@@ -1,11 +1,16 @@
 import { ReactNode } from 'react';
 import { joinClassNames } from '../../utils';
+// Components
+import Image from 'next/image';
 
 interface IProps {
   children: ReactNode;
   bgColor?: string;
   variant: Variant;
   noFlex: boolean;
+  backgroundImgURL?: string;
+  noFullHeight?: boolean;
+  noPaddingBottom?: boolean;
 }
 
 export enum Variant {
@@ -23,17 +28,29 @@ const PageContainer: React.FC<IProps> = ({
   bgColor,
   variant,
   noFlex,
+  backgroundImgURL,
+  noFullHeight,
+  noPaddingBottom,
 }) => {
   return (
     <div
       className={joinClassNames(
-        `page-container min-h-screen border border-purple-900 ${
+        `page-container relative ${
+          noFullHeight ? '' : 'min-h-screen'
+        } border border-purple-900 ${
           noFlex ? '' : 'flex flex-col justify-center items-center'
         }`,
+        `${noPaddingBottom ? 'pb-0 md:pb-0 xl:pb-0' : ''}`,
         VARIANT_MAPS[variant],
         bgColor
       )}
     >
+      {backgroundImgURL && (
+        <div className='absolute top-0 left-0 w-full h-full'>
+          <div className='absolute top-0 left-0 z-10 w-full h-full background-cover bg-gradient-to-r from-black'></div>
+          <Image src={backgroundImgURL} layout='fill' objectFit='cover' />
+        </div>
+      )}
       {children}
     </div>
   );
