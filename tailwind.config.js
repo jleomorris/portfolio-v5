@@ -8,6 +8,8 @@ module.exports = {
     extend: {
       fontSize: {
         '10xl': '10rem',
+        '28xl': '28rem',
+        '13xl': '13rem',
       },
       fontFamily: {
         vesterbroPoster: [

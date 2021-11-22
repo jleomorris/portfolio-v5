@@ -31,15 +31,15 @@
 
     .rowTitle,
     .rowLetter {
-      font-size: 28rem;
+      // font-size: 28rem;
       font-weight: 500;
       position: relative;
       letter-spacing: -0.8rem;
       display: inline-block;
       white-space: nowrap;
-      @media (max-width: $layout-breakpoint-xsmall) {
-        font-size: 13rem;
-      }
+      // @media (max-width: $layout-breakpoint-xsmall) {
+      //   font-size: 13rem;
+      // }
     }
 
     .row-col {
@@ -52,11 +52,11 @@
         width: 70%;
       }
 
-      @media (max-width: 1240px) {
-        &:last-child {
-          display: none;
-        }
-      }
+      // @media (max-width: 1240px) {
+      //   &:last-child {
+      //     display: none;
+      //   }
+      // }
 
       @media (max-width: $layout-breakpoint-xsmall) {
         width: 100%;
@@ -65,7 +65,7 @@
 
       .row-message {
         font-weight: 500;
-        font-size: 1.8rem;
+        // font-size: 1.8rem;
         line-height: 2.6rem;
         width: 320px;
       }
