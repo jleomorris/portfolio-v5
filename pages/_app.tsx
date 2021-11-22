@@ -8,17 +8,19 @@ import bannerStyles from '../styles/Banner.module.scss';
 // Animation
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 // Components
-import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Loader from '../components/Loader';
 import Header from '../components/Header';
 import Contact from '../components/Contact';
+import TabletMobileHeader from '../components/TabletMobileHeader.js';
 import { useRouter } from 'next/router';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const [isCurrentPageContact, setIsCurrentPageContact] =
+    useState<boolean>(false);
+  const [isTabletMobileHeaderOpen, setIsTabletMobileHeaderOpen] =
     useState<boolean>(false);
 
   useEffect(() => {
@@ -49,10 +51,14 @@ function MyApp({ Component, pageProps }: AppProps) {
             </motion.div>
           ) : (
             <>
-              <Header />
+              <Header
+                isTabletMobileHeaderOpen={isTabletMobileHeaderOpen}
+                setIsTabletMobileHeaderOpen={setIsTabletMobileHeaderOpen}
+              />
               <Component {...pageProps} />
               {!isCurrentPageContact && <Contact />}
               <Footer />
+              {isTabletMobileHeaderOpen && <TabletMobileHeader />}
             </>
           )}
         </AnimatePresence>

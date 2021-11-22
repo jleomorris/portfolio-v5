@@ -6,6 +6,12 @@ import styles from '../../styles/Header.module.scss';
 // Next
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import HamburgerIcon from './Components/HamburgerIcon';
+
+interface IProps {
+  isTabletMobileHeaderOpen: boolean;
+  setIsTabletMobileHeaderOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
 // Variants
 const header = {
@@ -24,7 +30,10 @@ const header = {
   },
 };
 
-const Header = () => {
+const Header: React.FC<IProps> = ({
+  isTabletMobileHeaderOpen,
+  setIsTabletMobileHeaderOpen,
+}) => {
   const router = useRouter();
   const [isCurrentPageProjects, setIsCurrentPageProjects] =
     useState<boolean>(false);
@@ -39,7 +48,7 @@ const Header = () => {
 
   return (
     <motion.div
-      className={`header absolute w-full z-50 ${styles.header}`}
+      className={`header absolute w-full z-60 ${styles.header}`}
       variants={header}
       initial='initial'
       animate='animate'
@@ -52,8 +61,8 @@ const Header = () => {
             </a>
           </Link>
         </div>
-        <nav className={styles.nav}>
-          <ul className='flex'>
+        <nav className={`${styles.nav}`}>
+          <ul className='hidden lg:flex'>
             <li className={styles.navLi}>
               <Link href='/about'>
                 <a
@@ -76,13 +85,6 @@ const Header = () => {
                 </a>
               </Link>
             </li>
-            {/* <li className={styles.navLi}>
-            <Link href='/desktops'>
-              <a className={`${styles.navLinks} ${isCurrentPageProjects ? "text-white" : ""} hover:underline pb-1`}>
-                Desktops
-              </a>
-            </Link>
-          </li> */}
             <li className={styles.navLi}>
               <Link href='/contact'>
                 <a
@@ -95,8 +97,18 @@ const Header = () => {
               </Link>
             </li>
           </ul>
+          <button
+            onClick={() =>
+              setIsTabletMobileHeaderOpen(!isTabletMobileHeaderOpen)
+            }
+          >
+            <HamburgerIcon
+              isTabletMobileHeaderOpen={isTabletMobileHeaderOpen}
+              setIsTabletMobileHeaderOpen={setIsTabletMobileHeaderOpen}
+            />
+          </button>
         </nav>
-        <div className={styles.contact}>
+        {/* <div className={`${styles.contact}`}>
           <a
             className={`${styles.contactLink} ${
               isCurrentPageProjects ? 'text-white border-white' : ''
@@ -105,7 +117,7 @@ const Header = () => {
           >
             Let's work together
           </a>
-        </div>
+        </div> */}
         {/* <div className={styles.hamburgerMenu}>
           <span></span>
           <span></span>

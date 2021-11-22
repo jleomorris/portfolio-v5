@@ -32,14 +32,14 @@
 
       @media (max-width: $layout-breakpoint-medium) {
         font-size: 3.2rem;
-        flex: 4;
+        // flex: 4;
       }
     }
 
     .nav {
-      @media (max-width: $layout-breakpoint-medium) {
-        display: none;
-      }
+      // @media (max-width: $layout-breakpoint-medium) {
+      //   display: none;
+      // }
 
       display: flex;
       align-items: center;
@@ -61,9 +61,9 @@
     }
 
     .contact {
-      @media (max-width: $layout-breakpoint-medium) {
-        flex: 1;
-      }
+      // @media (max-width: $layout-breakpoint-medium) {
+      //   flex: 1;
+      // }
 
       .contactLink {
         color: $black;
