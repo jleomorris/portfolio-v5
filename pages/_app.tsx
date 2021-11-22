@@ -55,10 +55,14 @@ function MyApp({ Component, pageProps }: AppProps) {
                 isTabletMobileHeaderOpen={isTabletMobileHeaderOpen}
                 setIsTabletMobileHeaderOpen={setIsTabletMobileHeaderOpen}
               />
-              <Component {...pageProps} />
+              {!isTabletMobileHeaderOpen && <Component {...pageProps} />}
               {!isCurrentPageContact && <Contact />}
               <Footer />
-              {isTabletMobileHeaderOpen && <TabletMobileHeader />}
+              {isTabletMobileHeaderOpen && (
+                <TabletMobileHeader
+                  setIsTabletMobileHeaderOpen={setIsTabletMobileHeaderOpen}
+                />
+              )}
             </>
           )}
         </AnimatePresence>
