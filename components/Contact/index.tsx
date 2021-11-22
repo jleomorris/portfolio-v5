@@ -11,19 +11,19 @@ const Contact = () => {
           Let's work together
         </h1>
         <div className='h-20 mx-auto mt-10 w-80'>
-          <Button
-            type='button'
-            variant={buttonVariant.BLACK_OUTLINE}
-            size={Size.ROUND}
-          >
-            <Link href='/contact'>
+          <Link href='/contact'>
+            <Button
+              type='button'
+              variant={buttonVariant.BLACK_OUTLINE}
+              size={Size.ROUND}
+            >
               <a className='block mx-auto'>
                 <span className='font-sans tracking-wider uppercase'>
                   Say hello
                 </span>
               </a>
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       </div>
     </PageContainer>
