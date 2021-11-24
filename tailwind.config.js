@@ -8,6 +8,8 @@ module.exports = {
     extend: {
       fontSize: {
         '10xl': '10rem',
+        '28xl': '28rem',
+        '13xl': '13rem',
       },
       fontFamily: {
         vesterbroPoster: [
@@ -61,6 +63,7 @@ module.exports = {
     },
     backgroundColor: (theme) => ({
       ...theme('colors'),
+      main: '#F2C744',
       blackLighter: '#1A1A1A',
       hoverShadow: '#00000017',
     }),
@@ -68,6 +71,10 @@ module.exports = {
       ...theme('colors'),
       blackLighter: '#1A1A1A',
     }),
+    zIndex: {
+      60: '60',
+      ...defaultTheme.zIndex,
+    },
   },
   variants: {
     extend: {},

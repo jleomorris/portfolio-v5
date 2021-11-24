@@ -1,3 +1,23 @@
+export const containerAnimation = {
+  initial: {
+    opacity: 1,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.1,
+      when: 'beforeChildren',
+      staggerChildren: 0.25,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
 export const pageAnimation = {
   hidden: {
     opacity: 0,

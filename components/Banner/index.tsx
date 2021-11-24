@@ -96,14 +96,14 @@ const Banner = () => {
 
 const AnimatedLetters = ({ title, disabled }) => (
   <motion.span
-    className={`${marqueeStyles['row-title']} ${bannerStyles.rowTitle}`}
+    className={`${marqueeStyles['row-title']} ${bannerStyles.rowTitle} text-9xl sm:text-13xl 2xl:text-28xl`}
     variants={disabled ? null : banner}
     initial='initial'
     animate='animate'
   >
     {[...title].map((letter) => (
       <motion.span
-        className={`${bannerStyles.rowLetter}`}
+        className={`${bannerStyles.rowLetter} text-9xl sm:text-13xl 2xl:text-28xl`}
         variants={letterAnimation}
       >
         {letter}
@@ -114,7 +114,7 @@ const AnimatedLetters = ({ title, disabled }) => (
 
 const BannerRowTop = ({ title }) => {
   return (
-    <div className={`${bannerStyles.bannerRow} pl-96`}>
+    <div className={`${bannerStyles.bannerRow} pl-10 2xl:pl-96`}>
       <div className={bannerStyles['row-col']}>
         <AnimatedLetters title={title} />
       </div>
@@ -124,7 +124,9 @@ const BannerRowTop = ({ title }) => {
         initial='initial'
         animate='animate'
       >
-        <span className={bannerStyles['row-message']}>
+        <span
+          className={`${bannerStyles['row-message']} text-2xl mb-48 sm:mb-0 sm:text-3xl`}
+        >
           Senior React Developer at IronmongeryDirect - Basildon, Essex
         </span>
       </motion.div>
