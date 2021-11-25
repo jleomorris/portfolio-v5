@@ -12,12 +12,13 @@ import SoftSkills from '../components/SoftSkills';
 import TechnicalSkills from '../components/TechnicalSkills';
 import CurrentlyUsedSkills from '../components/CurrentlyUsedSkills';
 import Banner from '../components/Banner';
+import ImageDescription from '../components/ImageDescription';
 
 export default function Home() {
   return (
     <div className='home pt-nav'>
       <Banner />
-      <div className={`${bannerStyles['transitionImage--final']}`}>
+      <div className={`${bannerStyles['transitionImage--final']} relative`}>
         <motion.img
           src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1635814195/Portfolio-v5/Loader/main.jpg`}
           layoutId='main-image-1'
@@ -26,6 +27,9 @@ export default function Home() {
             duration: 1.6,
           }}
         />
+        <div className='absolute right-12 md:right-32 -bottom-32 image-description'>
+          <ImageDescription content='Photo from my trip to Zakopane, Poland in 2019' />
+        </div>
       </div>
       <PageContainer variant={Variant.NORMAL} noFlex={false}>
         <div className='w-full'>
