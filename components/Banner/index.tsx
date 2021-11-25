@@ -35,7 +35,7 @@ const Banner = () => {
       animate='animate'
     >
       <BannerRowTop title={'J.Morris'} />
-      <BannerRowCenter title={'Front End'} playMarquee={playMarquee} />
+      <BannerRowCenter title={'Front_End'} playMarquee={playMarquee} />
       <BannerRowBottom title={'Developer'} />
     </motion.div>
   );

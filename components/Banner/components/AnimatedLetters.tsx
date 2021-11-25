@@ -45,7 +45,9 @@ const AnimatedLetters: React.FC<IProps> = ({ title, disabled }) => (
   >
     {[...title].map((letter) => (
       <motion.span
-        className={`${bannerStyles.rowLetter} text-9xl sm:text-13xl 2xl:text-28xl`}
+        className={`${bannerStyles.rowLetter} ${
+          letter === '_' ? 'text-main' : ''
+        } text-9xl sm:text-13xl 2xl:text-28xl`}
         variants={letterAnimation}
       >
         {letter}

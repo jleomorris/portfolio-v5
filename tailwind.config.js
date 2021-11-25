@@ -61,6 +61,10 @@ module.exports = {
       xs: '475px',
       ...defaultTheme.screens,
     },
+    textColor: (theme) => ({
+      ...theme('colors'),
+      main: '#F2C744',
+    }),
     backgroundColor: (theme) => ({
       ...theme('colors'),
       main: '#F2C744',
