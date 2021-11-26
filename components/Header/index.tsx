@@ -119,20 +119,6 @@ const Header: React.FC<IProps> = ({
             />
           </button>
         </nav>
-        {/* <div className={`${styles.contact}`}>
-          <a
-            className={`${styles.contactLink} ${
-              isCurrentPageProjects ? 'text-white border-white' : ''
-            }`}
-            href='/contact'
-          >
-            Let's work together
-          </a>
-        </div> */}
-        {/* <div className={styles.hamburgerMenu}>
-          <span></span>
-          <span></span>
-        </div> */}
       </div>
     </motion.div>
   );

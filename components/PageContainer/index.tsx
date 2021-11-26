@@ -37,9 +37,7 @@ const PageContainer: React.FC<IProps> = ({
   return (
     <div
       className={joinClassNames(
-        `page-container relative ${
-          noFullHeight ? '' : 'min-h-screen'
-        } border border-purple-900 ${
+        `page-container relative ${noFullHeight ? '' : 'min-h-screen'} ${
           noFlex ? '' : 'flex flex-col justify-center'
         }`,
         `${leftAlign ? '' : 'items-center'}`,
