@@ -1,5 +1,7 @@
+import { useState, useEffect } from 'react';
 // Components
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 interface IProps {
   isTabletMobileHeaderOpen: boolean;
@@ -72,27 +74,45 @@ const HamburgerIcon: React.FC<IProps> = ({
   isTabletMobileHeaderOpen,
   setIsTabletMobileHeaderOpen,
 }) => {
+  const router = useRouter();
+  const [isCurrentPageProjects, setIsCurrentPageProjects] =
+    useState<boolean>(false);
+
+  useEffect(() => {
+    if (router.route === '/projects/[id]') {
+      setIsCurrentPageProjects(true);
+    } else {
+      setIsCurrentPageProjects(false);
+    }
+  }, [router]);
+
   return (
     <div className='p-4 space-y-3 hamburger-icon lg:hidden'>
       <motion.div
         variants={firstBarVariants}
         initial='initial'
         animate={isTabletMobileHeaderOpen ? 'animate' : 'initial'}
-        className='w-16 h-1 bg-black'
+        className={`w-16 h-1 ${
+          isCurrentPageProjects ? 'bg-white' : 'bg-black'
+        }`}
         exit='initial'
       />
       <motion.div
         variants={secondBarVariants}
         initial='initial'
         animate={isTabletMobileHeaderOpen ? 'animate' : 'initial'}
-        className='w-16 h-1 bg-black'
+        className={`w-16 h-1 ${
+          isCurrentPageProjects ? 'bg-white' : 'bg-black'
+        }`}
         exit='initial'
       />
       <motion.div
         variants={thirdBarVariants}
         initial='initial'
         animate={isTabletMobileHeaderOpen ? 'animate' : 'initial'}
-        className='w-16 h-1 bg-black'
+        className={`w-16 h-1 ${
+          isCurrentPageProjects ? 'bg-white' : 'bg-black'
+        }`}
         exit='initial'
       />
     </div>
