@@ -11,6 +11,8 @@ export interface project {
   textColor: string;
   headerTextColor: string;
   headerImgURL: string;
+  descriptionImgURL: string;
+  challengeImgURL: string;
   sectionImgURL: string;
   features: Feature[];
   services: string[];
