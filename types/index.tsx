@@ -4,7 +4,7 @@ export interface project {
   subTitle: string;
   challenge: {
     title: string;
-    description: string[];
+    description: (string | undefined)[];
   };
   title: string;
   backgroundColor: string;
@@ -32,7 +32,6 @@ export interface Attribution {
 
 export interface Feature {
   title: string;
-  subTitle: string;
   description: string[];
   imgURL: string;
 }
