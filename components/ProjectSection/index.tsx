@@ -55,7 +55,7 @@ const ProjectSection: React.FC<IProps> = ({ project, index }) => {
       key={project.subTitle}
       variant={Variant.TIGHT}
       noFlex={false}
-      // bgColor='bg-white'
+      leftAlign
     >
       <div
         ref={ref}

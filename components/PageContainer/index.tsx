@@ -11,6 +11,7 @@ interface IProps {
   backgroundImgURL?: string;
   noFullHeight?: boolean;
   noPaddingBottom?: boolean;
+  leftAlign?: boolean;
 }
 
 export enum Variant {
@@ -31,6 +32,7 @@ const PageContainer: React.FC<IProps> = ({
   backgroundImgURL,
   noFullHeight,
   noPaddingBottom,
+  leftAlign,
 }) => {
   return (
     <div
@@ -38,8 +40,9 @@ const PageContainer: React.FC<IProps> = ({
         `page-container relative ${
           noFullHeight ? '' : 'min-h-screen'
         } border border-purple-900 ${
-          noFlex ? '' : 'flex flex-col justify-center items-center'
+          noFlex ? '' : 'flex flex-col justify-center'
         }`,
+        `${leftAlign ? '' : 'items-center'}`,
         `${noPaddingBottom ? 'pb-0 md:pb-0 xl:pb-0' : ''}`,
         VARIANT_MAPS[variant],
         bgColor
