@@ -18,3 +18,8 @@ export const setBackgroundColor = (color: string) => {
   document.body.style.backgroundColor = color;
   console.log(`background color changed to ${color}`);
 };
+
+export const selectRandom = (array: any) => {
+  const randomElement = array[Math.floor(Math.random() * array.length)];
+  return randomElement;
+};
