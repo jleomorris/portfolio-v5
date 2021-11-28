@@ -39,7 +39,7 @@ const TabletMobileHeader: React.FC<IProps> = ({
             className='space-y-24 text-8xl font-vesterbroPoster mt-96'
           >
             <motion.li variants={listItemVariants}>
-              <Link href='/about'>
+              <Link href='/about' passHref>
                 <button
                   onClick={() => setIsTabletMobileHeaderOpen((prev) => !prev)}
                 >
@@ -48,7 +48,7 @@ const TabletMobileHeader: React.FC<IProps> = ({
               </Link>
             </motion.li>
             <motion.li variants={listItemVariants}>
-              <Link href='/projects'>
+              <Link href='/projects' passHref>
                 <button
                   onClick={() => setIsTabletMobileHeaderOpen((prev) => !prev)}
                 >
@@ -57,7 +57,7 @@ const TabletMobileHeader: React.FC<IProps> = ({
               </Link>
             </motion.li>
             <motion.li variants={listItemVariants}>
-              <Link href='/contact'>
+              <Link href='/contact' passHref>
                 <button
                   onClick={() => setIsTabletMobileHeaderOpen((prev) => !prev)}
                 >

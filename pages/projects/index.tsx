@@ -18,7 +18,7 @@ const Projects = () => {
   return (
     <div className='projects'>
       {projectData().map((project, index) => (
-        <ProjectSection project={project} index={index} />
+        <ProjectSection key={project.title} project={project} index={index} />
       ))}
     </div>
   );

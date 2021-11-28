@@ -35,25 +35,29 @@ interface IProps {
   disabled?: boolean;
 }
 
-const AnimatedLetters: React.FC<IProps> = ({ title, disabled }) => (
-  <motion.span
-    className={`${marqueeStyles['row-title']} ${bannerStyles.rowTitle} text-9xl sm:text-13xl 2xl:text-28xl`}
-    // variants={disabled ? null : banner}
-    variants={banner}
-    initial='initial'
-    animate={disabled ? 'noAnimation' : 'animate'}
-  >
-    {[...title].map((letter) => (
-      <motion.span
-        className={`${bannerStyles.rowLetter} ${
-          letter === '_' ? 'text-main' : ''
-        } text-9xl sm:text-13xl 2xl:text-28xl`}
-        variants={letterAnimation}
-      >
-        {letter}
-      </motion.span>
-    ))}
-  </motion.span>
-);
+const AnimatedLetters: React.FC<IProps> = ({ title, disabled }) => {
+  const splitTitle = title.split('');
+
+  return (
+    <motion.span
+      className={`${marqueeStyles['row-title']} ${bannerStyles.rowTitle} text-9xl sm:text-13xl 2xl:text-28xl`}
+      variants={banner}
+      initial='initial'
+      animate={disabled ? 'noAnimation' : 'animate'}
+    >
+      {splitTitle.map((letter, index) => (
+        <motion.span
+          className={`${bannerStyles.rowLetter} ${
+            letter === '_' ? 'text-main' : ''
+          } text-9xl sm:text-13xl 2xl:text-28xl`}
+          variants={letterAnimation}
+          key={`${letter}-${index}`}
+        >
+          {letter}
+        </motion.span>
+      ))}
+    </motion.span>
+  );
+};
 
 export default AnimatedLetters;

@@ -14,6 +14,7 @@ export interface project {
   descriptionImgURL: string;
   challengeImgURL: string;
   sectionImgURL: string;
+  links: { title: string; href: string }[];
   features: Feature[];
   services: string[];
   team: Team[];

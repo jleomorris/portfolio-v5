@@ -48,7 +48,7 @@ const ProjectSection: React.FC<IProps> = ({ project, index }) => {
     } else {
       `section ${index}(${project.backgroundColor}) component isn't visible`;
     }
-  }, [inView]);
+  }, [index, project.backgroundColor, inView]);
 
   return (
     <PageContainer

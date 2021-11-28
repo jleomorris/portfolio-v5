@@ -10,7 +10,7 @@ import Image from 'next/image';
 interface IProps {
   imgURL: string;
   variants: any;
-  id: any;
+  id: '1' | '2' | '3' | '4';
 }
 
 const imageStyles = {

@@ -45,7 +45,9 @@ const ProjectChallenge: React.FC<IProps> = ({ project }) => {
             </div>
             <div className='w-full space-y-12 md:w-6/12'>
               {project.challenge.description.map((item) => (
-                <p className='font-sans text-3xl'>{item}</p>
+                <p key={item} className='font-sans text-3xl'>
+                  {item}
+                </p>
               ))}
             </div>
           </div>

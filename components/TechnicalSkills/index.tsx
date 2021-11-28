@@ -1,5 +1,5 @@
 // Components
-import SkillIcons from './components/skillIcons';
+import SkillIcons from './components/SkillIcons';
 // Images and Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -38,6 +38,7 @@ import Next from '../Icons/NextJs';
 import GraphQL from '../Icons/GraphQL';
 import Tailwind from '../Icons/Tailwind';
 import Webpack from '../Icons/Webpack';
+import Image from 'next/image';
 
 const skillsData = [
   {
@@ -65,7 +66,7 @@ const skillsData = [
     showTitle: true,
   },
   {
-    icon: null,
+    icon: faCode,
     altIcon: <Figma />,
     title: 'Figma',
     showTitle: false,
@@ -77,7 +78,7 @@ const skillsData = [
     showTitle: false,
   },
   {
-    icon: null,
+    icon: faCode,
     altIcon: <GraphQL />,
     title: 'GraphQL',
     showTitle: true,
@@ -89,11 +90,14 @@ const skillsData = [
     showTitle: true,
   },
   {
-    icon: null,
+    icon: faCode,
     altIcon: (
-      <img
-        className='h-36 object-contain'
+      <Image
+        layout='fill'
+        objectFit='contain'
+        className='object-contain h-36'
         src='https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636043580/Portfolio-v5/Skills/jest.png'
+        alt='technical skill'
       />
     ),
     title: 'Jest',
@@ -112,7 +116,7 @@ const skillsData = [
     showTitle: false,
   },
   {
-    icon: null,
+    icon: faCode,
     altIcon: <Next />,
     title: 'Next',
     showTitle: false,
@@ -130,22 +134,28 @@ const skillsData = [
     showTitle: true,
   },
   {
-    icon: null,
+    icon: faCode,
     altIcon: (
-      <img
-        className='h-36 object-contain'
+      <Image
+        layout='fill'
+        objectFit='contain'
+        // className='object-contain h-36'
         src='https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636043837/Portfolio-v5/Skills/redux.png'
+        alt='technical skill'
       />
     ),
     title: 'Redux',
     showTitle: true,
   },
   {
-    icon: null,
+    icon: faCode,
     altIcon: (
-      <img
-        className='h-36 object-contain'
+      <Image
+        layout='fill'
+        objectFit='contain'
+        // className='object-contain h-36'
         src='https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636030983/Portfolio-v5/Skills/rest-api.png'
+        alt='technical skill'
       />
     ),
     title: 'REST API',
@@ -164,24 +174,27 @@ const skillsData = [
     showTitle: true,
   },
   {
-    icon: null,
+    icon: faCode,
     altIcon: <Tailwind />,
     title: 'Tailwind',
     showTitle: false,
   },
   {
-    icon: null,
+    icon: faCode,
     altIcon: (
-      <img
-        className='h-36 object-contain'
+      <Image
+        layout='fill'
+        objectFit='contain'
+        // className='object-contain h-36'
         src='https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636041408/Portfolio-v5/Skills/ts.png'
+        alt='technical skill'
       />
     ),
     title: 'Typescript',
     showTitle: false,
   },
   {
-    icon: null,
+    icon: faCode,
     altIcon: <Webpack />,
     title: 'Webpack',
     showTitle: true,
@@ -191,7 +204,7 @@ const skillsData = [
 const TechnicalSkills = () => {
   return (
     <div className='technical-skills'>
-      <h3 className='text-8xl mb-32 font-extrabold text-center w-full xl:w-1/2 mx-auto'>
+      <h3 className='w-full mx-auto mb-32 font-extrabold text-center text-8xl xl:w-1/2'>
         Services and tools I have experience with.
       </h3>
       <SkillIcons skillsData={skillsData} />

@@ -1,6 +1,7 @@
 // Components
 import PageContainer, { Variant } from '../../components/PageContainer';
 import AboutSection from '../../components/AboutSection';
+import React, { ReactChild, ReactElement, ReactFragment } from 'react';
 
 const aboutData = [
   {
@@ -33,21 +34,21 @@ const aboutData = [
   {
     title: 'My hobbies',
     content: [
-      "In my spare time I build custom desktops (I'm a big fan of small form factor PCs). When I have time to travel I also like to go on hiking trips, and I've also been known to pick up a guitar and carry out some song writing from time to time.",
+      'In my spare time I build custom desktops, play guitar and try my hand at digtal art. I also like to cut off from tech when possible, so I like to arrange hiking trips when I can.',
     ],
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636211661/Portfolio-v5/About/hobbies.png',
   },
 ];
 
-const About = () => {
+const About: React.FC = (): ReactElement => {
   return (
     <div className='about'>
       <PageContainer variant={Variant.TIGHT} noFlex={false}>
         <div className='flex flex-col items-start justify-center w-full h-full'>
           <p className='mb-10 font-sans font-bold uppercase'>About</p>
           <h1 className='font-extrabold font-vesterbroPoster text-8xl lg:text-9xl 2xl:w-2/3'>
-            I'm a problem solver, designer and technology addict
+            {`I'm a problem solver, designer and technology addict`}
           </h1>
         </div>
       </PageContainer>
