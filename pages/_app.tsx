@@ -45,7 +45,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           // initial={false}
           onExitComplete={() => window.scrollTo(0, 0)}
         >
-          {/* {loading || !loading ? ( */}
           {loading ? (
             <motion.div key='loader'>
               <Loader setLoading={setLoading} />

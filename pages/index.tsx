@@ -18,7 +18,9 @@ export default function Home() {
   return (
     <div className='home pt-nav'>
       <Banner />
-      <div className={`${bannerStyles['transitionImage--final']} relative`}>
+      <div
+        className={`${bannerStyles['transitionImage--final']} relative bg-white rounded-3xl bg-opacity-80 border-4 border-black p-12`}
+      >
         <motion.img
           src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1638058108/Portfolio-v5/developer_outline.png`}
           layoutId='main-image-1'
