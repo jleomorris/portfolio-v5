@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 // Animation
 import { motion } from 'framer-motion';
-// Components
-import Image from './components/Image';
 // Styles
 import styles from '../../styles/Loader.module.scss';
+// Components
+import ImageBlock from './components/ImageBlock';
 
 // Variants
 const container = {
@@ -53,7 +53,11 @@ const itemMain = {
   },
 };
 
-const Loader = ({ setLoading }) => {
+interface IProps {
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Loader: React.FC<IProps> = ({ setLoading }): React.ReactElement => {
   return (
     <div className={styles.loader}>
       <motion.div
@@ -64,34 +68,35 @@ const Loader = ({ setLoading }) => {
         exit='exit'
         onAnimationComplete={() => setLoading(false)}
       >
-        <ImageBlock variants={item} id='image-1' />
+        <ImageBlock
+          variants={item}
+          imgURL='https://res.cloudinary.com/jleomorris/image/upload/v1637980791/Portfolio-v5/101.png'
+          id='1'
+        />
         <motion.div className={styles.transitionImage} variants={itemMain}>
           <motion.img
-            src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1635814195/Portfolio-v5/Loader/main.jpg`}
+            src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1638058108/Portfolio-v5/developer_outline.png`}
             alt='random alt'
             layoutId='main-image-1'
           />
         </motion.div>
-        <ImageBlock variants={item} id='image-3' />
-        <ImageBlock variants={item} id='image-4' />
-        <ImageBlock variants={item} id='image-5' />
+        <ImageBlock
+          variants={item}
+          imgURL='https://res.cloudinary.com/jleomorris/image/upload/v1637980791/Portfolio-v5/103.png'
+          id='2'
+        />
+        <ImageBlock
+          variants={item}
+          imgURL='https://res.cloudinary.com/jleomorris/image/upload/v1637980791/Portfolio-v5/113.png'
+          id='3'
+        />
+        <ImageBlock
+          variants={item}
+          imgURL='https://res.cloudinary.com/jleomorris/image/upload/v1637980791/Portfolio-v5/142.png'
+          id='4'
+        />
       </motion.div>
     </div>
-  );
-};
-
-export const ImageBlock = ({ id, variants }) => {
-  return (
-    <motion.div
-      className={`${styles.imageBlock} ${styles[id]}`}
-      variants={variants}
-    >
-      <Image
-        src={`../../images/${id}.webp`}
-        fallback={`../../images/${id}.jpg`}
-        alt={id}
-      />
-    </motion.div>
   );
 };
 

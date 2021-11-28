@@ -20,16 +20,16 @@ export default function Home() {
       <Banner />
       <div className={`${bannerStyles['transitionImage--final']} relative`}>
         <motion.img
-          src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1635814195/Portfolio-v5/Loader/main.jpg`}
+          src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1638058108/Portfolio-v5/developer_outline.png`}
           layoutId='main-image-1'
           transition={{
             ease: [0.6, 0.01, -0.05, 0.95],
             duration: 1.6,
           }}
         />
-        <div className='absolute right-12 md:right-32 -bottom-32 image-description'>
+        {/* <div className='absolute right-12 md:right-32 -bottom-32 image-description'>
           <ImageDescription content='Photo from my trip to Zakopane, Poland in 2019' />
-        </div>
+        </div> */}
       </div>
       <PageContainer variant={Variant.NORMAL} noFlex={false}>
         <div className='w-full'>

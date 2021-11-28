@@ -25,8 +25,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     loading
-      ? document.querySelector('body').classList.add('loading')
-      : document.querySelector('body').classList.remove('loading');
+      ? document.querySelector('body')!.classList.add('loading')
+      : document.querySelector('body')!.classList.remove('loading');
   }, [loading]);
 
   useEffect(() => {
@@ -45,6 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           // initial={false}
           onExitComplete={() => window.scrollTo(0, 0)}
         >
+          {/* {loading || !loading ? ( */}
           {loading ? (
             <motion.div key='loader'>
               <Loader setLoading={setLoading} />
