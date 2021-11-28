@@ -45,7 +45,7 @@ const Project: React.FC<IProps> = ({ projectData }) => {
       );
       setBackgroundColor('#FFFFFF');
     }
-  }, [inView]);
+  }, [inView, projectData.backgroundColor]);
 
   // Reset bg color to yellow on dismount
   useEffect(() => {

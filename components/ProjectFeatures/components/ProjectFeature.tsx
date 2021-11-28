@@ -28,7 +28,7 @@ const ProjectFeature: React.FC<IProps> = ({ project, feature, inView }) => {
 
   return (
     <PageContainer
-      key={feature.subTitle}
+      key={feature.title}
       variant={Variant.TIGHT}
       noFlex={false}
       // bgColor='bg-white'
@@ -50,7 +50,10 @@ const ProjectFeature: React.FC<IProps> = ({ project, feature, inView }) => {
           <div className='flex flex-wrap items-start justify-between'>
             <div className='w-full mb-10 md:mb-0 '>
               {feature.description.map((item) => (
-                <p className='text-5xl font-bold sm:text-7xl font-vesterbroPoster'>
+                <p
+                  key={item}
+                  className='text-5xl font-bold sm:text-7xl font-vesterbroPoster'
+                >
                   {item}
                 </p>
               ))}

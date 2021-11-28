@@ -3,10 +3,14 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 // Styles
 import styles from '../../styles/Header.module.scss';
+// Images and Icons
+import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 // Next
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+// Components
 import HamburgerIcon from './Components/HamburgerIcon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface IProps {
   isTabletMobileHeaderOpen: boolean;
@@ -55,9 +59,16 @@ const Header: React.FC<IProps> = ({
     >
       <div className={styles.headerInner}>
         <div className={styles.logo}>
-          <Link href='/'>
+          <Link href={isCurrentPageProjects ? '/projects' : '/'}>
             <a className={`${isCurrentPageProjects ? 'text-white' : ''}`}>
-              Jleo
+              {isCurrentPageProjects ? (
+                <FontAwesomeIcon
+                  icon={faLongArrowAltLeft}
+                  className='text-7xl'
+                />
+              ) : (
+                'Jleo'
+              )}
             </a>
           </Link>
         </div>
@@ -108,20 +119,6 @@ const Header: React.FC<IProps> = ({
             />
           </button>
         </nav>
-        {/* <div className={`${styles.contact}`}>
-          <a
-            className={`${styles.contactLink} ${
-              isCurrentPageProjects ? 'text-white border-white' : ''
-            }`}
-            href='/contact'
-          >
-            Let's work together
-          </a>
-        </div> */}
-        {/* <div className={styles.hamburgerMenu}>
-          <span></span>
-          <span></span>
-        </div> */}
       </div>
     </motion.div>
   );

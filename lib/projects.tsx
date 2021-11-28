@@ -5,7 +5,7 @@ export function getAllProjectData() {
 }
 
 export function getProjectData(id: string) {
-  const filteredProject = projectData.filter(
+  const filteredProject = projectData().filter(
     (project) => project.link === id
   )[0];
 
@@ -13,7 +13,7 @@ export function getProjectData(id: string) {
 }
 
 export function getAllProjectIds() {
-  return projectData.map((project) => {
+  return projectData().map((project) => {
     return {
       params: {
         id: project.link,

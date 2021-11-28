@@ -12,7 +12,7 @@ const Contact = () => {
         <div className='flex flex-wrap items-start w-full h-full'>
           <div className=''>
             <h1 className='font-extrabold font-vesterbroPoster text-8xl lg:text-9xl 2xl:w-2/3'>
-              Let's work together
+              {`Let's work together`}
             </h1>
             <div className='flex my-20 space-x-3'>
               <a

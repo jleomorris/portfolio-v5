@@ -45,7 +45,9 @@ const ProjectChallenge: React.FC<IProps> = ({ project }) => {
             </div>
             <div className='w-full space-y-12 md:w-6/12'>
               {project.challenge.description.map((item) => (
-                <p className='font-sans text-3xl'>{item}</p>
+                <p key={item} className='font-sans text-3xl'>
+                  {item}
+                </p>
               ))}
             </div>
           </div>
@@ -53,7 +55,7 @@ const ProjectChallenge: React.FC<IProps> = ({ project }) => {
       </ScrollAnimationChild>
       <div className='relative w-screen mt-48 overflow-hidden h-96 md:h-180 xl:h-screen'>
         <Image
-          src={project.headerImgURL}
+          src={project.challengeImgURL}
           layout='responsive'
           alt='main'
           height='100%'

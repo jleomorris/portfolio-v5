@@ -55,7 +55,7 @@ const ProjectHeader: React.FC<IProps> = ({ project }) => {
     >
       <div
         ref={ref}
-        className={`${project.headerTextColor} flex flex-col justify-start border`}
+        className={`${project.headerTextColor} flex flex-col justify-start`}
       >
         <p className='z-50 mb-20 font-sans font-bold uppercase'>
           {project.subTitle}

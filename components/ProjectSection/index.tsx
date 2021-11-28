@@ -48,28 +48,28 @@ const ProjectSection: React.FC<IProps> = ({ project, index }) => {
     } else {
       `section ${index}(${project.backgroundColor}) component isn't visible`;
     }
-  }, [inView]);
+  }, [index, project.backgroundColor, inView]);
 
   return (
     <PageContainer
       key={project.subTitle}
       variant={Variant.TIGHT}
       noFlex={false}
-      // bgColor='bg-white'
+      leftAlign
     >
       <div
         ref={ref}
-        className={`${project.textColor} flex flex-col justify-start border`}
+        className={`${project.textColor} flex flex-col justify-start`}
       >
         <p className='mb-20 font-sans font-bold tracking-widest uppercase'>
           {project.subTitle}
         </p>
-        <div className='relative border sm:w-1/2'>
+        <div className='relative sm:w-1/2'>
           <h1 className='relative z-50 text-5xl font-extrabold lg:leading-32 font-vesterbroPoster md:text-6xl lg:text-7xl 2xl:text-8xl'>
             {project.title}
           </h1>
           <motion.div
-            className='z-0 mt-10 border-4 border-red-900 sm:mt-0 sm:absolute left-9/10 -inset-y-32 xl:-inset-y-64 w-96 sm:w-112 sm:h-112 h-96 xl:h-220 xl:w-180'
+            className='z-0 mt-10 sm:mt-0 sm:absolute left-9/10 -inset-y-32 xl:-inset-y-64 w-96 sm:w-112 sm:h-112 h-96 xl:h-220 xl:w-180'
             variants={imageVariants}
             initial='initial'
             whileHover='whileHover'
@@ -82,7 +82,6 @@ const ProjectSection: React.FC<IProps> = ({ project, index }) => {
               objectFit='contain'
               objectPosition='center'
               alt='project'
-              className='border border-blue-600'
             />
           </motion.div>
         </div>

@@ -30,7 +30,7 @@ const Links: React.FC<IProps> = ({ project }) => {
   return (
     <div className='flex w-full space-x-20 mt-28 links'>
       {project.links.map((link) => (
-        <Link href={link.href}>
+        <Link href={link.href} key={link.title}>
           <a target='_blank'>
             <motion.div
               variants={imageVariants}

@@ -4,14 +4,17 @@ export interface project {
   subTitle: string;
   challenge: {
     title: string;
-    description: string[];
+    description: (string | undefined)[];
   };
   title: string;
   backgroundColor: string;
   textColor: string;
   headerTextColor: string;
   headerImgURL: string;
+  descriptionImgURL: string;
+  challengeImgURL: string;
   sectionImgURL: string;
+  links: { title: string; href: string }[];
   features: Feature[];
   services: string[];
   team: Team[];
@@ -30,7 +33,6 @@ export interface Attribution {
 
 export interface Feature {
   title: string;
-  subTitle: string;
   description: string[];
   imgURL: string;
 }

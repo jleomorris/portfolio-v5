@@ -11,6 +11,7 @@ interface IProps {
   backgroundImgURL?: string;
   noFullHeight?: boolean;
   noPaddingBottom?: boolean;
+  leftAlign?: boolean;
 }
 
 export enum Variant {
@@ -31,15 +32,15 @@ const PageContainer: React.FC<IProps> = ({
   backgroundImgURL,
   noFullHeight,
   noPaddingBottom,
+  leftAlign,
 }) => {
   return (
     <div
       className={joinClassNames(
-        `page-container relative ${
-          noFullHeight ? '' : 'min-h-screen'
-        } border border-purple-900 ${
-          noFlex ? '' : 'flex flex-col justify-center items-center'
+        `page-container relative ${noFullHeight ? '' : 'min-h-screen'} ${
+          noFlex ? '' : 'flex flex-col justify-center'
         }`,
+        `${leftAlign ? '' : 'items-center'}`,
         `${noPaddingBottom ? 'pb-0 md:pb-0 xl:pb-0' : ''}`,
         VARIANT_MAPS[variant],
         bgColor
@@ -48,7 +49,12 @@ const PageContainer: React.FC<IProps> = ({
       {backgroundImgURL && (
         <div className='absolute top-0 left-0 w-full h-full'>
           <div className='absolute top-0 left-0 z-10 w-full h-full background-cover bg-gradient-to-r from-black'></div>
-          <Image src={backgroundImgURL} layout='fill' objectFit='cover' />
+          <Image
+            src={backgroundImgURL}
+            layout='fill'
+            objectFit='cover'
+            alt='background'
+          />
         </div>
       )}
       {children}

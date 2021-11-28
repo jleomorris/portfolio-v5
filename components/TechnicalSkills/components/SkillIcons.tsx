@@ -52,11 +52,11 @@ interface Skill {
 
 const SkillIcons: React.FC<IProps> = ({ skillsData }) => {
   return (
-    <div className='skill-icons w-full lg:w-2/3 mx-auto flex flex-wrap justify-center items-center'>
+    <div className='flex flex-wrap items-center justify-center w-full mx-auto skill-icons lg:w-2/3'>
       {skillsData.map((skill) => (
-        <div className='skill my-10 mx-16 relative' key={skill!.title}>
+        <div className='relative mx-16 my-10 skill' key={skill!.title}>
           {skill.altIcon !== null ? (
-            <div className='h-36 w-60 flex justify-center items-center'>
+            <div className='flex items-center justify-center h-36 w-60'>
               {skill.altIcon}{' '}
               {skill.showTitle && (
                 <p
@@ -64,7 +64,7 @@ const SkillIcons: React.FC<IProps> = ({ skillsData }) => {
                     textShadow: '1px 1px 10px black',
                     fontFamily: 'system-ui',
                   }}
-                  className='text-center text-white mt-3 font-extrabold text-3xl absolute inset-0 flex items-center justify-center'
+                  className='absolute inset-0 flex items-center justify-center mt-3 text-3xl font-extrabold text-center text-white'
                 >
                   {skill.title}
                 </p>
@@ -72,7 +72,7 @@ const SkillIcons: React.FC<IProps> = ({ skillsData }) => {
             </div>
           ) : (
             <FontAwesomeIcon
-              icon={skill.icon}
+              icon={skill.icon!}
               className='text-8xl md:text-10xl'
             />
           )}
@@ -82,7 +82,7 @@ const SkillIcons: React.FC<IProps> = ({ skillsData }) => {
                 textShadow: '1px 1px 10px black',
                 fontFamily: 'system-ui',
               }}
-              className='text-center text-white mt-3 font-extrabold text-3xl absolute inset-0 flex items-center justify-center'
+              className='absolute inset-0 flex items-center justify-center mt-3 text-3xl font-extrabold text-center text-white'
             >
               {skill.title}
             </p>

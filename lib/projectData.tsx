@@ -1,4 +1,6 @@
-export const projectData = [
+import { selectRandom } from '../utils';
+
+export const projectData = () => [
   {
     link: 'LDR_Generator',
     description:
@@ -16,8 +18,36 @@ export const projectData = [
     backgroundColor: '#D62742',
     textColor: 'text-white',
     headerTextColor: 'text-white',
-    headerImgURL:
-      'https://res.cloudinary.com/jleomorris/image/upload/v1636763556/Portfolio-v5/Projects/LDR/header_background.jpg',
+    headerImgURL: selectRandom([
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/1.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/2.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/3.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/4.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/5.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/6.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/7.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/8.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/9.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/10.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/11.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/12.jpg',
+    ]),
+    descriptionImgURL:
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636763556/Portfolio-v5/Projects/LDR/header_background.jpg',
+    challengeImgURL: selectRandom([
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/1.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/2.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/3.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/4.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/5.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/6.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/7.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/8.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/9.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/10.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/11.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637863327/Portfolio-v5/Projects/LDR/header/12.jpg',
+    ]),
     sectionImgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636320699/Portfolio-v5/Projects/kharnivore.jpg',
     links: [
@@ -100,6 +130,10 @@ export const projectData = [
     headerTextColor: 'text-white',
     headerImgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1633172502/Pokemon-tcg-price-guide/home-background.jpg',
+    descriptionImgURL:
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637886594/Portfolio-v5/Projects/poke-price/header/1.jpg',
+    challengeImgURL:
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637887085/Portfolio-v5/Projects/poke-price/collage.jpg',
     sectionImgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636328176/Portfolio-v5/Projects/Charizard.png',
     links: [
@@ -127,7 +161,7 @@ export const projectData = [
           'View market, low, mid and high prices - all from TCGPlayer.',
         ],
         imgURL:
-          'https://res.cloudinary.com/jleomorris/image/upload/v1637277803/Portfolio-v5/Projects/poke-price/price-data.jpg',
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637277803/Portfolio-v5/Projects/poke-price/price-data.jpg',
       },
       {
         title: 'PokemonTCG API',
@@ -135,7 +169,7 @@ export const projectData = [
           'Developed using one of the most comprehensive datasets for Pokemon cards - PokemonTCG API.',
         ],
         imgURL:
-          'https://res.cloudinary.com/jleomorris/image/upload/v1637277673/Portfolio-v5/Projects/poke-price/pokemontcg.jpg',
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637277673/Portfolio-v5/Projects/poke-price/pokemontcg.jpg',
       },
     ],
     services: [
@@ -180,7 +214,11 @@ export const projectData = [
     textColor: 'text-black',
     headerTextColor: 'text-white',
     headerImgURL:
-      'https://res.cloudinary.com/jleomorris/image/upload/v1636768639/Portfolio-v5/Projects/modern-pokedex/header_background.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636768639/Portfolio-v5/Projects/modern-pokedex/header_background.jpg',
+    descriptionImgURL:
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637887418/Portfolio-v5/Projects/modern-pokedex/description.jpg',
+    challengeImgURL:
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637891142/Portfolio-v5/Projects/modern-pokedex/challenge.jpg',
     sectionImgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636324383/Portfolio-v5/Projects/gyarados.png',
     links: [
@@ -197,7 +235,7 @@ export const projectData = [
       {
         title: 'Custom Sprite Options',
         description: [
-          'Choose between 7 different sprite views - from official to 3D.',
+          'Choose between 7 different sprite styles - from official to 3D.',
         ],
         imgURL:
           'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637272356/Portfolio-v5/Projects/modern-pokedex/sprites.jpg',
@@ -216,7 +254,7 @@ export const projectData = [
           "View a Pokemon' stats, abilities, damage type, where to find, evolution chart and more.",
         ],
         imgURL:
-          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637272956/Portfolio-v5/Projects/modern-pokedex/details.jpg',
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637894665/Portfolio-v5/Projects/modern-pokedex/details.jpg',
       },
       {
         title: 'PokeAPI',
@@ -302,6 +340,10 @@ export const projectData = [
     headerTextColor: 'text-white',
     headerImgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636772097/Portfolio-v5/Projects/last-life/header-background.jpg',
+    descriptionImgURL:
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637891980/Portfolio-v5/Projects/last-life/description.jpg',
+    challengeImgURL:
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637894005/Portfolio-v5/Projects/last-life/mobile.jpg',
     sectionImgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636325505/Portfolio-v5/Projects/jin_sakai.png',
     links: [
@@ -379,7 +421,11 @@ export const projectData = [
     textColor: 'text-white',
     headerTextColor: 'text-white',
     headerImgURL:
-      'https://res.cloudinary.com/jleomorris/image/upload/v1636772390/Portfolio-v5/Projects/bolt-music-player/header-background.jpg',
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636772390/Portfolio-v5/Projects/bolt-music-player/header-background.jpg',
+    descriptionImgURL:
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637893738/Portfolio-v5/Projects/bolt-music-player/description.jpg',
+    challengeImgURL:
+      'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637280195/Portfolio-v5/Projects/bolt-music-player/mobile.jpg',
     sectionImgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636326862/Portfolio-v5/Projects/bolt.png',
     links: [
@@ -399,13 +445,13 @@ export const projectData = [
           'The latest chilled beats from chillhop.com, library view can be toggled on and off.',
         ],
         imgURL:
-          'https://res.cloudinary.com/jleomorris/image/upload/v1637280131/Portfolio-v5/Projects/bolt-music-player/library.jpg',
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637280131/Portfolio-v5/Projects/bolt-music-player/library.jpg',
       },
       {
         title: 'Dark Mode',
         description: ['Dark mode toggle available.'],
         imgURL:
-          'https://res.cloudinary.com/jleomorris/image/upload/v1637280195/Portfolio-v5/Projects/bolt-music-player/dark-mode.jpg',
+          'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1637280195/Portfolio-v5/Projects/bolt-music-player/dark-mode.jpg',
       },
     ],
     services: [

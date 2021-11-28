@@ -1,14 +1,18 @@
 // Components
 import Next from '../Icons/NextJs';
 import Tailwind from '../Icons/Tailwind';
-import SkillIcons from '../TechnicalSkills/components/skillIcons';
+import SkillIcons from '../TechnicalSkills/components/SkillIcons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
 
 const skillsData = [
   {
-    icon: null,
+    icon: faCode,
     altIcon: (
-      <img
-        className='h-36 object-contain'
+      <Image
+        layout='fill'
+        objectFit='contain'
+        // className='object-contain h-36'
         src='https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636043580/Portfolio-v5/Skills/jest.png'
       />
     ),
@@ -16,16 +20,18 @@ const skillsData = [
     showTitle: true,
   },
   {
-    icon: null,
+    icon: faCode,
     altIcon: <Next />,
     title: 'Next',
     showTitle: false,
   },
   {
-    icon: null,
+    icon: faCode,
     altIcon: (
-      <img
-        className='h-36 object-contain'
+      <Image
+        layout='fill'
+        objectFit='contain'
+        // className='object-contain h-36'
         src='https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636043837/Portfolio-v5/Skills/redux.png'
       />
     ),
@@ -33,16 +39,18 @@ const skillsData = [
     showTitle: true,
   },
   {
-    icon: null,
+    icon: faCode,
     altIcon: <Tailwind />,
     title: 'Tailwind',
     showTitle: false,
   },
   {
-    icon: null,
+    icon: faCode,
     altIcon: (
-      <img
-        className='h-36 object-contain'
+      <Image
+        layout='fill'
+        objectFit='contain'
+        // className='object-contain h-36'
         src='https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636041408/Portfolio-v5/Skills/ts.png'
       />
     ),
@@ -54,7 +62,7 @@ const skillsData = [
 const CurrentlyUsedSkills = () => {
   return (
     <div className='currently-used-skills'>
-      <h3 className='text-8xl mb-32 font-extrabold text-center w-full xl:w-1/2 mx-auto'>
+      <h3 className='w-full mx-auto mb-32 font-extrabold text-center text-8xl xl:w-1/2'>
         My current tech stack.
       </h3>
       <SkillIcons skillsData={skillsData} />
