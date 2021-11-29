@@ -14,10 +14,10 @@ interface IProps {
 }
 
 const imageStyles = {
-  1: 'w-96 h-96 left-96 top-24',
-  2: 'h-120 w-120 right-96 top-52',
-  3: 'w-200 h-200 left-96 bottom-8',
-  4: 'w-220 h-220 right-96 bottom-8',
+  1: 'w-48 h-48 sm:w-96 sm:h-96 border border-red-900',
+  2: 'w-48 h-48 sm:h-96 sm:w-96 -ml-12',
+  3: 'w-48 h-48 sm:w-96 sm:h-96 -ml-12',
+  4: 'w-48 h-48 sm:w-96 sm:h-96 -ml-12',
 };
 
 const ImageBlock: React.FC<IProps> = ({
@@ -27,7 +27,7 @@ const ImageBlock: React.FC<IProps> = ({
 }): React.ReactElement => {
   return (
     <motion.div
-      className={`${loaderStyles.imageBlock} z-50 absolute ${imageStyles[id]}`}
+      className={`${loaderStyles.imageBlock} z-50 bg-blackLighter relative border-4 border-yellow-400 p-12 rounded-full ${imageStyles[id]}`}
       variants={variants as any}
     >
       <Image src={imgURL} layout='fill' objectFit='contain' alt='image-block' />

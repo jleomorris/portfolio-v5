@@ -17,10 +17,10 @@ const BannerRowCenter: React.FC<IProps> = ({ title, playMarquee }) => {
       }`}
     >
       <div className={marqueeStyles['marquee__inner']}>
-        <AnimatedLetters title={title} disabled />
         <AnimatedLetters title={title} />
-        <AnimatedLetters title={title} disabled />
-        <AnimatedLetters title={title} disabled />
+        <AnimatedLetters title={title} />
+        <AnimatedLetters title={title} />
+        <AnimatedLetters title={title} />
       </div>
     </div>
   );

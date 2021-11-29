@@ -28,11 +28,36 @@ const itemsContainer = {
 const item = {
   hidden: {
     opacity: 0,
-    y: 200,
+    y: 100,
   },
   show: {
     opacity: 1,
     y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.6,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -200,
+    transition: {
+      ease: 'easeInOut',
+      duration: 0.8,
+    },
+  },
+};
+
+const logoIcons = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+    rotate: 5,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    rotate: 0,
     transition: {
       ease: [0.6, 0.01, -0.05, 0.95],
       duration: 1.6,
@@ -72,7 +97,7 @@ const Loader: React.FC<IProps> = ({ setLoading }): React.ReactElement => {
   return (
     <div className={styles.loader}>
       <motion.div
-        className={`${styles.loaderInner} flex justify-center`}
+        className={`${styles.loaderInner} flex justify-center items-center`}
         variants={container}
         initial='hidden'
         animate='show'
