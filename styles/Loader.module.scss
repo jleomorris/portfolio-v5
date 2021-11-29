@@ -4,18 +4,18 @@
   .loaderInner {
     .transitionImage {
       position: relative;
-      // top: 0;
-      // left: 0;
-      // height: 100vh;
-      // width: 100vw;
-      margin: 5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      // height: 75vh;
+      margin: 1rem;
+
+      @media (min-width: $layout-breakpoint-small) {
+        margin: 5rem;
+      }
 
       img {
-        width: 800px;
-        display: flex;
+        @media (min-width: $layout-breakpoint-small) {
+          height: 80vh;
+        }
+        object-fit: contain;
       }
 
       &.final {

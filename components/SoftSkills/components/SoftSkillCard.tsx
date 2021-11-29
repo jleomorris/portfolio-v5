@@ -12,8 +12,13 @@ interface IProps {
 const SoftSkillCard: React.FC<IProps> = ({ softSkill }) => {
   return (
     <div className='mr-20 soft-skill-card w-96 xl:w-112'>
-      <div className='relative mb-10 border border-black h-96 xl:h-112 w-96 xl:w-112'>
-        <Image layout='fill' alt='skill' src={softSkill.imgURL} />
+      <div className='relative mb-10 h-96 xl:h-112 w-96 xl:w-112'>
+        <Image
+          layout='fill'
+          alt='skill'
+          objectFit='contain'
+          src={softSkill.imgURL}
+        />
       </div>
       <h4 className='mb-4 text-5xl font-extrabold'>{softSkill.name}</h4>
       <p className='w-11/12 text-3xl font-light sm:w-10/12'>

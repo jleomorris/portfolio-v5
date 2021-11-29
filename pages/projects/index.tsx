@@ -11,7 +11,7 @@ const Projects = () => {
     const targetColor = projectData()[0].backgroundColor;
     setBackgroundColor(targetColor);
     return () => {
-      setBackgroundColor('#f2c744');
+      setBackgroundColor('#ff9e44');
     };
   }, []);
 

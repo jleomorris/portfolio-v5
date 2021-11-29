@@ -10,7 +10,7 @@ import ImageBlock from './components/ImageBlock';
 const container = {
   show: {
     transition: {
-      staggerChildren: 1,
+      staggerChildren: 0.5,
     },
   },
 };
@@ -84,7 +84,7 @@ const itemMain = {
     transition: {
       ease: [0.6, 0.01, -0.05, 0.95],
       duration: 1.6,
-      delay: 3,
+      // delay: 3,
     },
   },
 };
@@ -108,52 +108,33 @@ const Loader: React.FC<IProps> = ({ setLoading }): React.ReactElement => {
           initial='hidden'
           animate='show'
           exit='exit'
-          className='absolute flex flex-col text-center top-32'
+          className='absolute flex flex-col items-center justify-center w-11/12 text-center lg:text-left lg:flex-row top-32 sm:w-10/12'
         >
-          <motion.h1
-            variants={item}
-            className='w-full text-7xl md:text-8xl font-vesterbroPoster'
-          >
-            Jleo | Front End Portfolio
-          </motion.h1>
-          <motion.div
-            variants={itemsContainer}
-            className='relative flex flex-wrap items-center justify-center w-full mt-24'
-          >
-            <ImageBlock
-              variants={logoIcons}
-              imgURL='https://res.cloudinary.com/jleomorris/image/upload/v1637980791/Portfolio-v5/101.png'
-              id='1'
+          <div className='flex flex-col items-center justify-center lg:items-start'>
+            <motion.h1
+              variants={item}
+              className='text-7xl md:text-8xl font-vesterbroPoster'
+            >
+              Jleo | Front End Portfolio
+            </motion.h1>
+            <motion.div
+              variants={item}
+              className='w-10/12 h-1 my-6 bg-blackLighter sm:w-full'
             />
-            <ImageBlock
-              variants={logoIcons}
-              imgURL='https://res.cloudinary.com/jleomorris/image/upload/v1637980791/Portfolio-v5/103.png'
-              id='2'
-            />
-            <ImageBlock
-              variants={logoIcons}
-              imgURL='https://res.cloudinary.com/jleomorris/image/upload/v1637980791/Portfolio-v5/113.png'
-              id='3'
-            />
-            <ImageBlock
-              variants={logoIcons}
-              imgURL='https://res.cloudinary.com/jleomorris/image/upload/v1637980791/Portfolio-v5/142.png'
-              id='4'
-            />
-            {/* <motion.img
-              src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1638058108/Portfolio-v5/developer_outline.png`}
-              variants={itemMain}
-              alt='random alt'
-              layoutId='main-image-1'
-            /> */}
-          </motion.div>
+            <motion.h2
+              variants={item}
+              className='font-sans text-4xl tracking-wider md:text-5xl'
+            >
+              Senior Front End Developer
+            </motion.h2>
+          </div>
           <motion.div
             className={`${styles.transitionImage} relative`}
             variants={itemMain}
             onAnimationComplete={() => setLoading(false)}
           >
             <motion.img
-              src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1638058108/Portfolio-v5/developer_outline.png`}
+              src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1638223587/Portfolio-v5/3D-stripy/budda_ceg7wv.png`}
               alt='random alt'
               layoutId='main-image-1'
             />
