@@ -126,7 +126,7 @@
   display: block;
   top: -128px;
   position: relative;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   z-index: 0;
 
@@ -136,6 +136,11 @@
 
   img {
     width: 100%;
-    max-width: 100%;
+
+    @media (min-width: $layout-breakpoint-small) {
+      width: 70%;
+    }
+
+    margin: 0 auto;
   }
 }

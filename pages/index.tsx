@@ -18,9 +18,11 @@ export default function Home() {
   return (
     <div className='home pt-nav'>
       <Banner />
-      <div className={`${bannerStyles['transitionImage--final']} relative`}>
+      <div
+        className={`${bannerStyles['transitionImage--final']} p-36 sm:p-48 relative bg-white rounded-3xl bg-opacity-70 border-4 border-black`}
+      >
         <motion.img
-          src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1638058108/Portfolio-v5/developer_outline.png`}
+          src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1638223587/Portfolio-v5/3D-stripy/budda_ceg7wv.png`}
           layoutId='main-image-1'
           transition={{
             ease: [0.6, 0.01, -0.05, 0.95],

@@ -3,17 +3,19 @@
 .loader {
   .loaderInner {
     .transitionImage {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: relative;
+      // height: 75vh;
+      margin: 1rem;
+
+      @media (min-width: $layout-breakpoint-small) {
+        margin: 5rem;
+      }
+
       img {
-        width: 800px;
-        display: flex;
+        @media (min-width: $layout-breakpoint-small) {
+          height: 80vh;
+        }
+        object-fit: contain;
       }
       &.final {
         display: block;
