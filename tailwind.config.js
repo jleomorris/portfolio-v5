@@ -63,11 +63,11 @@ module.exports = {
     },
     textColor: (theme) => ({
       ...theme('colors'),
-      main: '#F2C744',
+      main: '#ff9e44',
     }),
     backgroundColor: (theme) => ({
       ...theme('colors'),
-      main: '#F2C744',
+      main: '#ff9e44',
       blackLighter: '#1A1A1A',
       hoverShadow: '#00000017',
     }),
