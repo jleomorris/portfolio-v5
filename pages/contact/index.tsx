@@ -47,7 +47,10 @@ const Contact = () => {
           </div>
           <div className=''>
             <p className='mb-4 font-sans text-4xl font-bold'>New Business</p>
-            <a href='' className='font-sans text-3xl font-normal underline'>
+            <a
+              href='mailTo:jamesleomorris@gmail.com'
+              className='font-sans text-3xl font-normal underline'
+            >
               jamesleomorris@gmail.com
             </a>
           </div>
