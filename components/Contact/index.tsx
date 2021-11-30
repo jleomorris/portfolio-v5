@@ -10,22 +10,22 @@ import Image from 'next/image';
 // Variants
 const handAnimation = {
   initial: {
-    y: 350,
+    y: 250,
     opacity: 1,
   },
   animate: {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.5,
       ease: 'easeInOut',
     },
   },
   exit: {
     opacity: 1,
-    y: 350,
+    y: 250,
     transition: {
-      duration: 1,
+      duration: 0.5,
     },
   },
 };
