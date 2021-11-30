@@ -7,8 +7,8 @@ const aboutData = [
   {
     title: 'My developer journey',
     content: [
-      'From Sep 2019-March 2021 I worked as a front end developer at the digital learning company Saffron Interactive. Over this period I built solid foundations in HTML5, JS, CSS, SCSS and React. I also developed a keen eye for UI, UX and responsive design.',
-      "In March 2021 I began a new role at IronmongeryDirect as a React developer. In my time here I've strengthened my React and Redux principles, learnt Next.js, improved my knowledge of SEO and have contributed to multiple new exciting projects in line with a company rebrand.",
+      'From Sep 2019-Mar 2021 I worked as a front end developer at the digital learning company Saffron Interactive. Over this period I built solid foundations as a developer and gained a keen eye for UI, UX and responsive design.',
+      "In Mar 2021 I began a new role at IronmongeryDirect as a React developer. In my time here I've between promoted to senior, have learnt Next.js, improved my knowledge of SEO and have contributed to multiple new projects in line with a company rebrand.",
     ],
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636172413/Portfolio-v5/About/front-end-developer.png',
@@ -17,7 +17,7 @@ const aboutData = [
     title: 'My qualifications',
     content: [
       'Completing a Bsc in Forensic Biology (2:1) taught me the importance of attention to detail and analytical thinking.',
-      'The Msc I completed in Computer Science introduced me to the industry, the skills and the mindset I would need to begin my career as a developer.',
+      'The Msc I gained in Computer Science (Merit) introduced me to the industry, the skills and the mindset I would need to begin my career as a developer.',
     ],
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636210765/Portfolio-v5/About/graduation_imyrx1.png',
@@ -25,8 +25,8 @@ const aboutData = [
   {
     title: 'My motivations',
     content: [
-      'In my youth I was passionate about art but I dropped this in favor of something more academic. However, after completing my Bsc  I fell out of love with forensics. It was at this moment I began to build custom desktops and dabble in HTML & CSS.',
-      "Web development is perfect for me as it allows me to combine my passion for tech and art/design. I'm driven to become as strong a developer as I can be and I like to maintain a high rate of learning in my personal time.",
+      'After completing my Bsc I fell out of love with forensics. Soon after I began to build custom desktops and develop my first web pages in HTML & CSS.',
+      "Web development is perfect for me as it allows me to combine my passion for tech and art/design. I'm driven to become as strong a developer as I can be and like to maintain a high rate of learning in my personal time.",
     ],
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636211048/Portfolio-v5/About/motivation.png',
@@ -34,7 +34,7 @@ const aboutData = [
   {
     title: 'My hobbies',
     content: [
-      'In my spare time I build custom desktops, play guitar and try my hand at digtal art. I also like to cut off from tech when possible, so I like to arrange hiking trips when I can.',
+      "In my spare time I build custom desktops, play guitar and create digtal art. I also like to go on hiking trips as I believe it's important to cut off from all things digital every once in a while.",
     ],
     imgURL:
       'https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1636211661/Portfolio-v5/About/hobbies.png',
