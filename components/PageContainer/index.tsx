@@ -37,9 +37,9 @@ const PageContainer: React.FC<IProps> = ({
   return (
     <div
       className={joinClassNames(
-        `page-container relative ${noFullHeight ? '' : 'min-h-screen'} ${
-          noFlex ? '' : 'flex flex-col justify-center'
-        }`,
+        `page-container overflow-hidden relative ${
+          noFullHeight ? '' : 'min-h-screen'
+        } ${noFlex ? '' : 'flex flex-col justify-center'}`,
         `${leftAlign ? '' : 'items-center'}`,
         `${noPaddingBottom ? 'pb-0 md:pb-0 xl:pb-0' : ''}`,
         VARIANT_MAPS[variant],
