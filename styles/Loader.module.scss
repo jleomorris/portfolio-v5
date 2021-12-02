@@ -5,11 +5,11 @@
     .transitionImage {
       position: relative;
       // height: 75vh;
-      margin: 1rem;
+      // margin: 1rem;
 
-      @media (min-width: $layout-breakpoint-small) {
-        margin: 5rem;
-      }
+      // @media (min-width: $layout-breakpoint-small) {
+      //   margin: 5rem;
+      // }
 
       img {
         @media (min-width: $layout-breakpoint-small) {
