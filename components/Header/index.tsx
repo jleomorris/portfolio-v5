@@ -6,7 +6,7 @@ import styles from '../../styles/Header.module.scss';
 // Images and Icons
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 // Next
-import Link from 'next/link';
+import Link from 'next/Link';
 import { useRouter } from 'next/router';
 // Components
 import HamburgerIcon from './Components/HamburgerIcon';

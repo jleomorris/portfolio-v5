@@ -1,5 +1,5 @@
 // Components
-import Link from 'next/link';
+import Link from 'next/Link';
 import PageContainer, { Variant } from '../components/PageContainer';
 import Image from 'next/image';
 

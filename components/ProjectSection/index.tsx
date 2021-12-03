@@ -10,7 +10,7 @@ import { project } from '../../types';
 import PageContainer, { Variant } from '../../components/PageContainer';
 import Image from 'next/image';
 import { useEffect } from 'react';
-import Link from 'next/link';
+import Link from 'next/Link';
 
 interface IProps {
   project: project;
