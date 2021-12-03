@@ -3,7 +3,7 @@ import Image from 'next/image';
 // Styling
 import bannerStyles from '../../styles/Banner.module.scss';
 // Components
-import Link from 'next/Link';
+import Link from 'next/link';
 import React, { ReactElement } from 'react';
 
 const EmploymentResponsive: React.FC = (): ReactElement => {
