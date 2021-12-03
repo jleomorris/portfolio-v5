@@ -5,6 +5,9 @@ import marqueeStyles from '../../../styles/Marquee.module.scss';
 import { motion } from 'framer-motion';
 // Components
 import AnimatedLetters from './AnimatedLetters';
+import Image from 'next/image';
+import Link from 'next/Link';
+import EmploymentDefault from '../../EmploymentDefault';
 
 // Variants
 const bannerRowTop = {
@@ -29,21 +32,17 @@ interface IProps {
 
 const BannerRowTop: React.FC<IProps> = ({ title }) => {
   return (
-    <div className={`${bannerStyles.bannerRow} pl-10 2xl:pl-96`}>
+    <div className={`${bannerStyles.bannerRow} pl-10 2xl:pl-96 relative`}>
       <div className={bannerStyles['row-col']}>
         <AnimatedLetters title={title} disabled={false} />
       </div>
       <motion.div
-        className={bannerStyles['row-col']}
+        className={`${bannerStyles['row-col']} -ml-48 mb-56 lg:ml-32 hidden xl:flex sm:mb-96 md:m-0`}
         variants={bannerRowTop}
         initial='initial'
         animate='animate'
       >
-        <span
-          className={`${bannerStyles['row-message']} text-2xl mb-48 sm:mb-0 sm:text-3xl`}
-        >
-          Senior React Developer at IronmongeryDirect - Basildon, Essex
-        </span>
+        <EmploymentDefault />
       </motion.div>
     </div>
   );

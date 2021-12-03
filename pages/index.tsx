@@ -13,6 +13,8 @@ import TechnicalSkills from '../components/TechnicalSkills';
 import CurrentlyUsedSkills from '../components/CurrentlyUsedSkills';
 import Banner from '../components/Banner';
 import ImageDescription from '../components/ImageDescription';
+import Link from 'next/Link';
+import EmploymentResponsive from '../components/EmploymentResponsive';
 
 export default function Home() {
   return (
@@ -28,10 +30,14 @@ export default function Home() {
             ease: [0.6, 0.01, -0.05, 0.95],
             duration: 1.6,
           }}
+          className='sm:mt-32'
         />
-        {/* <div className='absolute right-12 md:right-32 -bottom-32 image-description'>
-          <ImageDescription content='Photo from my trip to Zakopane, Poland in 2019' />
-        </div> */}
+        <div
+          className='absolute w-2/3 xl:hidden bottom-12 sm:bottom-24'
+          style={{ left: '50%', transform: 'translatex(-50%)' }}
+        >
+          <EmploymentResponsive />
+        </div>
       </div>
       <PageContainer variant={Variant.NORMAL} noFlex={false}>
         <div className='w-full'>
