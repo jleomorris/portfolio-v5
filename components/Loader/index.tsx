@@ -15,16 +15,6 @@ const container = {
   },
 };
 
-const itemsContainer = {
-  show: {
-    transition: {
-      ease: 'easeInOut',
-      delay: 5,
-      staggerChildren: 0.5,
-    },
-  },
-};
-
 const item = {
   hidden: {
     opacity: 0,
@@ -34,7 +24,9 @@ const item = {
     opacity: 1,
     y: 0,
     transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
+      type: 'spring',
+      bounce: 0.7,
+      ease: 'easeInOut',
       duration: 1.6,
     },
   },
@@ -43,32 +35,7 @@ const item = {
     y: -200,
     transition: {
       ease: 'easeInOut',
-      duration: 0.8,
-    },
-  },
-};
-
-const logoIcons = {
-  hidden: {
-    opacity: 0,
-    y: 100,
-    rotate: 5,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    rotate: 0,
-    transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 1.6,
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: -200,
-    transition: {
-      ease: 'easeInOut',
-      duration: 0.8,
+      duration: 1.5,
     },
   },
 };
@@ -82,9 +49,10 @@ const itemMain = {
     opacity: 1,
     y: 0,
     transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 1.6,
-      // delay: 3,
+      type: 'spring',
+      bounce: 0.7,
+      ease: 'easeInOut',
+      duration: 2.5,
     },
   },
 };
@@ -129,7 +97,7 @@ const Loader: React.FC<IProps> = ({ setLoading }): React.ReactElement => {
             </motion.h2>
           </div>
           <motion.div
-            className={`${styles.transitionImage} relative`}
+            className={`${styles.transitionImage} relative mt-24 sm:mt-48 lg:ml-48 lg:my-0`}
             variants={itemMain}
             onAnimationComplete={() => setLoading(false)}
           >
