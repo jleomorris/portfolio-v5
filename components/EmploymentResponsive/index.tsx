@@ -4,8 +4,9 @@ import Image from 'next/image';
 import bannerStyles from '../../styles/Banner.module.scss';
 // Components
 import Link from 'next/Link';
+import React, { ReactElement } from 'react';
 
-const EmploymentResponsive = () => {
+const EmploymentResponsive: React.FC = (): ReactElement => {
   return (
     <Link href='https://www.ironmongerydirect.co.uk'>
       <a

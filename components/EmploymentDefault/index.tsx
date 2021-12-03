@@ -4,8 +4,9 @@ import bannerStyles from '../../styles/Banner.module.scss';
 // Components
 import Image from 'next/image';
 import Link from 'next/Link';
+import React, { ReactElement } from 'react';
 
-const EmploymentDefault = () => {
+const EmploymentDefault: React.FC = (): ReactElement => {
   return (
     <Link href='https://www.ironmongerydirect.co.uk'>
       <a target='_blank' className={`${bannerStyles['row-col']}`}>
