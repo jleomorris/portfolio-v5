@@ -2,7 +2,7 @@
 import { containerAnimation } from '../../animations';
 import { motion } from 'framer-motion';
 // Components
-import Link from 'next/Link';
+import Link from 'next/link';
 import Footer from '../Footer';
 
 const listItemVariants = {

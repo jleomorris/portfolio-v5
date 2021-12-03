@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 // Components
 import PageContainer, { Variant as pageVariant } from '../PageContainer';
 import Button, { Variant as buttonVariant, Size } from '../Button';
-import Link from 'next/Link';
+import Link from 'next/link';
 import Image from 'next/image';
 
 // Variants

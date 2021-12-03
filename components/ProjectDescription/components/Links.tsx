@@ -3,7 +3,7 @@ import { project } from '../../../types';
 // Animation
 import { motion } from 'framer-motion';
 // Components
-import Link from 'next/Link';
+import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
