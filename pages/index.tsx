@@ -13,7 +13,7 @@ import TechnicalSkills from '../components/TechnicalSkills';
 import CurrentlyUsedSkills from '../components/CurrentlyUsedSkills';
 import Banner from '../components/Banner';
 import ImageDescription from '../components/ImageDescription';
-import Link from 'next/Link';
+import Link from 'next/link';
 import EmploymentResponsive from '../components/EmploymentResponsive';
 
 export default function Home() {

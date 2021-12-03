@@ -3,7 +3,7 @@ import bannerStyles from '../../styles/Banner.module.scss';
 // Animation
 // Components
 import Image from 'next/image';
-import Link from 'next/Link';
+import Link from 'next/link';
 import React, { ReactElement } from 'react';
 
 const EmploymentDefault: React.FC = (): ReactElement => {
