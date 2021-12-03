@@ -25,9 +25,9 @@ const item = {
     y: 0,
     transition: {
       type: 'spring',
-      bounce: 0.7,
+      // bounce: 0.7,
       ease: 'easeInOut',
-      duration: 1.6,
+      duration: 1,
     },
   },
   exit: {
@@ -35,7 +35,7 @@ const item = {
     y: -200,
     transition: {
       ease: 'easeInOut',
-      duration: 1.5,
+      duration: 1,
     },
   },
 };
@@ -50,9 +50,9 @@ const itemMain = {
     y: 0,
     transition: {
       type: 'spring',
-      bounce: 0.7,
+      // bounce: 0.7,
       ease: 'easeInOut',
-      duration: 2.5,
+      duration: 1.5,
     },
   },
 };
