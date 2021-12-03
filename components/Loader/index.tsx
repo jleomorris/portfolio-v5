@@ -35,7 +35,7 @@ const item = {
     y: -200,
     transition: {
       ease: 'easeInOut',
-      duration: 1,
+      duration: 1.5,
     },
   },
 };
@@ -52,7 +52,7 @@ const itemMain = {
       type: 'spring',
       bounce: 0.7,
       ease: 'easeInOut',
-      duration: 2,
+      duration: 2.5,
     },
   },
 };
