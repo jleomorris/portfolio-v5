@@ -5,8 +5,6 @@ import marqueeStyles from '../../../styles/Marquee.module.scss';
 import { motion } from 'framer-motion';
 // Components
 import AnimatedLetters from './AnimatedLetters';
-import Image from 'next/image';
-import Link from 'next/Link';
 import EmploymentDefault from '../../EmploymentDefault';
 
 // Variants

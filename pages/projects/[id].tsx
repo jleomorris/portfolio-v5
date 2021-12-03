@@ -11,7 +11,7 @@ import { setBackgroundColor } from '../../utils';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import ProjectHeader from '../../components/ProjectHeader';
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/Link';
 import ProjectDescription from '../../components/ProjectDescription';
 import ProjectChallenge from '../../components/ProjectChallenge';
 import ProjectFeatures from '../../components/ProjectFeatures';
