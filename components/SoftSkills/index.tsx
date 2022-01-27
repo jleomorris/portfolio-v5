@@ -71,7 +71,9 @@ const SoftSkills = () => {
 
   return (
     <div className='soft-skills'>
-      <h3 className='mb-32 font-extrabold text-8xl'>Soft Skills</h3>
+      <h3 className='mb-32 font-extrabold text-8xl mt-32 sm:mt-0'>
+        Soft Skills
+      </h3>
       <div className='xl:ml-40 cursor-pointer'>
         <AliceCarousel
           // autoPlay

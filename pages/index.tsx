@@ -21,7 +21,7 @@ export default function Home() {
     <div className='home pt-nav'>
       <Banner />
       <div
-        className={`${bannerStyles['transitionImage--final']} p-36 sm:p-48 relative bg-white rounded-3xl bg-opacity-70 border-4 border-black`}
+        className={`${bannerStyles['transitionImage--final']} p-10 sm:p-20 relative bg-white rounded-3xl bg-opacity-70 border-4 border-black`}
       >
         <motion.img
           src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1638223587/Portfolio-v5/3D-stripy/budda_ceg7wv.png`}
@@ -33,7 +33,7 @@ export default function Home() {
           className='sm:mt-32'
         />
         <div
-          className='absolute w-2/3 xl:hidden bottom-12 sm:bottom-24'
+          className='absolute w-full sm:w-2/3 xl:hidden bottom-12 sm:bottom-24'
           style={{ left: '50%', transform: 'translatex(-50%)' }}
         >
           <EmploymentResponsive />
