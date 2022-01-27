@@ -54,7 +54,7 @@ const SkillIcons: React.FC<IProps> = ({ skillsData }) => {
   return (
     <div className='flex flex-wrap items-center justify-center w-full mx-auto skill-icons lg:w-2/3'>
       {skillsData.map((skill) => (
-        <div className='relative mx-16 my-10 skill' key={skill!.title}>
+        <div className='relative mx-5 sm:mx-16 my-10 skill' key={skill!.title}>
           {skill.altIcon !== null ? (
             <div className='flex items-center justify-center h-36 w-60'>
               {skill.altIcon}{' '}
