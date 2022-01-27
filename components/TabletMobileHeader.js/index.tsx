@@ -36,7 +36,7 @@ const TabletMobileHeader: React.FC<IProps> = ({
             variants={containerAnimation}
             initial='initial'
             animate='animate'
-            className='space-y-24 text-8xl font-vesterbroPoster mt-96'
+            className='space-y-24 text-6xl sm:text-8xl font-vesterbroPoster mt-96'
           >
             <motion.li variants={listItemVariants}>
               <Link href='/about' passHref>
