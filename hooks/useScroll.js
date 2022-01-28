@@ -8,9 +8,10 @@ export const useScroll = () => {
 
   if (inView) {
     controls.start('show');
-  } else {
-    controls.start('hidden');
   }
+  // else {
+  //   controls.start('hidden');
+  // }
 
   return [element, controls];
 };
