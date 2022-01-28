@@ -12,14 +12,12 @@ const ProjectFeatures: React.FC<IProps> = ({ project, inView }) => {
   return (
     <div className='project-features mt-20 md:mt-0'>
       {project.features.map((feature) => (
-        <div className='border'>
-          <ProjectFeature
-            key={feature.title}
-            project={project}
-            feature={feature}
-            inView={inView}
-          />
-        </div>
+        <ProjectFeature
+          key={feature.title}
+          project={project}
+          feature={feature}
+          inView={inView}
+        />
       ))}
     </div>
   );
