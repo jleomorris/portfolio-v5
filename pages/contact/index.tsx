@@ -65,7 +65,7 @@ const Contact: React.FC = (): ReactElement => {
           </div> */}
           <div className=''>
             <h1
-              className='font-extrabold font-vesterbroPoster text-8xl lg:text-9xl 2xl:w-2/3'
+              className='font-extrabold font-vesterbroPoster text-6xl sm:text-8xl lg:text-9xl 2xl:w-2/3'
               style={
                 isButtonHoveredOver
                   ? {
