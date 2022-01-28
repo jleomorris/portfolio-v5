@@ -11,7 +11,7 @@ const EmploymentResponsive: React.FC = (): ReactElement => {
     <Link href='https://www.ironmongerydirect.co.uk'>
       <a
         target='_blank'
-        className={`${bannerStyles['row-col']} text-center block mb-10 border`}
+        className={`${bannerStyles['row-col']} text-center block mb-10`}
       >
         <span
           className={`${bannerStyles['row-message']} text-2xl sm:m-0 sm:text-3xl`}
