@@ -204,7 +204,7 @@ const skillsData = [
 const TechnicalSkills = () => {
   return (
     <div className='technical-skills'>
-      <h3 className='w-full mx-auto mb-32 font-extrabold text-center text-8xl xl:w-1/2'>
+      <h3 className='w-full mx-auto mb-32 font-extrabold mt-20 sm:mt-0 text-center text-6xl sm:text-8xl xl:w-1/2'>
         Services and tools I have experience with.
       </h3>
       <SkillIcons skillsData={skillsData} />

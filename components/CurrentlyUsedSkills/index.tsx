@@ -62,7 +62,7 @@ const skillsData = [
 const CurrentlyUsedSkills = () => {
   return (
     <div className='currently-used-skills'>
-      <h3 className='w-full mx-auto mb-32 font-extrabold text-center text-8xl xl:w-1/2'>
+      <h3 className='w-full mx-auto mb-32 font-extrabold text-center text-6xl mt-20 sm:mt-0 sm:text-8xl xl:w-1/2'>
         My current tech stack.
       </h3>
       <SkillIcons skillsData={skillsData} />

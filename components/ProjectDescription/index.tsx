@@ -36,9 +36,11 @@ const ProjectDescription: React.FC<IProps> = ({ project }) => {
             {project.description}
           </p>
         </div>
-        <Links project={project} />
+        <div className='mb-20'>
+          <Links project={project} />
+        </div>
       </ScrollAnimationChild>
-      <div className='relative w-full h-96 md:h-260 2xl:mt-96'>
+      <div className='relative w-screen h-96 md:h-260 2xl:mt-96'>
         <Image
           src={project.descriptionImgURL}
           layout='fill'

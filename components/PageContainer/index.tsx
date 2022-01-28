@@ -21,7 +21,7 @@ export enum Variant {
 
 const VARIANT_MAPS: Record<Variant, string> = {
   [Variant.NORMAL]: 'p-10 md:p-40',
-  [Variant.TIGHT]: 'md:p-40 px-20 xl:px-160 py-72',
+  [Variant.TIGHT]: 'md:p-40 px-20 xl:px-160 py-10 lg:py-72',
 };
 
 const PageContainer: React.FC<IProps> = ({

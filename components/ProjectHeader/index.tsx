@@ -61,7 +61,7 @@ const ProjectHeader: React.FC<IProps> = ({ project }) => {
           {project.subTitle}
         </p>
         <div className='relative xl:w-1/2'>
-          <h1 className='relative z-50 font-extrabold lg:leading-32 2xl:2/3 font-vesterbroPoster text-7xl lg:text-8xl'>
+          <h1 className='relative z-50 font-extrabold lg:leading-32 2xl:2/3 font-vesterbroPoster text-6xl lg:text-8xl'>
             {project.title}
           </h1>
         </div>

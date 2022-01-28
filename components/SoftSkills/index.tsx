@@ -58,9 +58,10 @@ const softSkillData = [
 ];
 
 const responsive = {
-  0: { items: 1.5 },
-  568: { items: 3 },
-  1024: { items: 4.5 },
+  0: { items: 1.25 },
+  568: { items: 2.25 },
+  1200: { items: 3.5 },
+  1600: { items: 4.5 },
 };
 
 const SoftSkills = () => {
@@ -70,8 +71,10 @@ const SoftSkills = () => {
 
   return (
     <div className='soft-skills'>
-      <h3 className='mb-32 font-extrabold text-8xl'>Soft Skills</h3>
-      <div className='xl:ml-40'>
+      <h3 className='mb-32 font-extrabold text-6xl sm:text-8xl mt-32 sm:mt-0'>
+        Soft Skills
+      </h3>
+      <div className='xl:ml-40 cursor-pointer'>
         <AliceCarousel
           // autoPlay
           // autoPlayInterval={3000}
