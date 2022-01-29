@@ -39,6 +39,7 @@ import GraphQL from '../Icons/GraphQL';
 import Tailwind from '../Icons/Tailwind';
 import Webpack from '../Icons/Webpack';
 import Image from 'next/image';
+import SkillIconsMobile from './components/SkillIconsMobile';
 
 const skillsData = [
   {
@@ -204,8 +205,8 @@ const skillsData = [
 const TechnicalSkills = () => {
   return (
     <div className='technical-skills'>
-      <h3 className='w-full mx-auto mb-32 font-extrabold mt-20 sm:mt-0 text-center text-6xl sm:text-8xl xl:w-1/2'>
-        Services and tools I have experience with.
+      <h3 className='w-full mx-auto mt-20 mb-32 text-6xl font-extrabold text-center sm:mt-0 sm:text-8xl xl:w-1/2'>
+        Services and Tools I Have Experience With
       </h3>
       <SkillIcons skillsData={skillsData} />
     </div>
