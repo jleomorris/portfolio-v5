@@ -41,7 +41,7 @@ interface IProps {
 const BannerRowBottom: React.FC<IProps> = ({ title }) => {
   return (
     <div className={`${bannerStyles.bannerRow} ${bannerStyles.center}`}>
-      <motion.div
+      {/* <motion.div
         className={bannerStyles.scroll}
         variants={bannerRowBottom}
         initial='initial'
@@ -63,7 +63,7 @@ const BannerRowBottom: React.FC<IProps> = ({ title }) => {
         >
           down
         </motion.span>
-      </motion.div>
+      </motion.div> */}
       <AnimatedLetters title={title} />
     </div>
   );
