@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState } from "react";
 // Animation
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 // Components
-import Link from 'next/link';
-import Image from 'next/image';
-import React from 'react';
+import Link from "next/link";
+import Image from "next/image";
+import React from "react";
 
 interface IProps {
   title: string;
@@ -12,6 +12,7 @@ interface IProps {
   iconImgUrl: string;
   iconBgColor?: string;
   projectLink: string;
+  description: string;
 }
 
 // Variants
@@ -21,17 +22,40 @@ const backgroundAnimation = {
     opacity: 1,
   },
   animate: {
-    x: '90%',
+    x: "100%",
     opacity: 1,
     transition: {
       duration: 0.5,
       delay: 0.25,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
   exit: {
     opacity: 1,
     x: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const descriptionAnimation = {
+  initial: {
+    x: "-100%",
+    opacity: 1,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      delay: 0.25,
+      ease: "easeInOut",
+    },
+  },
+  exit: {
+    opacity: 1,
+    x: "-100%",
     transition: {
       duration: 0.5,
     },
@@ -46,13 +70,13 @@ const iconAnimation = {
     scale: 1,
   },
   animate: {
-    x: '100%',
+    x: "100%",
     opacity: 1,
     scale: 0.7,
     rotate: 90,
     transition: {
       duration: 0.5,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
   exit: {
@@ -72,48 +96,63 @@ const ProjectHomeTile: React.FC<IProps> = ({
   iconImgUrl,
   iconBgColor,
   projectLink,
+  description,
 }): React.ReactElement => {
   const [isHoveredOver, setIsHoveredOver] = useState<boolean>(false);
 
   return (
     <div
-      className='relative w-full overflow-hidden border-4 border-white border-opacity-0 sm:w-1/2 project-home-tile'
+      className="relative w-full overflow-hidden border-4 border-white border-opacity-0 lg:w-1/2 project-home-tile"
       onMouseEnter={() => setIsHoveredOver(true)}
       onMouseLeave={() => setIsHoveredOver(false)}
     >
       <motion.div
-        variants={backgroundAnimation}
-        initial='initial'
-        animate={isHoveredOver ? 'animate' : 'exit'}
-        exit='exit'
-        className='absolute top-0 left-0 z-10 flex items-center justify-center w-full h-full transition-colors duration-1000 bg-black bg-opacity-90'
+        variants={descriptionAnimation}
+        initial="initial"
+        animate={isHoveredOver ? "animate" : "exit"}
+        exit="exit"
+        className="absolute flex justify-center items-center flex-col text-white top-0 left-0 h-full w-1/2 xl:w-1/3 bg-black bg-opacity-60 z-10 p-3"
       >
-        <div className='flex flex-col items-center justify-center'>
-          <h2 className='text-6xl text-center text-white font-vesterbroPoster '>
+        <h2 className="text-4xl font-vesterbroPoster text-center">
+          {description}
+        </h2>
+        <p className="text-2xl mt-3 text-center">
+          Click image to see project &rarr;
+        </p>
+      </motion.div>
+      <motion.div
+        variants={backgroundAnimation}
+        initial="initial"
+        animate={isHoveredOver ? "animate" : "exit"}
+        exit="exit"
+        className="absolute top-0 left-0 z-10 flex items-center justify-center w-full h-full transition-colors duration-1000 bg-black bg-opacity-60"
+      >
+        <div className="flex flex-col items-center justify-center">
+          <h2 className="text-6xl text-center text-white font-vesterbroPoster ">
             {title}
           </h2>
-          <div className='w-6/12 h-1 mt-2 bg-white' />
+          <div className="w-6/12 h-1 mt-2 bg-white" />
           <motion.div
             variants={iconAnimation}
-            initial='initial'
-            animate={isHoveredOver ? 'animate' : 'exit'}
-            exit='exit'
+            initial="initial"
+            animate={isHoveredOver ? "animate" : "exit"}
+            exit="exit"
             className={`relative w-64 h-64 mt-5 overflow-hidden rounded-full ${
-              iconBgColor ? iconBgColor : ''
+              iconBgColor ? iconBgColor : ""
             }`}
           >
-            <Image layout='fill' objectFit='cover' src={iconImgUrl} alt='LDR' />
+            <Image layout="fill" objectFit="cover" src={iconImgUrl} alt="LDR" />
           </motion.div>
         </div>
       </motion.div>
       <Link href={projectLink}>
         <a>
-          <div className='relative w-full border h-160 sm:h-220 border-orange'>
+          <div className="relative w-full border h-160 sm:h-220 border-orange">
             <Image
-              layout='fill'
+              layout="fill"
               src={backgroundImgUrl}
-              alt='LDR'
-              objectFit='cover'
+              alt="LDR"
+              objectFit="cover"
             />
           </div>
         </a>
