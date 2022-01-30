@@ -64,8 +64,8 @@ export default function Home() {
   return (
     <div className="home pt-nav">
       <Banner />
-      <div className="mb-24 cursor-pointer xl:mb-48">
-        <div className="flex flex-wrap w-11/12 mx-auto project-collage">
+      <div className="mt-24 cursor-pointer">
+        <div className="flex flex-wrap mx-auto project-collage bg-blackLighter">
           {tileData.map((tile) => (
             <ProjectHomeTile
               key={tile.title}

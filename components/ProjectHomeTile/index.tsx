@@ -102,7 +102,7 @@ const ProjectHomeTile: React.FC<IProps> = ({
 
   return (
     <div
-      className="relative w-full overflow-hidden border-4 border-white border-opacity-0 lg:w-1/2 project-home-tile"
+      className="relative w-full overflow-hidden transform -skew-x-10 sm:w-1/2 lg:w-1/4 project-home-tile"
       onMouseEnter={() => setIsHoveredOver(true)}
       onMouseLeave={() => setIsHoveredOver(false)}
     >
@@ -111,14 +111,16 @@ const ProjectHomeTile: React.FC<IProps> = ({
         initial="initial"
         animate={isHoveredOver ? "animate" : "exit"}
         exit="exit"
-        className="absolute flex justify-center items-center flex-col text-white top-0 left-0 h-full w-1/2 xl:w-1/3 bg-black bg-opacity-60 z-10 p-3"
+        className="absolute flex justify-center items-center flex-col text-white top-0 left-0 h-full w-1/2 bg-black bg-opacity-60 z-10 p-5"
       >
-        <h2 className="text-4xl font-vesterbroPoster text-center">
-          {description}
-        </h2>
-        <p className="text-2xl mt-3 text-center">
-          Click image to see project &rarr;
-        </p>
+        <div className="transform skew-x-10">
+          <h2 className="text-4xl font-vesterbroPoster text-center">
+            {description}
+          </h2>
+          <p className="text-2xl mt-3 text-center">
+            Click image to see project &rarr;
+          </p>
+        </div>
       </motion.div>
       <motion.div
         variants={backgroundAnimation}
@@ -127,7 +129,7 @@ const ProjectHomeTile: React.FC<IProps> = ({
         exit="exit"
         className="absolute top-0 left-0 z-10 flex items-center justify-center w-full h-full transition-colors duration-1000 bg-black bg-opacity-60"
       >
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center transform skew-x-10">
           <h2 className="text-6xl text-center text-white font-vesterbroPoster ">
             {title}
           </h2>
@@ -147,7 +149,7 @@ const ProjectHomeTile: React.FC<IProps> = ({
       </motion.div>
       <Link href={projectLink}>
         <a>
-          <div className="relative w-full border h-160 sm:h-220 border-orange">
+          <div className="relative -left-15 w-120% transform skew-x-10 h-120 sm:h-160">
             <Image
               layout="fill"
               src={backgroundImgUrl}
