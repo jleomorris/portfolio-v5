@@ -1,3 +1,6 @@
+import { useState } from 'react';
+// Animation
+import { motion } from 'framer-motion';
 // Components
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,6 +14,58 @@ interface IProps {
   projectLink: string;
 }
 
+// Variants
+const backgroundAnimation = {
+  initial: {
+    x: 0,
+    opacity: 1,
+  },
+  animate: {
+    x: '90%',
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      delay: 0.25,
+      ease: 'easeInOut',
+    },
+  },
+  exit: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const iconAnimation = {
+  initial: {
+    x: 0,
+    opacity: 1,
+    rotate: 0,
+    scale: 1,
+  },
+  animate: {
+    x: '100%',
+    opacity: 1,
+    scale: 0.7,
+    rotate: 90,
+    transition: {
+      duration: 0.5,
+      ease: 'easeInOut',
+    },
+  },
+  exit: {
+    opacity: 1,
+    x: 0,
+    rotate: 0,
+    scale: 1,
+    transition: {
+      duration: 0.7,
+    },
+  },
+};
+
 const ProjectHomeTile: React.FC<IProps> = ({
   title,
   backgroundImgUrl,
@@ -18,23 +73,39 @@ const ProjectHomeTile: React.FC<IProps> = ({
   iconBgColor,
   projectLink,
 }): React.ReactElement => {
+  const [isHoveredOver, setIsHoveredOver] = useState<boolean>(false);
+
   return (
-    <div className='relative w-full overflow-hidden border-4 border-white border-opacity-0 sm:w-1/2 project-home-tile'>
-      <div className='absolute top-0 left-0 z-10 flex items-center justify-center w-full h-full transition-colors duration-1000 bg-black bg-opacity-90 hover:bg-transparent'>
+    <div
+      className='relative w-full overflow-hidden border-4 border-white border-opacity-0 sm:w-1/2 project-home-tile'
+      onMouseEnter={() => setIsHoveredOver(true)}
+      onMouseLeave={() => setIsHoveredOver(false)}
+    >
+      <motion.div
+        variants={backgroundAnimation}
+        initial='initial'
+        animate={isHoveredOver ? 'animate' : 'exit'}
+        exit='exit'
+        className='absolute top-0 left-0 z-10 flex items-center justify-center w-full h-full transition-colors duration-1000 bg-black bg-opacity-90'
+      >
         <div className='flex flex-col items-center justify-center'>
           <h2 className='text-6xl text-center text-white font-vesterbroPoster '>
             {title}
           </h2>
           <div className='w-6/12 h-1 mt-2 bg-white' />
-          <div
+          <motion.div
+            variants={iconAnimation}
+            initial='initial'
+            animate={isHoveredOver ? 'animate' : 'exit'}
+            exit='exit'
             className={`relative w-64 h-64 mt-5 overflow-hidden rounded-full ${
               iconBgColor ? iconBgColor : ''
             }`}
           >
             <Image layout='fill' objectFit='cover' src={iconImgUrl} alt='LDR' />
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
       <Link href={projectLink}>
         <a>
           <div className='relative w-full border h-160 sm:h-220 border-orange'>
