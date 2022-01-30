@@ -1,9 +1,10 @@
 // Animation
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 // Styling
-import bannerStyles from '../../../styles/Banner.module.scss';
+import bannerStyles from "../../../styles/Banner.module.scss";
 // Components
-import AnimatedLetters from './AnimatedLetters';
+import AnimatedLetters from "./AnimatedLetters";
+import Image from "next/image";
 
 // Variants
 const bannerRowBottom = {
@@ -20,50 +21,30 @@ const bannerRowBottom = {
   },
 };
 
-const bannerRowBottomText = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: {
-      ease: 'easeInOut',
-      duration: 1,
-      delay: 1.8,
-    },
-  },
-};
-
 interface IProps {
   title: string;
 }
 
 const BannerRowBottom: React.FC<IProps> = ({ title }) => {
   return (
-    <div className={`${bannerStyles.bannerRow} ${bannerStyles.center}`}>
-      {/* <motion.div
-        className={bannerStyles.scroll}
+    <div
+      className={`${bannerStyles.bannerRow} ${bannerStyles.center} relative`}
+    >
+      <motion.div
+        className={`hidden xl:block rounded-full absolute h-72 w-72 left-72 -bottom-10 mt-10`}
         variants={bannerRowBottom}
-        initial='initial'
-        animate='animate'
+        initial="initial"
+        animate="animate"
       >
-        <motion.span
-          className={bannerStyles.scrollInnerMessage}
-          variants={bannerRowBottomText}
-          initial='initial'
-          animate='animate'
-        >
-          scroll
-        </motion.span>
-        <motion.span
-          className={bannerStyles.scrollInnerMessage}
-          variants={bannerRowBottomText}
-          initial='initial'
-          animate='animate'
-        >
-          down
-        </motion.span>
-      </motion.div> */}
+        <div className="w-full h-full relative rounded-full overflow-hidden">
+          <Image
+            src="https://res.cloudinary.com/jleomorris/image/upload/v1643565053/profile_picture.jpg"
+            alt="profile"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+      </motion.div>
       <AnimatedLetters title={title} />
     </div>
   );
