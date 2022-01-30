@@ -59,9 +59,12 @@ const softSkillData = [
 
 const responsive = {
   0: { items: 1.25 },
+  320: { items: 1.75 },
   568: { items: 2.25 },
+  800: { items: 3.2 },
   1200: { items: 3.5 },
-  1600: { items: 4.5 },
+  1600: { items: 4.8 },
+  1920: { items: 5.2 },
 };
 
 const SoftSkills = () => {
@@ -71,10 +74,10 @@ const SoftSkills = () => {
 
   return (
     <div className='soft-skills'>
-      <h3 className='mb-32 font-extrabold text-6xl sm:text-8xl mt-32 sm:mt-0'>
+      <h3 className='mt-32 mb-32 text-6xl font-extrabold sm:text-8xl sm:mt-0'>
         Soft Skills
       </h3>
-      <div className='xl:ml-40 cursor-pointer'>
+      <div className='cursor-pointer xl:ml-40'>
         <AliceCarousel
           // autoPlay
           // autoPlayInterval={3000}
@@ -85,7 +88,7 @@ const SoftSkills = () => {
           items={items}
           responsive={responsive}
           disableButtonsControls
-          disableDotsControls
+          // disableDotsControls
           controlsStrategy='alternate'
         ></AliceCarousel>
         {/* {softSkillData.map((softSkill) => (

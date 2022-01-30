@@ -1,4 +1,4 @@
-@import 'breakpoints';
+@import "breakpoints";
 
 .loader {
   .loaderInner {
@@ -13,26 +13,26 @@
 
       img {
         @media (min-width: $layout-breakpoint-small) {
-          height: 80vh;
+          height: 70vh;
         }
         object-fit: contain;
       }
 
-      &.final {
-        display: block;
-        top: -128px;
-        position: relative;
-        width: 90%;
-        margin: 0 auto;
-        z-index: -100;
-        @media (max-width: $layout-breakpoint-xsmall) {
-          top: -56px;
-        }
-        img {
-          width: 100%;
-          max-width: 100%;
-        }
-      }
+      // &.final {
+      //   display: block;
+      //   top: -128px;
+      //   position: relative;
+      //   width: 90%;
+      //   margin: 0 auto;
+      //   z-index: -100;
+      //   @media (max-width: $layout-breakpoint-xsmall) {
+      //     top: -56px;
+      //   }
+      //   img {
+      //     width: 100%;
+      //     max-width: 100%;
+      //   }
+      // }
     }
 
     .imageBlock {

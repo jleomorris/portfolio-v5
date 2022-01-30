@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 // Animation
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 // Styles
-import bannerStyles from '../../styles/Banner.module.scss';
-import marqueeStyles from '../../styles/Marquee.module.scss';
+import bannerStyles from "../../styles/Banner.module.scss";
+import marqueeStyles from "../../styles/Marquee.module.scss";
 // Components
-import BannerRowCenter from './components/BannerRowCenter';
-import BannerRowTop from './components/BannerRowTop';
-import BannerRowBottom from './components/BannerRowBottom';
+import BannerRowCenter from "./components/BannerRowCenter";
+import BannerRowTop from "./components/BannerRowTop";
+import BannerRowBottom from "./components/BannerRowBottom";
 
 // Variants
 const banner = {
@@ -30,13 +30,13 @@ const Banner = () => {
 
   return (
     <motion.div
-      className={bannerStyles.banner}
+      className={`${bannerStyles.banner} relative`}
       variants={banner}
-      animate='animate'
+      animate="animate"
     >
-      <BannerRowTop title={'J.Morris'} />
-      <BannerRowCenter title={'Front_End'} playMarquee={playMarquee} />
-      <BannerRowBottom title={'Developer'} />
+      <BannerRowTop title={"J.Morris"} />
+      <BannerRowCenter title={"Front_End"} playMarquee={playMarquee} />
+      <BannerRowBottom title={"Developer"} />
     </motion.div>
   );
 };
