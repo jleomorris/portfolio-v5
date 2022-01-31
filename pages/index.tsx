@@ -26,7 +26,7 @@ const tileData = [
     iconImgUrl:
       "https://res.cloudinary.com/jleomorris/image/upload/v1636320699/Portfolio-v5/Projects/kharnivore.jpg",
     projectLink: "/projects/LDR_Generator",
-    description: "Some Love Death and Robots randomness",
+    description: "Some Love Death and Robots Randomness",
   },
   {
     title: "POKE PRICE",
@@ -36,7 +36,7 @@ const tileData = [
       "https://res.cloudinary.com/jleomorris/image/upload/v1636328176/Portfolio-v5/Projects/Charizard.png",
     iconBgColor: "bg-red-400",
     projectLink: "/projects/Poke_Price",
-    description: "Get the prices of your childhood favourites",
+    description: "Get The Prices Of your Childhood Favourites",
   },
   {
     title: "MODERN POKEDEX",
