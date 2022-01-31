@@ -102,7 +102,7 @@ const ProjectHomeTile: React.FC<IProps> = ({
 
   return (
     <div
-      className="relative w-full overflow-hidden transform -skew-x-10 sm:w-1/2 lg:w-1/4 project-home-tile"
+      className="relative w-full overflow-hidden transform sm:-skew-x-10 lg:w-1/4 project-home-tile"
       onMouseEnter={() => setIsHoveredOver(true)}
       onMouseLeave={() => setIsHoveredOver(false)}
     >
@@ -113,7 +113,7 @@ const ProjectHomeTile: React.FC<IProps> = ({
         exit="exit"
         className="absolute flex justify-center items-center flex-col text-white top-0 left-0 h-full w-1/2 bg-black bg-opacity-60 z-10 p-5"
       >
-        <div className="transform skew-x-10">
+        <div className="transform sm:skew-x-10">
           <h2 className="text-4xl font-vesterbroPoster text-center">
             {description}
           </h2>
@@ -129,7 +129,7 @@ const ProjectHomeTile: React.FC<IProps> = ({
         exit="exit"
         className="absolute top-0 left-0 z-10 flex items-center justify-center w-full h-full transition-colors duration-1000 bg-black bg-opacity-60"
       >
-        <div className="flex flex-col items-center justify-center transform skew-x-10">
+        <div className="flex flex-col items-center justify-center transform sm:skew-x-10">
           <h2 className="text-6xl text-center text-white font-vesterbroPoster ">
             {title}
           </h2>
@@ -149,7 +149,7 @@ const ProjectHomeTile: React.FC<IProps> = ({
       </motion.div>
       <Link href={projectLink}>
         <a>
-          <div className="relative -left-15 w-120% transform skew-x-10 h-120 sm:h-160">
+          <div className="relative -left-15 w-120% transform sm:skew-x-10 h-120 h-96 xl:h-160">
             <Image
               layout="fill"
               src={backgroundImgUrl}

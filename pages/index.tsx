@@ -26,7 +26,7 @@ const tileData = [
     iconImgUrl:
       "https://res.cloudinary.com/jleomorris/image/upload/v1636320699/Portfolio-v5/Projects/kharnivore.jpg",
     projectLink: "/projects/LDR_Generator",
-    description: "Some Love Death and Robots randomness",
+    description: "Some Love Death and Robots Randomness",
   },
   {
     title: "POKE PRICE",
@@ -36,7 +36,7 @@ const tileData = [
       "https://res.cloudinary.com/jleomorris/image/upload/v1636328176/Portfolio-v5/Projects/Charizard.png",
     iconBgColor: "bg-red-400",
     projectLink: "/projects/Poke_Price",
-    description: "Get the prices of your childhood favourites",
+    description: "Get The Prices Of your Childhood Favourites",
   },
   {
     title: "MODERN POKEDEX",
@@ -64,7 +64,7 @@ export default function Home() {
   return (
     <div className="home pt-nav">
       <Banner />
-      <div className="mt-24 cursor-pointer">
+      <div className="mt-24 overflow-hidden cursor-pointer">
         <div className="flex flex-wrap mx-auto project-collage bg-blackLighter">
           {tileData.map((tile) => (
             <ProjectHomeTile
@@ -79,25 +79,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-      {/* <div
-        className={`${bannerStyles['transitionImage--final']} p-10 sm:p-20 relative bg-white rounded-3xl bg-opacity-70 border-4 border-black`}
-      >
-        <motion.img
-          src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1638223587/Portfolio-v5/3D-stripy/budda_ceg7wv.png`}
-          layoutId='main-image-1'
-          transition={{
-            ease: [0.6, 0.01, -0.05, 0.95],
-            duration: 1.6,
-          }}
-          className='sm:mt-32'
-        />
-        <div
-          className='absolute w-full sm:w-2/3 xl:hidden bottom-12 sm:bottom-24'
-          style={{ left: '50%', transform: 'translatex(-50%)' }}
-        >
-          <EmploymentResponsive />
-        </div>
-      </div> */}
       <PageContainer variant={Variant.NORMAL} noFlex={false}>
         <div className="w-full">
           <SoftSkills />
