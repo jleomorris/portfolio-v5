@@ -76,7 +76,7 @@ const Header: React.FC<IProps> = ({
                         ease: [0.6, 0.01, -0.05, 0.95],
                         duration: 1.6,
                       }}
-                      className="h-40 w-40"
+                      className="h-20 sm:h-40 w-20 sm:w-40"
                     />
                   </div>
                   {/* <EmploymentResponsive /> */}
