@@ -69,9 +69,7 @@ const responsive = {
 
 const SoftSkills = () => {
   const items = softSkillData.map((softSkill) => (
-    <div className="overflow-hidden">
-      <SoftSkillCard key={softSkill.name} softSkill={softSkill} />
-    </div>
+    <SoftSkillCard key={softSkill.name} softSkill={softSkill} />
   ));
 
   return (
