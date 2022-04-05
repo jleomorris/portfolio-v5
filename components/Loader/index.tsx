@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 // Animation
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 // Styles
-import styles from '../../styles/Loader.module.scss';
+import styles from "../../styles/Loader.module.scss";
 // Components
-import ImageBlock from './components/ImageBlock';
+import ImageBlock from "./components/ImageBlock";
 
 // Variants
 const container = {
@@ -24,9 +24,9 @@ const item = {
     opacity: 1,
     y: 0,
     transition: {
-      type: 'spring',
+      type: "spring",
       // bounce: 0.7,
-      ease: 'easeInOut',
+      ease: "easeInOut",
       duration: 1,
     },
   },
@@ -34,7 +34,7 @@ const item = {
     opacity: 0,
     y: -200,
     transition: {
-      ease: 'easeInOut',
+      ease: "easeInOut",
       duration: 1,
     },
   },
@@ -49,9 +49,9 @@ const itemMain = {
     opacity: 1,
     y: 0,
     transition: {
-      type: 'spring',
+      type: "spring",
       // bounce: 0.7,
-      ease: 'easeInOut',
+      ease: "easeInOut",
       duration: 1.5,
     },
   },
@@ -67,33 +67,36 @@ const Loader: React.FC<IProps> = ({ setLoading }): React.ReactElement => {
       <motion.div
         className={`${styles.loaderInner} flex justify-center items-center`}
         variants={container}
-        initial='hidden'
-        animate='show'
-        exit='exit'
+        initial="hidden"
+        animate="show"
+        exit="exit"
       >
         <motion.div
           variants={container}
-          initial='hidden'
-          animate='show'
-          exit='exit'
-          className='absolute flex flex-col items-center justify-center w-11/12 text-center lg:text-left lg:flex-row top-32 sm:w-10/12'
+          initial="hidden"
+          animate="show"
+          exit="exit"
+          className="absolute flex flex-col items-center justify-center w-11/12 text-center lg:text-left lg:flex-row top-32 sm:w-10/12"
         >
-          <div className='flex flex-col items-center justify-center lg:items-start'>
+          <div className="flex flex-col items-center justify-center lg:items-start">
             <motion.h1
               variants={item}
-              className='text-7xl md:text-8xl font-vesterbroPoster'
+              className="text-7xl md:text-8xl font-vesterbroPoster"
             >
               Jleo | Front End Portfolio
             </motion.h1>
             <motion.div
               variants={item}
-              className='w-10/12 h-1 my-6 bg-blackLighter sm:w-full'
+              className="w-10/12 h-1 my-6 bg-blackLighter sm:w-full"
             />
             <motion.h2
               variants={item}
-              className='font-sans text-4xl tracking-wider md:text-5xl'
+              className="font-sans text-4xl tracking-wider md:text-5xl"
             >
-              Senior Front End Developer
+              Front End Developer{" "}
+              <span className="text-3xl md:text-4xl">
+                | React | Next.js | GraphQL
+              </span>
             </motion.h2>
           </div>
           <motion.div
@@ -103,8 +106,8 @@ const Loader: React.FC<IProps> = ({ setLoading }): React.ReactElement => {
           >
             <motion.img
               src={`https://res.cloudinary.com/jleomorris/image/upload/f_auto,q_auto/v1638223587/Portfolio-v5/3D-stripy/budda_ceg7wv.png`}
-              alt='random alt'
-              layoutId='main-image-1'
+              alt="random alt"
+              layoutId="main-image-1"
             />
           </motion.div>
         </motion.div>
